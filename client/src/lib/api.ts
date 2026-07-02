@@ -53,13 +53,23 @@ export const api = {
       lastName: string;
       company?: string;
       role?: string;
+      inviteCode?: string;
     }) =>
       request<{ user: import("@/types").User; token: string }>("/auth/register", {
         method: "POST",
         body: JSON.stringify(data),
       }),
+    becomeDeveloper: (inviteCode: string) =>
+      request<{ user: import("@/types").User; token: string }>("/auth/become-developer", {
+        method: "POST",
+        body: JSON.stringify({ inviteCode }),
+      }),
     me: () => request<{ user: import("@/types").User }>("/auth/me"),
     clients: () => request<{ clients: import("@/types").User[] }>("/auth/clients"),
+    users: (role?: "CLIENT" | "DEVELOPER") =>
+      request<{ users: import("@/types").User[] }>(
+        `/auth/users${role ? `?role=${role}` : ""}`
+      ),
   },
   projects: {
     list: () => request<{ projects: import("@/types").Project[] }>("/projects"),
@@ -175,6 +185,41 @@ export const api = {
         `/timeline${qs ? `?${qs}` : ""}`
       );
     },
+  },
+  messages: {
+    list: () => request<{ conversations: import("@/types").Conversation[] }>("/messages"),
+    get: (id: string) =>
+      request<{ conversation: import("@/types").ConversationDetail }>(`/messages/${id}`),
+    create: (userId: string, projectId?: string) =>
+      request<{ conversation: import("@/types").Conversation }>("/messages", {
+        method: "POST",
+        body: JSON.stringify({ userId, projectId }),
+      }),
+    send: (conversationId: string, content: string) =>
+      request<{ message: import("@/types").DirectMessage }>(`/messages/${conversationId}/messages`, {
+        method: "POST",
+        body: JSON.stringify({ content }),
+      }),
+  },
+  notifications: {
+    list: () =>
+      request<{ notifications: import("@/types").AppNotification[]; unreadCount: number }>(
+        "/notifications"
+      ),
+    readAll: () => request<{ success: boolean }>("/notifications/read-all", { method: "PATCH" }),
+    getVapidKey: () => request<{ publicKey: string | null }>("/notifications/vapid-public-key"),
+    subscribePush: (subscription: PushSubscriptionJSON) =>
+      request<{ success: boolean }>("/notifications/push/subscribe", {
+        method: "POST",
+        body: JSON.stringify({
+          endpoint: subscription.endpoint,
+          keys: subscription.keys,
+        }),
+      }),
+    telegramLink: () =>
+      request<{ code: string; botUsername: string | null; link: string | null }>(
+        "/notifications/telegram/link"
+      ),
   },
 };
 

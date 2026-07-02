@@ -111,6 +111,49 @@ export interface TimelineEvent {
   order?: { id: string; title: string; project: { id: string; name: string } };
 }
 
+export interface DirectMessage {
+  id: string;
+  conversationId: string;
+  senderId: string;
+  content: string;
+  createdAt: string;
+  sender?: {
+    id: string;
+    role: Role;
+    profile?: Profile | null;
+  };
+}
+
+export interface Conversation {
+  id: string;
+  projectId?: string | null;
+  createdAt: string;
+  updatedAt: string;
+  project?: { id: string; name: string } | null;
+  participants?: Array<{
+    userId: string;
+    user: {
+      id: string;
+      role: Role;
+      profile?: Profile | null;
+    };
+  }>;
+  messages?: DirectMessage[];
+}
+
+export interface ConversationDetail extends Conversation {
+  messages: DirectMessage[];
+}
+
+export interface AppNotification {
+  id: string;
+  title: string;
+  body: string;
+  link?: string | null;
+  read: boolean;
+  createdAt: string;
+}
+
 export const ORDER_STATUS_LABELS: Record<OrderStatus, string> = {
   NEW: "Новый",
   IN_PROGRESS: "В работе",

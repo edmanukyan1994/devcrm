@@ -9,12 +9,14 @@ import { ApiError } from "@/lib/api";
 
 export function RegisterPage() {
   const { register, user } = useAuth();
+  const [isDeveloper, setIsDeveloper] = useState(false);
   const [form, setForm] = useState({
     email: "",
     password: "",
     firstName: "",
     lastName: "",
     company: "",
+    inviteCode: "",
   });
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
@@ -26,7 +28,11 @@ export function RegisterPage() {
     setError("");
     setLoading(true);
     try {
-      await register({ ...form, role: "CLIENT" });
+      await register({
+        ...form,
+        role: isDeveloper ? "DEVELOPER" : "CLIENT",
+        inviteCode: isDeveloper ? form.inviteCode : undefined,
+      });
     } catch (err) {
       setError(err instanceof ApiError ? err.message : "Ошибка регистрации");
     } finally {
@@ -45,6 +51,23 @@ export function RegisterPage() {
         <Card className="border-border/60">
           <CardContent className="pt-8">
             <form onSubmit={handleSubmit} className="space-y-5">
+              <div className="flex gap-2 p-1 rounded-xl bg-muted">
+                <button
+                  type="button"
+                  onClick={() => setIsDeveloper(false)}
+                  className={`flex-1 rounded-lg py-2 text-sm font-medium transition-all cursor-pointer ${!isDeveloper ? "bg-background shadow-sm" : "text-muted-foreground"}`}
+                >
+                  Заказчик
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setIsDeveloper(true)}
+                  className={`flex-1 rounded-lg py-2 text-sm font-medium transition-all cursor-pointer ${isDeveloper ? "bg-background shadow-sm" : "text-muted-foreground"}`}
+                >
+                  Исполнитель
+                </button>
+              </div>
+
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div className="space-y-2">
                   <Label htmlFor="firstName">Имя</Label>
@@ -65,6 +88,18 @@ export function RegisterPage() {
                   />
                 </div>
               </div>
+              {isDeveloper && (
+                <div className="space-y-2">
+                  <Label htmlFor="inviteCode">Код приглашения</Label>
+                  <Input
+                    id="inviteCode"
+                    value={form.inviteCode}
+                    onChange={(e) => setForm({ ...form, inviteCode: e.target.value })}
+                    required
+                    placeholder="Код от администратора"
+                  />
+                </div>
+              )}
               <div className="space-y-2">
                 <Label htmlFor="company">Компания</Label>
                 <Input

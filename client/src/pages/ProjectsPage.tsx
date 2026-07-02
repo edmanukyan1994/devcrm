@@ -30,7 +30,7 @@ export function ProjectsPage() {
   useEffect(() => {
     load();
     if (user?.role === "DEVELOPER") {
-      api.auth.clients().then((r) => setClients(r.clients));
+      api.auth.users("CLIENT").then((r) => setClients(r.users));
     }
   }, [user]);
 
@@ -73,12 +73,12 @@ export function ProjectsPage() {
                   <Label>Заказчик</Label>
                   <Select value={form.clientId} onValueChange={(v) => setForm({ ...form, clientId: v })}>
                     <SelectTrigger>
-                      <SelectValue placeholder="Выберите заказчика" />
+                      <SelectValue placeholder="Заказчик из списка" />
                     </SelectTrigger>
                     <SelectContent>
                       {clients.map((c) => (
                         <SelectItem key={c.id} value={c.id}>
-                          {c.profile?.firstName} {c.profile?.lastName}
+                          {c.profile?.firstName} {c.profile?.lastName} · {c.email}
                         </SelectItem>
                       ))}
                     </SelectContent>

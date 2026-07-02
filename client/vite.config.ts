@@ -9,7 +9,11 @@ export default defineConfig({
     react(),
     tailwindcss(),
     VitePWA({
+      strategies: "injectManifest",
+      srcDir: "src",
+      filename: "sw.ts",
       registerType: "autoUpdate",
+      injectRegister: "auto",
       includeAssets: ["favicon.svg", "icon-192.svg", "icon-512.svg", "apple-touch-icon.svg"],
       manifest: {
         name: "DevCRM",
@@ -24,61 +28,12 @@ export default defineConfig({
         lang: "ru",
         categories: ["business", "productivity"],
         icons: [
-          {
-            src: "/icon-192.svg",
-            sizes: "192x192",
-            type: "image/svg+xml",
-            purpose: "any",
-          },
-          {
-            src: "/icon-512.svg",
-            sizes: "512x512",
-            type: "image/svg+xml",
-            purpose: "any",
-          },
-          {
-            src: "/icon-512.svg",
-            sizes: "512x512",
-            type: "image/svg+xml",
-            purpose: "maskable",
-          },
+          { src: "/icon-192.svg", sizes: "192x192", type: "image/svg+xml", purpose: "any" },
+          { src: "/icon-512.svg", sizes: "512x512", type: "image/svg+xml", purpose: "any" },
+          { src: "/icon-512.svg", sizes: "512x512", type: "image/svg+xml", purpose: "maskable" },
         ],
       },
-      workbox: {
-        globPatterns: ["**/*.{js,css,html,ico,svg,woff2}"],
-        navigateFallback: "/index.html",
-        navigateFallbackDenylist: [/^\/api/, /^\/uploads/],
-        runtimeCaching: [
-          {
-            urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
-            handler: "CacheFirst",
-            options: {
-              cacheName: "google-fonts-cache",
-              expiration: { maxEntries: 10, maxAgeSeconds: 60 * 60 * 24 * 365 },
-            },
-          },
-          {
-            urlPattern: /^https:\/\/fonts\.gstatic\.com\/.*/i,
-            handler: "CacheFirst",
-            options: {
-              cacheName: "gstatic-fonts-cache",
-              expiration: { maxEntries: 10, maxAgeSeconds: 60 * 60 * 24 * 365 },
-            },
-          },
-          {
-            urlPattern: /\/api\/.*/i,
-            handler: "NetworkFirst",
-            options: {
-              cacheName: "api-cache",
-              networkTimeoutSeconds: 10,
-              expiration: { maxEntries: 50, maxAgeSeconds: 60 * 5 },
-            },
-          },
-        ],
-      },
-      devOptions: {
-        enabled: true,
-      },
+      devOptions: { enabled: true, type: "module" },
     }),
   ],
   resolve: {
@@ -89,14 +44,8 @@ export default defineConfig({
   server: {
     port: 5173,
     proxy: {
-      "/api": {
-        target: "http://localhost:3001",
-        changeOrigin: true,
-      },
-      "/uploads": {
-        target: "http://localhost:3001",
-        changeOrigin: true,
-      },
+      "/api": { target: "http://localhost:3001", changeOrigin: true },
+      "/uploads": { target: "http://localhost:3001", changeOrigin: true },
     },
   },
 });

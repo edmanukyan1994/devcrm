@@ -3,6 +3,8 @@ import { Role } from "@prisma/client";
 import { prisma } from "../lib/prisma";
 import { authMiddleware } from "../middleware/auth";
 import { paramId } from "../lib/params";
+import { notifyUser } from "../lib/notifications";
+import { getSenderName } from "../lib/messages";
 
 const router = Router();
 
@@ -77,8 +79,48 @@ router.post("/", async (req, res) => {
             profile: { select: { firstName: true, lastName: true, avatar: true } },
           },
         },
+        task: {
+          select: {
+            id: true,
+            title: true,
+            order: {
+              select: {
+                project: { select: { clientId: true } },
+              },
+            },
+          },
+        },
       },
     });
+
+    const clientId = comment.task.order.project.clientId;
+    const senderName = await getSenderName(req.user!.id);
+    const notifyTarget =
+      req.user!.role === Role.DEVELOPER ? clientId : undefined;
+
+    if (notifyTarget) {
+      await notifyUser(
+        notifyTarget,
+        `Комментарий: ${comment.task.title}`,
+        `${senderName}: ${content.trim().slice(0, 100)}`,
+        `/tasks/${taskId}`
+      );
+    } else if (req.user!.role === Role.CLIENT) {
+      const developers = await prisma.user.findMany({
+        where: { role: Role.DEVELOPER },
+        select: { id: true },
+      });
+      await Promise.all(
+        developers.map((d) =>
+          notifyUser(
+            d.id,
+            `Комментарий: ${comment.task.title}`,
+            `${senderName}: ${content.trim().slice(0, 100)}`,
+            `/tasks/${taskId}`
+          )
+        )
+      );
+    }
 
     res.status(201).json({ comment });
   } catch (error) {

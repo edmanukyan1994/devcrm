@@ -3,6 +3,8 @@ import { Role } from "@prisma/client";
 import { prisma } from "../lib/prisma";
 import { authMiddleware, requireRole } from "../middleware/auth";
 import { paramId } from "../lib/params";
+import { createProjectConversation } from "../lib/messages";
+import { notifyUser } from "../lib/notifications";
 
 const router = Router();
 
@@ -101,6 +103,15 @@ router.post("/", requireRole(Role.DEVELOPER), async (req, res) => {
         },
       },
     });
+
+    await createProjectConversation(project.id, req.user!.id, clientId);
+
+    await notifyUser(
+      clientId,
+      "Новый проект",
+      `Вам назначен проект «${name}»`,
+      `/projects/${project.id}`
+    );
 
     res.status(201).json({ project });
   } catch (error) {

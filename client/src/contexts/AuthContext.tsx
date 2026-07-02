@@ -13,6 +13,7 @@ interface AuthContextType {
     lastName: string;
     company?: string;
     role?: string;
+    inviteCode?: string;
   }) => Promise<void>;
   logout: () => void;
   refresh: () => Promise<void>;
@@ -56,6 +57,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     lastName: string;
     company?: string;
     role?: string;
+    inviteCode?: string;
   }) => {
     const { user, token } = await api.auth.register(data);
     setToken(token);

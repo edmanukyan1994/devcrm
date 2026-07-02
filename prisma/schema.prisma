@@ -35,17 +35,23 @@ enum TaskPriority {
 }
 
 model User {
-  id        String   @id @default(cuid())
-  email     String   @unique
-  password  String
-  role      Role     @default(CLIENT)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id               String   @id @default(cuid())
+  email            String   @unique
+  password         String
+  role             Role     @default(CLIENT)
+  telegramChatId   String?  @unique
+  telegramLinkCode String?  @unique
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
 
-  profile     Profile?
-  projects    Project[]  @relation("ClientProjects")
-  comments    Comment[]
-  attachments Attachment[]
+  profile                   Profile?
+  projects                  Project[]                 @relation("ClientProjects")
+  comments                  Comment[]
+  attachments               Attachment[]
+  pushSubscriptions         PushSubscription[]
+  notifications             Notification[]
+  conversationParticipants  ConversationParticipant[]
+  sentMessages              DirectMessage[]           @relation("SentMessages")
 
   @@map("users")
 }
@@ -74,8 +80,9 @@ model Project {
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 
-  client User    @relation("ClientProjects", fields: [clientId], references: [id], onDelete: Cascade)
-  orders Order[]
+  client       User          @relation("ClientProjects", fields: [clientId], references: [id], onDelete: Cascade)
+  orders       Order[]
+  conversation Conversation?
 
   @@index([clientId])
   @@map("projects")
@@ -153,4 +160,72 @@ model Attachment {
 
   @@index([taskId])
   @@map("attachments")
+}
+
+model Conversation {
+  id        String   @id @default(cuid())
+  projectId String?  @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  project      Project?                  @relation(fields: [projectId], references: [id], onDelete: SetNull)
+  participants ConversationParticipant[]
+  messages     DirectMessage[]
+
+  @@map("conversations")
+}
+
+model ConversationParticipant {
+  conversationId String
+  userId         String
+  lastReadAt     DateTime?
+
+  conversation Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  user         User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@id([conversationId, userId])
+  @@map("conversation_participants")
+}
+
+model DirectMessage {
+  id             String   @id @default(cuid())
+  conversationId String
+  senderId       String
+  content        String
+  createdAt      DateTime @default(now())
+
+  conversation Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  sender       User         @relation("SentMessages", fields: [senderId], references: [id], onDelete: Cascade)
+
+  @@index([conversationId])
+  @@map("direct_messages")
+}
+
+model PushSubscription {
+  id        String   @id @default(cuid())
+  userId    String
+  endpoint  String
+  p256dh    String
+  auth      String
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, endpoint])
+  @@map("push_subscriptions")
+}
+
+model Notification {
+  id        String   @id @default(cuid())
+  userId    String
+  title     String
+  body      String
+  link      String?
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, read])
+  @@map("notifications")
 }

@@ -5,6 +5,8 @@ import {
   FolderKanban,
   Columns3,
   CalendarDays,
+  MessageSquare,
+  Settings,
   LogOut,
   Moon,
   Sun,
@@ -19,7 +21,9 @@ const navItems = [
   { to: "/", icon: LayoutDashboard, label: "Обзор" },
   { to: "/projects", icon: FolderKanban, label: "Проекты" },
   { to: "/orders", icon: Columns3, label: "Заказы" },
+  { to: "/messages", icon: MessageSquare, label: "Чат" },
   { to: "/timeline", icon: CalendarDays, label: "Сроки" },
+  { to: "/settings", icon: Settings, label: "Настройки" },
 ];
 
 function NavLink({
@@ -45,7 +49,7 @@ function NavLink({
         "transition-all duration-200 cursor-pointer",
         mobile
           ? cn(
-              "flex flex-1 flex-col items-center gap-1 py-2 text-[10px] font-medium",
+              "flex flex-1 flex-col items-center gap-1 py-2 text-[10px] font-medium min-w-[3.5rem]",
               active ? "text-foreground" : "text-muted-foreground"
             )
           : cn(
@@ -159,7 +163,7 @@ export function DashboardLayout() {
 
       {/* Mobile bottom navigation */}
       <nav className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-card/90 backdrop-blur-xl safe-bottom md:hidden">
-        <div className="mx-auto flex max-w-lg items-stretch justify-around px-2">
+        <div className="mx-auto flex max-w-lg items-stretch justify-around px-1 overflow-x-auto">
           {navItems.map((item) => (
             <NavLink key={item.to} {...item} active={isActive(item.to)} mobile />
           ))}

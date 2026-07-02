@@ -11,6 +11,8 @@ import { ProjectDetailPage } from "@/pages/ProjectDetailPage";
 import { OrdersPage } from "@/pages/OrdersPage";
 import { OrderDetailPage } from "@/pages/OrderDetailPage";
 import { TaskDetailPage } from "@/pages/TaskDetailPage";
+import { MessagesPage } from "@/pages/MessagesPage";
+import { SettingsPage } from "@/pages/SettingsPage";
 import { TimelinePage } from "@/pages/TimelinePage";
 import { PwaInstallPrompt } from "@/components/PwaInstallPrompt";
 
@@ -36,7 +38,10 @@ export default function App() {
               <Route path="orders" element={<OrdersPage />} />
               <Route path="orders/:id" element={<OrderDetailPage />} />
               <Route path="tasks/:id" element={<TaskDetailPage />} />
+              <Route path="messages" element={<MessagesPage />} />
+              <Route path="messages/:id" element={<MessagesPage />} />
               <Route path="timeline" element={<TimelinePage />} />
+              <Route path="settings" element={<SettingsPage />} />
             </Route>
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>

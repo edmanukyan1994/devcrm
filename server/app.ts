@@ -8,6 +8,9 @@ import taskRoutes from "./routes/tasks";
 import commentRoutes from "./routes/comments";
 import attachmentRoutes from "./routes/attachments";
 import timelineRoutes from "./routes/timeline";
+import messagesRoutes from "./routes/messages";
+import notificationsRoutes from "./routes/notifications";
+import telegramRoutes from "./routes/telegram";
 
 const app = express();
 
@@ -32,6 +35,9 @@ app.use("/api/tasks", taskRoutes);
 app.use("/api/comments", commentRoutes);
 app.use("/api/attachments", attachmentRoutes);
 app.use("/api/timeline", timelineRoutes);
+app.use("/api/messages", messagesRoutes);
+app.use("/api/notifications", notificationsRoutes);
+app.use("/api/telegram", telegramRoutes);
 
 if (process.env.NODE_ENV === "production") {
   const clientDist = path.join(__dirname, "../../client/dist");

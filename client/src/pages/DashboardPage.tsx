@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Clock, FolderKanban, Layers } from "lucide-react";
+import { ArrowRight, Clock, FolderKanban, Layers, Settings } from "lucide-react";
 import { api } from "@/lib/api";
 import { useAuth } from "@/contexts/AuthContext";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { OrderStatusBadge } from "@/components/StatusBadge";
 import { formatDate, isOverdue } from "@/lib/utils";
 import type { Order, Project, TimelineEvent } from "@/types";
@@ -35,6 +36,25 @@ export function DashboardPage() {
           {user?.profile?.firstName ? `${user.profile.firstName}` : "Панель"}
         </h1>
       </header>
+
+      {user?.role === "CLIENT" && (
+        <Card className="border-foreground/20 bg-muted/30">
+          <CardContent className="flex flex-col gap-4 py-5 sm:flex-row sm:items-center sm:justify-between">
+            <div className="space-y-1">
+              <p className="font-medium">Вы вошли как заказчик</p>
+              <p className="text-sm text-muted-foreground">
+                Если вы исполнитель — активируйте роль в настройках профиля.
+              </p>
+            </div>
+            <Link to="/settings">
+              <Button className="w-full sm:w-auto gap-2">
+                <Settings className="h-4 w-4" />
+                Настройки
+              </Button>
+            </Link>
+          </CardContent>
+        </Card>
+      )}
 
       <div className="grid gap-6 md:grid-cols-3">
         <Card>

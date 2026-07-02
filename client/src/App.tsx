@@ -1,7 +1,45 @@
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { AuthProvider } from "@/contexts/AuthContext";
+import { ThemeProvider } from "@/contexts/ThemeContext";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { DashboardLayout } from "@/components/layout/DashboardLayout";
+import { LoginPage } from "@/pages/LoginPage";
+import { RegisterPage } from "@/pages/RegisterPage";
+import { DashboardPage } from "@/pages/DashboardPage";
+import { ProjectsPage } from "@/pages/ProjectsPage";
+import { ProjectDetailPage } from "@/pages/ProjectDetailPage";
+import { OrdersPage } from "@/pages/OrdersPage";
+import { OrderDetailPage } from "@/pages/OrderDetailPage";
+import { TaskDetailPage } from "@/pages/TaskDetailPage";
+import { TimelinePage } from "@/pages/TimelinePage";
+
 export default function App() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background text-foreground">
-      <p className="text-sm tracking-widest uppercase text-muted-foreground">DevCRM</p>
-    </div>
+    <ThemeProvider>
+      <AuthProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/register" element={<RegisterPage />} />
+            <Route
+              element={
+                <ProtectedRoute>
+                  <DashboardLayout />
+                </ProtectedRoute>
+              }
+            >
+              <Route index element={<DashboardPage />} />
+              <Route path="projects" element={<ProjectsPage />} />
+              <Route path="projects/:id" element={<ProjectDetailPage />} />
+              <Route path="orders" element={<OrdersPage />} />
+              <Route path="orders/:id" element={<OrderDetailPage />} />
+              <Route path="tasks/:id" element={<TaskDetailPage />} />
+              <Route path="timeline" element={<TimelinePage />} />
+            </Route>
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+        </BrowserRouter>
+      </AuthProvider>
+    </ThemeProvider>
   );
 }

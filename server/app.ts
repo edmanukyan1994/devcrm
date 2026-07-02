@@ -41,8 +41,16 @@ app.use("/api/telegram", telegramRoutes);
 
 if (process.env.NODE_ENV === "production") {
   const clientDist = path.join(__dirname, "../../client/dist");
-  app.use(express.static(clientDist));
+  app.use(
+    "/assets",
+    express.static(path.join(clientDist, "assets"), {
+      maxAge: "1y",
+      immutable: true,
+    })
+  );
+  app.use(express.static(clientDist, { index: false }));
   app.get("*", (_req, res) => {
+    res.setHeader("Cache-Control", "no-store, no-cache, must-revalidate");
     res.sendFile(path.join(clientDist, "index.html"));
   });
 }

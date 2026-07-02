@@ -5,13 +5,9 @@ import App from "./App";
 import "./index.css";
 
 registerSW({
+  immediate: true,
   onNeedRefresh() {
-    if (confirm("Доступна новая версия. Обновить?")) {
-      window.location.reload();
-    }
-  },
-  onOfflineReady() {
-    console.info("DevCRM готов к работе офлайн");
+    window.location.reload();
   },
 });
 

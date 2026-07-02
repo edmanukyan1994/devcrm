@@ -1,5 +1,7 @@
 /// <reference lib="webworker" />
-import { precacheAndRoute, cleanupOutdatedCaches } from "workbox-precaching";
+import { precacheAndRoute, cleanupOutdatedCaches, createHandlerBoundToURL } from "workbox-precaching";
+import { registerRoute, NavigationRoute } from "workbox-routing";
+import { NetworkFirst } from "workbox-strategies";
 
 declare let self: ServiceWorkerGlobalScope & {
   __WB_MANIFEST: Array<{ url: string; revision: string | null }>;
@@ -7,6 +9,30 @@ declare let self: ServiceWorkerGlobalScope & {
 
 precacheAndRoute(self.__WB_MANIFEST);
 cleanupOutdatedCaches();
+
+// Always serve fresh HTML shell for SPA routes
+registerRoute(
+  ({ request }) => request.mode === "navigate",
+  new NetworkFirst({
+    cacheName: "pages",
+    networkTimeoutSeconds: 5,
+  })
+);
+
+const navigationHandler = createHandlerBoundToURL("/index.html");
+registerRoute(
+  new NavigationRoute(navigationHandler, {
+    denylist: [/^\/api/, /^\/uploads/],
+  })
+);
+
+self.addEventListener("install", () => {
+  self.skipWaiting();
+});
+
+self.addEventListener("activate", (event) => {
+  event.waitUntil(self.clients.claim());
+});
 
 self.addEventListener("push", (event) => {
   const data = event.data?.json() ?? {};

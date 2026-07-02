@@ -65,15 +65,15 @@ export function TaskDetailPage() {
   const isImage = (mime: string) => mime.startsWith("image/");
 
   return (
-    <div className="space-y-10">
+    <div className="page-section">
       <header className="space-y-4">
         <Link to={`/orders/${task.orderId}`} className="text-sm text-muted-foreground hover:text-foreground">
           ← {task.order?.title}
         </Link>
-        <div className="flex flex-wrap items-start justify-between gap-4">
-          <div className="space-y-2">
-            <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">{task.order?.project.name}</p>
-            <h1 className="text-3xl font-bold tracking-tight">{task.title}</h1>
+        <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-start sm:justify-between">
+          <div className="space-y-2 min-w-0 flex-1">
+            <p className="page-subtitle">{task.order?.project.name}</p>
+            <h1 className="text-2xl font-bold tracking-tight sm:text-3xl break-words">{task.title}</h1>
           </div>
           <div className="flex flex-wrap gap-2">
             <PriorityBadge priority={task.priority} />
@@ -81,10 +81,10 @@ export function TaskDetailPage() {
           </div>
         </div>
         <p className="text-muted-foreground max-w-3xl leading-relaxed">{task.description}</p>
-        <div className="flex flex-wrap items-center gap-4">
+        <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
           <span className="text-sm text-muted-foreground">Дедлайн: {formatDate(task.deadline)}</span>
           <Select value={task.status} onValueChange={(v) => handleStatusChange(v as TaskStatus)}>
-            <SelectTrigger className="w-40 h-9">
+            <SelectTrigger className="w-full sm:w-40 h-9">
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
@@ -121,15 +121,15 @@ export function TaskDetailPage() {
               <p className="text-sm text-muted-foreground text-center py-8">Начните обсуждение</p>
             )}
           </div>
-          <form onSubmit={handleSendComment} className="flex gap-3">
+          <form onSubmit={handleSendComment} className="flex flex-col gap-3 sm:flex-row">
             <Textarea
               value={comment}
               onChange={(e) => setComment(e.target.value)}
               placeholder="Сообщение..."
-              className="min-h-[48px] max-h-32"
+              className="min-h-[48px] max-h-32 flex-1"
               rows={1}
             />
-            <Button type="submit" size="icon" disabled={sending || !comment.trim()}>
+            <Button type="submit" className="sm:w-10 sm:px-0" size="icon" disabled={sending || !comment.trim()}>
               <Send className="h-4 w-4" />
             </Button>
           </form>

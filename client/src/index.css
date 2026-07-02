@@ -54,7 +54,49 @@
     @apply border-border;
   }
 
+  html {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+  }
+
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    overscroll-behavior-y: none;
+  }
+}
+
+@layer utilities {
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .page-title {
+    @apply text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl;
+  }
+
+  .page-subtitle {
+    @apply text-xs uppercase tracking-[0.2em] text-muted-foreground;
+  }
+
+  .page-section {
+    @apply space-y-6 md:space-y-10;
+  }
+
+  .kanban-scroll {
+    @apply flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .kanban-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .kanban-column {
+    @apply min-w-[78vw] shrink-0 snap-start sm:min-w-[280px] lg:min-w-0 lg:flex-1;
   }
 }

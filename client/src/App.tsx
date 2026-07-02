@@ -12,12 +12,14 @@ import { OrdersPage } from "@/pages/OrdersPage";
 import { OrderDetailPage } from "@/pages/OrderDetailPage";
 import { TaskDetailPage } from "@/pages/TaskDetailPage";
 import { TimelinePage } from "@/pages/TimelinePage";
+import { PwaInstallPrompt } from "@/components/PwaInstallPrompt";
 
 export default function App() {
   return (
     <ThemeProvider>
       <AuthProvider>
         <BrowserRouter>
+          <PwaInstallPrompt />
           <Routes>
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />

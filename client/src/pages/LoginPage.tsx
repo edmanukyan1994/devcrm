@@ -30,11 +30,11 @@ export function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background px-6">
-      <div className="w-full max-w-md space-y-10">
+    <div className="min-h-[100dvh] flex items-center justify-center bg-background px-4 py-8 safe-top safe-bottom">
+      <div className="w-full max-w-md space-y-8 sm:space-y-10">
         <div className="text-center space-y-2">
           <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">DevCRM</p>
-          <h1 className="text-3xl font-bold tracking-tight">Вход</h1>
+          <h1 className="text-2xl sm:text-3xl font-bold tracking-tight">Вход</h1>
         </div>
 
         <Card className="border-border/60">

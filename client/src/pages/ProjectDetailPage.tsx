@@ -18,10 +18,10 @@ export function ProjectDetailPage() {
   if (!project) return null;
 
   return (
-    <div className="space-y-10">
+    <div className="page-section">
       <header className="space-y-2">
-        <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Проект</p>
-        <h1 className="text-4xl font-bold tracking-tight">{project.name}</h1>
+        <p className="page-subtitle">Проект</p>
+        <h1 className="page-title break-words">{project.name}</h1>
         {project.description && (
           <p className="text-muted-foreground max-w-2xl">{project.description}</p>
         )}

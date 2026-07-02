@@ -17,6 +17,15 @@ Premium CRM for web developers and their clients. Monolithic Node.js + React app
 - Comments chat per task
 - Image & PDF attachments
 - Timeline view for deadlines
+- **PWA** — installable app with offline shell caching
+- **Mobile-first** — bottom navigation, responsive kanban, safe-area support
+
+## PWA Installation
+
+On mobile (Chrome/Safari) or desktop Chrome:
+1. Open the deployed app
+2. Tap **Install** in the prompt, or use browser menu → "Add to Home Screen"
+3. The app runs in standalone mode with cached assets
 
 ## Quick Start (Local)
 

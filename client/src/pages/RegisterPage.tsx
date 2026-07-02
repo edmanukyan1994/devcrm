@@ -35,17 +35,17 @@ export function RegisterPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background px-6 py-12">
-      <div className="w-full max-w-md space-y-10">
+    <div className="min-h-[100dvh] flex items-center justify-center bg-background px-4 py-8 safe-top safe-bottom">
+      <div className="w-full max-w-md space-y-8 sm:space-y-10">
         <div className="text-center space-y-2">
           <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">DevCRM</p>
-          <h1 className="text-3xl font-bold tracking-tight">Регистрация</h1>
+          <h1 className="text-2xl sm:text-3xl font-bold tracking-tight">Регистрация</h1>
         </div>
 
         <Card className="border-border/60">
           <CardContent className="pt-8">
             <form onSubmit={handleSubmit} className="space-y-5">
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div className="space-y-2">
                   <Label htmlFor="firstName">Имя</Label>
                   <Input

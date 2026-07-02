@@ -66,15 +66,15 @@ export function OrdersPage() {
   };
 
   return (
-    <div className="space-y-10">
-      <header className="flex flex-wrap items-end justify-between gap-4">
+    <div className="page-section">
+      <header className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-end sm:justify-between">
         <div className="space-y-2">
-          <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Заказы</p>
-          <h1 className="text-4xl font-bold tracking-tight">Канбан</h1>
+          <p className="page-subtitle">Заказы</p>
+          <h1 className="page-title">Канбан</h1>
         </div>
-        <div className="flex items-center gap-3">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
           <Select value={projectId} onValueChange={setProjectId}>
-            <SelectTrigger className="w-48">
+            <SelectTrigger className="w-full sm:w-48">
               <SelectValue placeholder="Проект" />
             </SelectTrigger>
             <SelectContent>
@@ -125,9 +125,9 @@ export function OrdersPage() {
         </div>
       </header>
 
-      <div className="grid gap-6 lg:grid-cols-4 overflow-x-auto pb-4">
+      <div className="kanban-scroll lg:grid lg:grid-cols-4 lg:gap-6 lg:overflow-visible lg:snap-none">
         {KANBAN_COLUMNS.map((status) => (
-          <div key={status} className="min-w-[260px] space-y-3">
+          <div key={status} className="kanban-column space-y-3">
             <div className="flex items-center justify-between px-1">
               <h3 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                 {ORDER_STATUS_LABELS[status]}

@@ -28,10 +28,10 @@ export function DashboardPage() {
   const upcoming = events.filter((e) => e.deadline && !isOverdue(e.deadline));
 
   return (
-    <div className="space-y-12">
+    <div className="page-section">
       <header className="space-y-2">
-        <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Обзор</p>
-        <h1 className="text-4xl font-bold tracking-tight">
+        <p className="page-subtitle">Обзор</p>
+        <h1 className="page-title">
           {user?.profile?.firstName ? `${user.profile.firstName}` : "Панель"}
         </h1>
       </header>
@@ -78,7 +78,7 @@ export function DashboardPage() {
             {activeOrders.slice(0, 5).map((order) => (
               <Link key={order.id} to={`/orders/${order.id}`} className="block cursor-pointer">
                 <Card className="transition-all duration-200 hover:shadow-md hover:border-foreground/20">
-                  <CardContent className="flex items-center justify-between py-4">
+                  <CardContent className="flex flex-col gap-3 py-4 sm:flex-row sm:items-center sm:justify-between">
                     <div>
                       <p className="font-medium">{order.title}</p>
                       <p className="text-xs text-muted-foreground">{order.project?.name}</p>
@@ -104,7 +104,7 @@ export function DashboardPage() {
           <div className="space-y-3">
             {events.map((event) => (
               <Card key={`${event.type}-${event.id}`}>
-                <CardContent className="flex items-center justify-between py-4">
+                <CardContent className="flex flex-col gap-2 py-4 sm:flex-row sm:items-center sm:justify-between">
                   <div>
                     <p className="font-medium">{event.title}</p>
                     <p className="text-xs text-muted-foreground capitalize">{event.type === "order" ? "Заказ" : "Правка"}</p>

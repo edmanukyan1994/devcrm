@@ -56,13 +56,13 @@ export function OrderDetailPage() {
   if (!order) return null;
 
   return (
-    <div className="space-y-10">
+    <div className="page-section">
       <header className="space-y-4">
         <Link to="/orders" className="text-sm text-muted-foreground hover:text-foreground">← Заказы</Link>
-        <div className="flex items-start justify-between gap-4">
-          <div className="space-y-2">
-            <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">{order.project?.name}</p>
-            <h1 className="text-4xl font-bold tracking-tight">{order.title}</h1>
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+          <div className="space-y-2 min-w-0">
+            <p className="page-subtitle">{order.project?.name}</p>
+            <h1 className="page-title break-words">{order.title}</h1>
             {order.description && <p className="text-muted-foreground max-w-2xl">{order.description}</p>}
           </div>
           <OrderStatusBadge status={order.status} />
@@ -119,7 +119,7 @@ export function OrderDetailPage() {
           {order.tasks?.map((task) => (
             <Link key={task.id} to={`/tasks/${task.id}`} className="block cursor-pointer">
               <Card className="transition-all hover:shadow-md hover:border-foreground/20">
-                <CardHeader className="flex flex-row items-start justify-between pb-2">
+                <CardHeader className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between pb-2">
                   <CardTitle className="text-base font-medium">{task.title}</CardTitle>
                   <div className="flex gap-2">
                     <PriorityBadge priority={task.priority} />

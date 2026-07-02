@@ -32,14 +32,14 @@ export function TimelinePage() {
   const sortedDates = Object.keys(grouped).sort();
 
   return (
-    <div className="space-y-10">
-      <header className="flex flex-wrap items-end justify-between gap-4">
+    <div className="page-section">
+      <header className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div className="space-y-2">
-          <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Сроки</p>
-          <h1 className="text-4xl font-bold tracking-tight">Таймлайн</h1>
+          <p className="page-subtitle">Сроки</p>
+          <h1 className="page-title">Таймлайн</h1>
         </div>
         <Select value={projectId} onValueChange={setProjectId}>
-          <SelectTrigger className="w-48">
+          <SelectTrigger className="w-full sm:w-48">
             <SelectValue placeholder="Проект" />
           </SelectTrigger>
           <SelectContent>
@@ -64,7 +64,7 @@ export function TimelinePage() {
                   className="block cursor-pointer"
                 >
                   <Card className={cn("transition-all hover:shadow-md", isOverdue(event.deadline) && "border-destructive/50")}>
-                    <CardContent className="flex items-center justify-between py-4">
+                    <CardContent className="flex flex-col gap-3 py-4 sm:flex-row sm:items-center sm:justify-between">
                       <div className="space-y-1">
                         <p className="font-medium">{event.title}</p>
                         <p className="text-xs text-muted-foreground">

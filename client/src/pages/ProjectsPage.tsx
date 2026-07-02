@@ -43,11 +43,11 @@ export function ProjectsPage() {
   };
 
   return (
-    <div className="space-y-10">
-      <header className="flex items-end justify-between">
+    <div className="page-section">
+      <header className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div className="space-y-2">
-          <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Проекты</p>
-          <h1 className="text-4xl font-bold tracking-tight">Все проекты</h1>
+          <p className="page-subtitle">Проекты</p>
+          <h1 className="page-title">Все проекты</h1>
         </div>
         {user?.role === "DEVELOPER" && (
           <Dialog open={open} onOpenChange={setOpen}>

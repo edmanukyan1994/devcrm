@@ -228,4 +228,19 @@ router.patch("/users/:id/role", authMiddleware, requireRole(Role.DEVELOPER), asy
   }
 });
 
+router.delete("/users/:id", authMiddleware, requireRole(Role.DEVELOPER), async (req, res) => {
+  try {
+    const id = paramId(req.params.id);
+    if (id === req.user!.id) {
+      res.status(400).json({ error: "Cannot delete yourself" });
+      return;
+    }
+    await prisma.user.delete({ where: { id } });
+    res.json({ success: true });
+  } catch (error) {
+    console.error("User delete error:", error);
+    res.status(500).json({ error: "Failed to delete user" });
+  }
+});
+
 export default router;

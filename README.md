@@ -45,9 +45,8 @@ npm install --prefix client
 cp .env.example .env
 # Edit DATABASE_URL and JWT_SECRET
 
-# Push schema & seed demo data
+# Push schema (no demo users)
 npm run db:push
-npx prisma db seed
 
 # Run dev (API + frontend)
 npm run dev
@@ -56,12 +55,7 @@ npm run dev
 - Frontend: http://localhost:5173
 - API: http://localhost:3001
 
-### Demo Accounts (after seed)
-
-| Role      | Email              | Password      |
-|-----------|--------------------|---------------|
-| Developer | dev@devcrm.app     | developer123  |
-| Client    | client@example.com | client123     |
+Register your account at `/register`. First user can become developer via invite code in Settings.
 
 ## Railway Deployment
 

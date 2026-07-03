@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
+import { Trash2 } from "lucide-react";
 import { api } from "@/lib/api";
 import { useAuth } from "@/contexts/AuthContext";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import type { User } from "@/types";
 
@@ -18,6 +20,12 @@ export function UsersPage() {
 
   const handleRoleChange = async (userId: string, role: "CLIENT" | "DEVELOPER") => {
     await api.auth.updateRole(userId, role);
+    load();
+  };
+
+  const handleDelete = async (userId: string, name: string) => {
+    if (!confirm(`Удалить пользователя ${name}?`)) return;
+    await api.auth.deleteUser(userId);
     load();
   };
 
@@ -48,6 +56,7 @@ export function UsersPage() {
                   <p className="text-xs text-muted-foreground">{u.profile.company}</p>
                 )}
               </div>
+              <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
               <Select
                 value={u.role}
                 onValueChange={(v) => handleRoleChange(u.id, v as "CLIENT" | "DEVELOPER")}
@@ -61,6 +70,19 @@ export function UsersPage() {
                   <SelectItem value="CLIENT">Заказчик</SelectItem>
                 </SelectContent>
               </Select>
+              {u.id !== currentUser?.id && (
+                <Button
+                  size="icon"
+                  variant="ghost"
+                  className="text-destructive shrink-0"
+                  onClick={() =>
+                    handleDelete(u.id, `${u.profile?.firstName} ${u.profile?.lastName}`)
+                  }
+                >
+                  <Trash2 className="h-4 w-4" />
+                </Button>
+              )}
+              </div>
             </CardContent>
           </Card>
         ))}

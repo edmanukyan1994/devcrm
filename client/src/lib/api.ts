@@ -75,6 +75,8 @@ export const api = {
         method: "PATCH",
         body: JSON.stringify({ role }),
       }),
+    deleteUser: (id: string) =>
+      request<{ success: boolean }>(`/auth/users/${id}`, { method: "DELETE" }),
   },
   projects: {
     list: () => request<{ projects: import("@/types").Project[] }>("/projects"),

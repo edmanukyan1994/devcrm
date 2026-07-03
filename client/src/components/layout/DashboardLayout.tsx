@@ -12,6 +12,10 @@ import {
   Sun,
   MoreHorizontal,
   X,
+  Search,
+  Wallet,
+  Users,
+  CircleHelp,
 } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
 import { useTheme } from "@/contexts/ThemeContext";
@@ -28,8 +32,13 @@ const mainNavItems = [
 
 const extraNavItems = [
   { to: "/messages", icon: MessageSquare, label: "Чат" },
+  { to: "/search", icon: Search, label: "Поиск" },
+  { to: "/finance", icon: Wallet, label: "Финансы" },
+  { to: "/help", icon: CircleHelp, label: "Справка" },
   { to: "/settings", icon: Settings, label: "Настройки" },
 ];
+
+const developerNavItems = [{ to: "/users", icon: Users, label: "Пользователи" }];
 
 const allNavItems = [...mainNavItems, ...extraNavItems];
 
@@ -93,7 +102,19 @@ export function DashboardLayout() {
   const isActive = (to: string) =>
     location.pathname === to || (to !== "/" && location.pathname.startsWith(to));
 
-  const isExtraActive = extraNavItems.some((item) => isActive(item.to));
+  const isExtraActive = [...extraNavItems, ...(user?.role === "DEVELOPER" ? developerNavItems : [])].some(
+    (item) => isActive(item.to)
+  );
+
+  const sidebarItems = [
+    ...allNavItems,
+    ...(user?.role === "DEVELOPER" ? developerNavItems : []),
+  ];
+
+  const mobileMoreItems = [
+    ...extraNavItems,
+    ...(user?.role === "DEVELOPER" ? developerNavItems : []),
+  ];
 
   return (
     <div className="min-h-screen bg-background">
@@ -110,7 +131,7 @@ export function DashboardLayout() {
           </div>
 
           <nav className="flex-1 space-y-1">
-            {allNavItems.map((item) => (
+            {sidebarItems.map((item) => (
               <NavLink key={item.to} {...item} active={isActive(item.to)} />
             ))}
           </nav>
@@ -156,6 +177,15 @@ export function DashboardLayout() {
           <span className="text-lg font-bold tracking-tight">CRM</span>
         </Link>
         <div className="flex items-center gap-2">
+          <Button
+            variant="outline"
+            size="icon"
+            className="h-8 w-8"
+            onClick={() => navigate("/search")}
+            aria-label="Search"
+          >
+            <Search className="h-3.5 w-3.5" />
+          </Button>
           <Button
             variant="outline"
             size="icon"
@@ -226,7 +256,7 @@ export function DashboardLayout() {
               </Button>
             </div>
             <div className="grid gap-2">
-              {extraNavItems.map(({ to, icon: Icon, label }) => (
+              {mobileMoreItems.map(({ to, icon: Icon, label }) => (
                 <Link
                   key={to}
                   to={to}

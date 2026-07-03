@@ -1,117 +1,96 @@
 import { Router } from "express";
-import multer from "multer";
-import path from "path";
-import fs from "fs";
-import crypto from "crypto";
-import { Role } from "@prisma/client";
 import { prisma } from "../lib/prisma";
 import { authMiddleware } from "../middleware/auth";
 import { paramId } from "../lib/params";
+import { fileUpload, deleteUploadFile, toPublicPath } from "../lib/upload";
+import { canAccessProject, canAccessOrder, canAccessTask } from "../lib/access";
 
 const router = Router();
 
-const uploadsDir = path.join(process.cwd(), "uploads");
-if (!fs.existsSync(uploadsDir)) {
-  fs.mkdirSync(uploadsDir, { recursive: true });
-}
-
-const storage = multer.diskStorage({
-  destination: (_req, _file, cb) => cb(null, uploadsDir),
-  filename: (_req, file, cb) => {
-    const ext = path.extname(file.originalname);
-    cb(null, `${crypto.randomUUID()}${ext}`);
-  },
-});
-
-const upload = multer({
-  storage,
-  limits: { fileSize: 10 * 1024 * 1024 },
-  fileFilter: (_req, file, cb) => {
-    const allowed = /\.(jpg|jpeg|png|gif|webp|svg|pdf)$/i.test(file.originalname);
-    if (allowed) cb(null, true);
-    else cb(new Error("Only images and PDF files are allowed"));
-  },
-});
-
 router.use(authMiddleware);
 
-async function canAccessTask(taskId: string, userId: string, role: Role) {
-  const task = await prisma.task.findUnique({
-    where: { id: taskId },
-    include: { order: { include: { project: true } } },
-  });
+const uploaderSelect = {
+  profile: { select: { firstName: true, lastName: true } },
+};
 
-  if (!task) return false;
-  if (role === Role.DEVELOPER) return true;
-  return task.order.project.clientId === userId;
+async function listAttachments(where: { taskId?: string; orderId?: string; projectId?: string }) {
+  return prisma.attachment.findMany({
+    where,
+    include: { uploadedBy: { select: uploaderSelect } },
+    orderBy: { createdAt: "desc" },
+  });
 }
 
-router.get("/task/:taskId", async (req, res) => {
-  try {
-    const allowed = await canAccessTask(paramId(req.params.taskId), req.user!.id, req.user!.role);
-    if (!allowed) {
-      res.status(404).json({ error: "Task not found" });
-      return;
-    }
-
-    const attachments = await prisma.attachment.findMany({
-      where: { taskId: paramId(req.params.taskId) },
-      include: {
-        uploadedBy: {
-          select: {
-            profile: { select: { firstName: true, lastName: true } },
-          },
-        },
-      },
-      orderBy: { createdAt: "desc" },
-    });
-
-    res.json({ attachments });
-  } catch (error) {
-    console.error("Attachments list error:", error);
-    res.status(500).json({ error: "Failed to fetch attachments" });
+router.get("/project/:projectId", async (req, res) => {
+  const projectId = paramId(req.params.projectId);
+  const allowed = await canAccessProject(projectId, req.user!.id, req.user!.role);
+  if (!allowed) {
+    res.status(404).json({ error: "Project not found" });
+    return;
   }
+  res.json({ attachments: await listAttachments({ projectId }) });
 });
 
-router.post("/", upload.single("file"), async (req, res) => {
-  try {
-    const { taskId } = req.body;
+router.get("/order/:orderId", async (req, res) => {
+  const orderId = paramId(req.params.orderId);
+  const allowed = await canAccessOrder(orderId, req.user!.id, req.user!.role);
+  if (!allowed) {
+    res.status(404).json({ error: "Order not found" });
+    return;
+  }
+  res.json({ attachments: await listAttachments({ orderId }) });
+});
 
-    if (!taskId || !req.file) {
-      res.status(400).json({ error: "taskId and file are required" });
+router.get("/task/:taskId", async (req, res) => {
+  const taskId = paramId(req.params.taskId);
+  const allowed = await canAccessTask(taskId, req.user!.id, req.user!.role);
+  if (!allowed) {
+    res.status(404).json({ error: "Task not found" });
+    return;
+  }
+  res.json({ attachments: await listAttachments({ taskId }) });
+});
+
+router.post("/", fileUpload.single("file"), async (req, res) => {
+  try {
+    const { taskId, orderId, projectId } = req.body;
+    const targets = [taskId, orderId, projectId].filter(Boolean);
+
+    if (targets.length !== 1 || !req.file) {
+      if (req.file) deleteUploadFile(toPublicPath(req.file.filename));
+      res.status(400).json({ error: "Exactly one of taskId, orderId, projectId and file required" });
       return;
     }
 
-    const allowed = await canAccessTask(taskId, req.user!.id, req.user!.role);
+    let allowed = false;
+    if (taskId) allowed = await canAccessTask(taskId, req.user!.id, req.user!.role);
+    else if (orderId) allowed = await canAccessOrder(orderId, req.user!.id, req.user!.role);
+    else if (projectId) allowed = await canAccessProject(projectId, req.user!.id, req.user!.role);
+
     if (!allowed) {
-      fs.unlinkSync(req.file.path);
-      res.status(404).json({ error: "Task not found" });
+      deleteUploadFile(toPublicPath(req.file.filename));
+      res.status(404).json({ error: "Not found" });
       return;
     }
 
     const attachment = await prisma.attachment.create({
       data: {
-        taskId,
+        taskId: taskId || null,
+        orderId: orderId || null,
+        projectId: projectId || null,
         uploadedById: req.user!.id,
         filename: req.file.filename,
         originalName: req.file.originalname,
         mimeType: req.file.mimetype,
         size: req.file.size,
-        path: `/uploads/${req.file.filename}`,
+        path: toPublicPath(req.file.filename),
       },
-      include: {
-        uploadedBy: {
-          select: {
-            profile: { select: { firstName: true, lastName: true } },
-          },
-        },
-      },
+      include: { uploadedBy: { select: uploaderSelect } },
     });
 
     res.status(201).json({ attachment });
   } catch (error) {
-    console.error("Attachment upload error:", error);
-    if (req.file) fs.unlinkSync(req.file.path);
+    if (req.file) deleteUploadFile(toPublicPath(req.file.filename));
     res.status(500).json({ error: "Failed to upload attachment" });
   }
 });
@@ -127,19 +106,21 @@ router.delete("/:id", async (req, res) => {
       return;
     }
 
-    const allowed = await canAccessTask(attachment.taskId, req.user!.id, req.user!.role);
+    let allowed = false;
+    if (attachment.taskId) allowed = await canAccessTask(attachment.taskId, req.user!.id, req.user!.role);
+    else if (attachment.orderId) allowed = await canAccessOrder(attachment.orderId, req.user!.id, req.user!.role);
+    else if (attachment.projectId)
+      allowed = await canAccessProject(attachment.projectId, req.user!.id, req.user!.role);
+
     if (!allowed) {
       res.status(403).json({ error: "Forbidden" });
       return;
     }
 
-    const filePath = path.join(uploadsDir, attachment.filename);
-    if (fs.existsSync(filePath)) fs.unlinkSync(filePath);
-
+    deleteUploadFile(attachment.path);
     await prisma.attachment.delete({ where: { id: paramId(req.params.id) } });
     res.json({ success: true });
   } catch (error) {
-    console.error("Attachment delete error:", error);
     res.status(500).json({ error: "Failed to delete attachment" });
   }
 });

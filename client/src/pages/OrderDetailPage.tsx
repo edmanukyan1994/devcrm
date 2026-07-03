@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
-import { Plus } from "lucide-react";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import { Plus, Pencil, Trash2 } from "lucide-react";
 import { api } from "@/lib/api";
+import { useAuth } from "@/contexts/AuthContext";
+import { FinancePanel } from "@/components/FinancePanel";
+import { EntityDiscussion } from "@/components/EntityDiscussion";
+import { EntityFiles } from "@/components/EntityFiles";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -17,12 +21,22 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { OrderStatusBadge, TaskStatusBadge, PriorityBadge } from "@/components/StatusBadge";
 import { formatDate } from "@/lib/utils";
-import { PRIORITY_LABELS, type Order, type TaskPriority } from "@/types";
+import { PRIORITY_LABELS, ORDER_STATUS_LABELS, type Order, type OrderStatus, type TaskPriority } from "@/types";
 
 export function OrderDetailPage() {
   const { id } = useParams<{ id: string }>();
+  const navigate = useNavigate();
+  const { user } = useAuth();
   const [order, setOrder] = useState<Order | null>(null);
   const [open, setOpen] = useState(false);
+  const [editOpen, setEditOpen] = useState(false);
+  const [editForm, setEditForm] = useState({
+    title: "",
+    description: "",
+    status: "NEW" as OrderStatus,
+    deadline: "",
+    budget: "",
+  });
   const [form, setForm] = useState({
     title: "",
     description: "",
@@ -53,6 +67,45 @@ export function OrderDetailPage() {
     load();
   };
 
+  const handleDelete = async () => {
+    if (!order) return;
+    if (!confirm(`Удалить заказ «${order.title}»? Все задачи будут удалены.`)) return;
+    await api.orders.delete(order.id);
+    navigate("/orders");
+  };
+
+  const openEdit = () => {
+    if (!order) return;
+    setEditForm({
+      title: order.title,
+      description: order.description || "",
+      status: order.status,
+      deadline: order.deadline ? order.deadline.slice(0, 10) : "",
+      budget: order.budget != null ? String(order.budget) : "",
+    });
+    setEditOpen(true);
+  };
+
+  const handleEdit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!order) return;
+    const { order: updated } = await api.orders.update(order.id, {
+      title: editForm.title,
+      description: editForm.description,
+      status: editForm.status,
+      deadline: editForm.deadline || null,
+      budget: editForm.budget.trim() === "" ? null : parseFloat(editForm.budget),
+    });
+    setOrder({ ...order, ...updated });
+    setEditOpen(false);
+  };
+
+  const handleBudgetChange = async (budget: number | null) => {
+    if (!order) return;
+    const { order: updated } = await api.orders.update(order.id, { budget });
+    setOrder({ ...order, ...updated });
+  };
+
   if (!order) return null;
 
   return (
@@ -65,13 +118,29 @@ export function OrderDetailPage() {
             <h1 className="page-title break-words">{order.title}</h1>
             {order.description && <p className="text-muted-foreground max-w-2xl">{order.description}</p>}
           </div>
-          <OrderStatusBadge status={order.status} />
+          <div className="flex items-center gap-2 shrink-0">
+            <OrderStatusBadge status={order.status} />
+            {user?.role === "DEVELOPER" && (
+              <>
+                <Button size="sm" variant="outline" onClick={openEdit}>
+                  <Pencil className="h-4 w-4" />
+                  Изменить
+                </Button>
+                <Button size="sm" variant="destructive" onClick={handleDelete}>
+                  <Trash2 className="h-4 w-4" />
+                  Удалить
+                </Button>
+              </>
+            )}
+          </div>
         </div>
         {order.deadline && (
           <p className="text-sm text-muted-foreground">Дедлайн: {formatDate(order.deadline)}</p>
         )}
       </header>
 
+      <div className="grid gap-6 lg:grid-cols-3">
+        <div className="lg:col-span-2">
       <section className="space-y-4">
         <div className="flex items-center justify-between">
           <h2 className="text-lg font-semibold">Правки</h2>
@@ -141,7 +210,58 @@ export function OrderDetailPage() {
             <p className="text-center text-muted-foreground py-12">Правок пока нет</p>
           )}
         </div>
+
+        <div className="grid gap-8 md:grid-cols-2 pt-4 border-t border-border">
+          <EntityDiscussion type="order" entityId={order.id} initialComments={order.comments} onUpdate={load} />
+          <EntityFiles type="order" entityId={order.id} initialAttachments={order.attachments} onUpdate={load} />
+        </div>
       </section>
+        </div>
+        <FinancePanel
+          orderId={order.id}
+          budget={order.budget}
+          editableBudget={user?.role === "DEVELOPER"}
+          onBudgetChange={handleBudgetChange}
+        />
+      </div>
+
+      <Dialog open={editOpen} onOpenChange={setEditOpen}>
+        <DialogContent>
+          <DialogHeader><DialogTitle>Редактировать заказ</DialogTitle></DialogHeader>
+          <form onSubmit={handleEdit} className="space-y-4">
+            <div className="space-y-2">
+              <Label>Название</Label>
+              <Input value={editForm.title} onChange={(e) => setEditForm({ ...editForm, title: e.target.value })} required />
+            </div>
+            <div className="space-y-2">
+              <Label>Описание</Label>
+              <Textarea value={editForm.description} onChange={(e) => setEditForm({ ...editForm, description: e.target.value })} />
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="space-y-2">
+                <Label>Статус</Label>
+                <Select value={editForm.status} onValueChange={(v) => setEditForm({ ...editForm, status: v as OrderStatus })}>
+                  <SelectTrigger><SelectValue /></SelectTrigger>
+                  <SelectContent>
+                    {(Object.keys(ORDER_STATUS_LABELS) as OrderStatus[]).map((s) => (
+                      <SelectItem key={s} value={s}>{ORDER_STATUS_LABELS[s]}</SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+              <div className="space-y-2">
+                <Label>Дедлайн</Label>
+                <Input type="date" value={editForm.deadline} onChange={(e) => setEditForm({ ...editForm, deadline: e.target.value })} />
+              </div>
+            </div>
+            <div className="space-y-2">
+              <Label>Бюджет</Label>
+              <Input type="number" min="0" value={editForm.budget} onChange={(e) => setEditForm({ ...editForm, budget: e.target.value })} />
+            </div>
+            <Button type="submit" className="w-full">Сохранить</Button>
+          </form>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

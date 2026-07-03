@@ -1,6 +1,44 @@
+export type MessageType = "TEXT" | "VOICE" | "IMAGE" | "FILE";
+
+export interface MessageAttachment {
+  id: string;
+  messageId: string;
+  filename: string;
+  originalName: string;
+  mimeType: string;
+  size: number;
+  path: string;
+  duration?: number | null;
+  createdAt: string;
+}
+
+export interface Payment {
+  id: string;
+  orderId?: string | null;
+  projectId?: string | null;
+  amount: number | string;
+  note?: string | null;
+  paidAt: string;
+  createdAt: string;
+}
+
+export interface FinanceSummary {
+  totalBudget: number;
+  totalPaid: number;
+  totalRemaining: number;
+  projects: Array<{
+    id: string;
+    name: string;
+    budget: number;
+    paid: number;
+    remaining: number;
+  }>;
+}
+
 export type Role = "DEVELOPER" | "CLIENT";
 
 export type OrderStatus = "NEW" | "IN_PROGRESS" | "REVIEW" | "COMPLETED" | "CANCELLED";
+export type ProjectStatus = "ACTIVE" | "PAUSED" | "COMPLETED";
 export type TaskStatus = "NEW" | "IN_PROGRESS" | "REVIEW" | "DONE";
 export type TaskPriority = "LOW" | "MEDIUM" | "HIGH" | "URGENT";
 
@@ -25,6 +63,10 @@ export interface Project {
   id: string;
   name: string;
   description?: string | null;
+  coverImage?: string | null;
+  budget?: number | string | null;
+  status?: ProjectStatus;
+  deadline?: string | null;
   clientId: string;
   createdAt: string;
   updatedAt: string;
@@ -35,6 +77,8 @@ export interface Project {
   };
   _count?: { orders: number };
   orders?: Order[];
+  comments?: Comment[];
+  attachments?: Attachment[];
 }
 
 export interface Order {
@@ -43,12 +87,15 @@ export interface Order {
   title: string;
   description?: string | null;
   status: OrderStatus;
+  budget?: number | string | null;
   deadline?: string | null;
   position: number;
   createdAt: string;
   updatedAt: string;
   project?: { id: string; name: string; clientId?: string };
   tasks?: Task[];
+  comments?: Comment[];
+  attachments?: Attachment[];
   _count?: { tasks: number };
 }
 
@@ -75,7 +122,9 @@ export interface Task {
 
 export interface Comment {
   id: string;
-  taskId: string;
+  taskId?: string | null;
+  orderId?: string | null;
+  projectId?: string | null;
   userId: string;
   content: string;
   createdAt: string;
@@ -88,7 +137,9 @@ export interface Comment {
 
 export interface Attachment {
   id: string;
-  taskId: string;
+  taskId?: string | null;
+  orderId?: string | null;
+  projectId?: string | null;
   filename: string;
   originalName: string;
   mimeType: string;
@@ -115,6 +166,7 @@ export interface DirectMessage {
   id: string;
   conversationId: string;
   senderId: string;
+  type: MessageType;
   content: string;
   createdAt: string;
   sender?: {
@@ -122,6 +174,7 @@ export interface DirectMessage {
     role: Role;
     profile?: Profile | null;
   };
+  attachments?: MessageAttachment[];
 }
 
 export interface Conversation {
@@ -153,6 +206,12 @@ export interface AppNotification {
   read: boolean;
   createdAt: string;
 }
+
+export const PROJECT_STATUS_LABELS: Record<ProjectStatus, string> = {
+  ACTIVE: "Активен",
+  PAUSED: "На паузе",
+  COMPLETED: "Завершён",
+};
 
 export const ORDER_STATUS_LABELS: Record<OrderStatus, string> = {
   NEW: "Новый",

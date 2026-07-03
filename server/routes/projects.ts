@@ -5,6 +5,7 @@ import { authMiddleware, requireRole } from "../middleware/auth";
 import { paramId } from "../lib/params";
 import { createProjectConversation } from "../lib/messages";
 import { notifyUser } from "../lib/notifications";
+import { imageUpload, deleteUploadFile } from "../lib/upload";
 
 const router = Router();
 
@@ -53,6 +54,27 @@ router.get("/:id", async (req, res) => {
           orderBy: [{ status: "asc" }, { position: "asc" }],
           include: { _count: { select: { tasks: true } } },
         },
+        comments: {
+          orderBy: { createdAt: "asc" },
+          include: {
+            user: {
+              select: {
+                id: true,
+                role: true,
+                profile: { select: { firstName: true, lastName: true, avatar: true } },
+              },
+            },
+          },
+        },
+        attachments: {
+          orderBy: { createdAt: "desc" },
+          include: {
+            uploadedBy: {
+              select: { profile: { select: { firstName: true, lastName: true } } },
+            },
+          },
+        },
+        _count: { select: { orders: true, comments: true, attachments: true } },
       },
     });
 
@@ -122,7 +144,7 @@ router.post("/", requireRole(Role.DEVELOPER), async (req, res) => {
 
 router.patch("/:id", requireRole(Role.DEVELOPER), async (req, res) => {
   try {
-    const { name, description, clientId } = req.body;
+    const { name, description, clientId, coverImage, budget, status, deadline } = req.body;
 
     const project = await prisma.project.update({
       where: { id: paramId(req.params.id) },
@@ -130,6 +152,10 @@ router.patch("/:id", requireRole(Role.DEVELOPER), async (req, res) => {
         ...(name !== undefined && { name }),
         ...(description !== undefined && { description }),
         ...(clientId !== undefined && { clientId }),
+        ...(coverImage === null && { coverImage: null }),
+        ...(budget !== undefined && { budget: budget === null || budget === "" ? null : budget }),
+        ...(status !== undefined && { status }),
+        ...(deadline !== undefined && { deadline: deadline ? new Date(deadline) : null }),
       },
       include: {
         client: {
@@ -149,9 +175,85 @@ router.patch("/:id", requireRole(Role.DEVELOPER), async (req, res) => {
   }
 });
 
+router.post("/:id/cover", requireRole(Role.DEVELOPER), imageUpload.single("file"), async (req, res) => {
+  try {
+    const id = paramId(req.params.id);
+    if (!req.file) {
+      res.status(400).json({ error: "file is required" });
+      return;
+    }
+
+    const existing = await prisma.project.findUnique({ where: { id } });
+    if (!existing) {
+      deleteUploadFile(`/uploads/${req.file.filename}`);
+      res.status(404).json({ error: "Project not found" });
+      return;
+    }
+
+    if (existing.coverImage) deleteUploadFile(existing.coverImage);
+
+    const coverPath = `/uploads/${req.file.filename}`;
+    const project = await prisma.project.update({
+      where: { id },
+      data: { coverImage: coverPath },
+      include: {
+        client: {
+          select: {
+            id: true,
+            email: true,
+            profile: { select: { firstName: true, lastName: true, company: true } },
+          },
+        },
+        _count: { select: { orders: true } },
+      },
+    });
+
+    res.json({ project });
+  } catch (error) {
+    console.error("Cover upload error:", error);
+    if (req.file) deleteUploadFile(`/uploads/${req.file.filename}`);
+    res.status(500).json({ error: "Failed to upload cover" });
+  }
+});
+
+router.delete("/:id/cover", requireRole(Role.DEVELOPER), async (req, res) => {
+  try {
+    const id = paramId(req.params.id);
+    const existing = await prisma.project.findUnique({ where: { id } });
+    if (!existing) {
+      res.status(404).json({ error: "Project not found" });
+      return;
+    }
+
+    if (existing.coverImage) deleteUploadFile(existing.coverImage);
+
+    const project = await prisma.project.update({
+      where: { id },
+      data: { coverImage: null },
+      include: {
+        client: {
+          select: {
+            id: true,
+            email: true,
+            profile: { select: { firstName: true, lastName: true, company: true } },
+          },
+        },
+        _count: { select: { orders: true } },
+      },
+    });
+
+    res.json({ project });
+  } catch (error) {
+    res.status(500).json({ error: "Failed to remove cover" });
+  }
+});
+
 router.delete("/:id", requireRole(Role.DEVELOPER), async (req, res) => {
   try {
-    await prisma.project.delete({ where: { id: paramId(req.params.id) } });
+    const id = paramId(req.params.id);
+    const existing = await prisma.project.findUnique({ where: { id } });
+    if (existing?.coverImage) deleteUploadFile(existing.coverImage);
+    await prisma.project.delete({ where: { id } });
     res.json({ success: true });
   } catch (error) {
     console.error("Project delete error:", error);

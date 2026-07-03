@@ -31,3 +31,12 @@ export function isOverdue(deadline: string | Date | null | undefined) {
   if (!deadline) return false;
   return new Date(deadline) < new Date();
 }
+
+export function formatMoney(amount: number | string | null | undefined, currency = "RUB") {
+  const value = Number(amount || 0);
+  return new Intl.NumberFormat("ru-RU", {
+    style: "currency",
+    currency,
+    maximumFractionDigits: 0,
+  }).format(value);
+}

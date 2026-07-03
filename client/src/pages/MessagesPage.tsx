@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { Plus, Send } from "lucide-react";
+import { Image, Mic, Paperclip, Plus, Send, Square } from "lucide-react";
 import { api } from "@/lib/api";
 import { useAuth } from "@/contexts/AuthContext";
+import { MessageBubble, messagePreview } from "@/components/MessageBubble";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
@@ -16,15 +17,11 @@ import {
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { formatDateTime, getInitials } from "@/lib/utils";
-import type { Conversation, ConversationDetail, DirectMessage, User } from "@/types";
+import { getInitials } from "@/lib/utils";
+import type { Conversation, ConversationDetail, User } from "@/types";
 
 function otherParticipant(conversation: Conversation, currentUserId: string) {
   return conversation.participants?.find((p) => p.userId !== currentUserId)?.user;
-}
-
-function lastMessage(conversation: Conversation): DirectMessage | undefined {
-  return conversation.messages?.[0];
 }
 
 export function MessagesPage() {
@@ -36,9 +33,23 @@ export function MessagesPage() {
   const [clients, setClients] = useState<User[]>([]);
   const [newUserId, setNewUserId] = useState("");
   const [open, setOpen] = useState(false);
+  const [recording, setRecording] = useState(false);
+  const [recordSeconds, setRecordSeconds] = useState(0);
   const bottomRef = useRef<HTMLDivElement>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+  const imageInputRef = useRef<HTMLInputElement>(null);
+  const mediaRecorderRef = useRef<MediaRecorder | null>(null);
+  const chunksRef = useRef<Blob[]>([]);
+  const recordStartRef = useRef<number>(0);
+  const recordTimerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const loadList = () => api.messages.list().then((r) => setConversations(r.conversations));
+
+  const reloadActive = async (conversationId: string) => {
+    const { conversation } = await api.messages.get(conversationId);
+    setActive(conversation);
+    loadList();
+  };
 
   useEffect(() => {
     loadList();
@@ -59,14 +70,74 @@ export function MessagesPage() {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [active?.messages]);
 
-  const handleSend = async (e: React.FormEvent) => {
-    e.preventDefault();
+  useEffect(() => {
+    return () => {
+      if (recordTimerRef.current) clearInterval(recordTimerRef.current);
+      mediaRecorderRef.current?.stop();
+    };
+  }, []);
+
+  const handleSend = async (e?: React.FormEvent) => {
+    e?.preventDefault();
     if (!active || !text.trim()) return;
     await api.messages.send(active.id, text.trim());
     setText("");
-    const { conversation } = await api.messages.get(active.id);
-    setActive(conversation);
-    loadList();
+    await reloadActive(active.id);
+  };
+
+  const handleMessageKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
+    if (e.key === "Enter" && !e.metaKey && !e.ctrlKey) {
+      e.preventDefault();
+      void handleSend();
+    }
+  };
+
+  const handleFileUpload = async (file: File, type?: "IMAGE" | "FILE" | "VOICE", duration?: number) => {
+    if (!active) return;
+    await api.messages.sendMedia(active.id, file, { type, duration });
+    await reloadActive(active.id);
+  };
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>, asImage: boolean) => {
+    const file = e.target.files?.[0];
+    if (file) void handleFileUpload(file, asImage ? "IMAGE" : "FILE");
+    e.target.value = "";
+  };
+
+  const startRecording = async () => {
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      const recorder = new MediaRecorder(stream);
+      chunksRef.current = [];
+      recorder.ondataavailable = (e) => {
+        if (e.data.size > 0) chunksRef.current.push(e.data);
+      };
+      recorder.onstop = async () => {
+        stream.getTracks().forEach((t) => t.stop());
+        const duration = Math.round((Date.now() - recordStartRef.current) / 1000);
+        const blob = new Blob(chunksRef.current, { type: recorder.mimeType || "audio/webm" });
+        const file = new File([blob], `voice-${Date.now()}.webm`, { type: blob.type });
+        if (active && duration >= 1) {
+          await handleFileUpload(file, "VOICE", duration);
+        }
+        setRecording(false);
+        setRecordSeconds(0);
+        if (recordTimerRef.current) clearInterval(recordTimerRef.current);
+      };
+      mediaRecorderRef.current = recorder;
+      recordStartRef.current = Date.now();
+      recorder.start();
+      setRecording(true);
+      recordTimerRef.current = setInterval(() => {
+        setRecordSeconds(Math.round((Date.now() - recordStartRef.current) / 1000));
+      }, 500);
+    } catch {
+      alert("Нет доступа к микрофону");
+    }
+  };
+
+  const stopRecording = () => {
+    mediaRecorderRef.current?.stop();
   };
 
   const handleNewChat = async (e: React.FormEvent) => {
@@ -120,7 +191,7 @@ export function MessagesPage() {
         <div className={`space-y-2 lg:col-span-2 ${activeId ? "hidden lg:block" : ""}`}>
           {conversations.map((c) => {
             const other = user ? otherParticipant(c, user.id) : null;
-            const last = lastMessage(c);
+            const last = c.messages?.[0];
             return (
               <Link key={c.id} to={`/messages/${c.id}`} className="block cursor-pointer">
                 <Card className={`transition-all hover:shadow-md ${c.id === activeId ? "border-foreground/30" : ""}`}>
@@ -133,7 +204,11 @@ export function MessagesPage() {
                         {other?.profile?.firstName} {other?.profile?.lastName}
                       </p>
                       {c.project && <p className="text-xs text-muted-foreground">{c.project.name}</p>}
-                      {last && <p className="text-sm text-muted-foreground truncate mt-1">{last.content}</p>}
+                      {last && (
+                        <p className="text-sm text-muted-foreground truncate mt-1">
+                          {messagePreview(last)}
+                        </p>
+                      )}
                     </div>
                   </CardContent>
                 </Card>
@@ -160,27 +235,81 @@ export function MessagesPage() {
               </div>
               <div className="flex-1 overflow-y-auto p-4 space-y-3">
                 {active.messages?.map((m) => (
-                  <div key={m.id} className={`flex ${m.senderId === user?.id ? "justify-end" : "justify-start"}`}>
-                    <div className={`max-w-[85%] rounded-2xl px-4 py-2 text-sm ${m.senderId === user?.id ? "bg-primary text-primary-foreground" : "bg-muted"}`}>
-                      <p>{m.content}</p>
-                      <p className={`text-[10px] mt-1 ${m.senderId === user?.id ? "text-primary-foreground/70" : "text-muted-foreground"}`}>
-                        {formatDateTime(m.createdAt)}
-                      </p>
-                    </div>
-                  </div>
+                  <MessageBubble key={m.id} message={m} isMine={m.senderId === user?.id} />
                 ))}
                 <div ref={bottomRef} />
               </div>
-              <form onSubmit={handleSend} className="border-t border-border p-4 flex gap-2">
-                <Textarea
-                  value={text}
-                  onChange={(e) => setText(e.target.value)}
-                  placeholder="Сообщение..."
-                  className="min-h-[44px] max-h-24 flex-1"
-                  rows={1}
-                />
-                <Button type="submit" size="icon" disabled={!text.trim()}><Send className="h-4 w-4" /></Button>
-              </form>
+
+              {recording ? (
+                <div className="border-t border-border p-4 flex items-center justify-between gap-3 bg-destructive/10">
+                  <div className="flex items-center gap-2 text-sm">
+                    <span className="h-2 w-2 rounded-full bg-destructive animate-pulse" />
+                    Запись {recordSeconds}с
+                  </div>
+                  <Button type="button" variant="destructive" size="sm" onClick={stopRecording}>
+                    <Square className="h-4 w-4" /> Отправить
+                  </Button>
+                </div>
+              ) : (
+                <form onSubmit={handleSend} className="border-t border-border p-4 space-y-2">
+                  <div className="flex gap-2">
+                    <input
+                      ref={imageInputRef}
+                      type="file"
+                      accept="image/*"
+                      className="hidden"
+                      onChange={(e) => handleFileChange(e, true)}
+                    />
+                    <input
+                      ref={fileInputRef}
+                      type="file"
+                      className="hidden"
+                      onChange={(e) => handleFileChange(e, false)}
+                    />
+                    <Button
+                      type="button"
+                      size="icon"
+                      variant="outline"
+                      className="shrink-0"
+                      onClick={() => imageInputRef.current?.click()}
+                      title="Фото"
+                    >
+                      <Image className="h-4 w-4" />
+                    </Button>
+                    <Button
+                      type="button"
+                      size="icon"
+                      variant="outline"
+                      className="shrink-0"
+                      onClick={() => fileInputRef.current?.click()}
+                      title="Файл"
+                    >
+                      <Paperclip className="h-4 w-4" />
+                    </Button>
+                    <Button
+                      type="button"
+                      size="icon"
+                      variant="outline"
+                      className="shrink-0"
+                      onClick={startRecording}
+                      title="Голосовое"
+                    >
+                      <Mic className="h-4 w-4" />
+                    </Button>
+                    <Textarea
+                      value={text}
+                      onChange={(e) => setText(e.target.value)}
+                      onKeyDown={handleMessageKeyDown}
+                      placeholder="Сообщение... (Enter — отправить)"
+                      className="min-h-[44px] max-h-24 flex-1"
+                      rows={1}
+                    />
+                    <Button type="submit" size="icon" disabled={!text.trim()} className="shrink-0">
+                      <Send className="h-4 w-4" />
+                    </Button>
+                  </div>
+                </form>
+              )}
             </>
           ) : (
             <div className="flex-1 flex items-center justify-center text-muted-foreground text-sm">

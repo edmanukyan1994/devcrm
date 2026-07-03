@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Plus } from "lucide-react";
+import { Plus, Trash2 } from "lucide-react";
 import { api } from "@/lib/api";
 import { useAuth } from "@/contexts/AuthContext";
 import { Button } from "@/components/ui/button";
@@ -62,6 +62,12 @@ export function OrdersPage() {
 
   const handleStatusChange = async (orderId: string, status: OrderStatus) => {
     await api.orders.update(orderId, { status });
+    load();
+  };
+
+  const handleDelete = async (order: Order) => {
+    if (!confirm(`Удалить заказ «${order.title}»? Все задачи будут удалены.`)) return;
+    await api.orders.delete(order.id);
     load();
   };
 
@@ -146,20 +152,33 @@ export function OrdersPage() {
                       <span className="text-xs text-muted-foreground">{formatDate(order.deadline)}</span>
                       <span className="text-xs text-muted-foreground">{order._count?.tasks ?? 0} правок</span>
                     </div>
-                    {user?.role === "DEVELOPER" && status !== "COMPLETED" && (
-                      <Select
-                        value={order.status}
-                        onValueChange={(v) => handleStatusChange(order.id, v as OrderStatus)}
-                      >
-                        <SelectTrigger className="h-8 text-xs">
-                          <SelectValue />
-                        </SelectTrigger>
-                        <SelectContent>
-                          {KANBAN_COLUMNS.map((s) => (
-                            <SelectItem key={s} value={s}>{ORDER_STATUS_LABELS[s]}</SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
+                    {user?.role === "DEVELOPER" && (
+                      <div className="flex items-center gap-2">
+                        {status !== "COMPLETED" && (
+                          <Select
+                            value={order.status}
+                            onValueChange={(v) => handleStatusChange(order.id, v as OrderStatus)}
+                          >
+                            <SelectTrigger className="h-8 text-xs flex-1">
+                              <SelectValue />
+                            </SelectTrigger>
+                            <SelectContent>
+                              {KANBAN_COLUMNS.map((s) => (
+                                <SelectItem key={s} value={s}>{ORDER_STATUS_LABELS[s]}</SelectItem>
+                              ))}
+                            </SelectContent>
+                          </Select>
+                        )}
+                        <Button
+                          size="icon"
+                          variant="ghost"
+                          className="h-8 w-8 shrink-0 text-destructive hover:text-destructive"
+                          onClick={() => handleDelete(order)}
+                          title="Удалить заказ"
+                        >
+                          <Trash2 className="h-4 w-4" />
+                        </Button>
+                      </div>
                     )}
                   </CardContent>
                 </Card>

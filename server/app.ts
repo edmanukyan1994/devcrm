@@ -11,6 +11,9 @@ import timelineRoutes from "./routes/timeline";
 import messagesRoutes from "./routes/messages";
 import notificationsRoutes from "./routes/notifications";
 import telegramRoutes from "./routes/telegram";
+import financeRoutes from "./routes/finance";
+import searchRoutes from "./routes/search";
+import { uploadsDir } from "./lib/upload";
 
 const app = express();
 
@@ -22,7 +25,7 @@ app.use(
 );
 app.use(express.json());
 
-app.use("/uploads", express.static(path.join(process.cwd(), "uploads")));
+app.use("/uploads", express.static(uploadsDir));
 
 app.get("/api/health", (_req, res) => {
   res.json({ status: "ok", timestamp: new Date().toISOString() });
@@ -38,6 +41,8 @@ app.use("/api/timeline", timelineRoutes);
 app.use("/api/messages", messagesRoutes);
 app.use("/api/notifications", notificationsRoutes);
 app.use("/api/telegram", telegramRoutes);
+app.use("/api/finance", financeRoutes);
+app.use("/api/search", searchRoutes);
 
 if (process.env.NODE_ENV === "production") {
   const clientDist = path.join(__dirname, "../../client/dist");

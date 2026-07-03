@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { Role } from "@prisma/client";
+import { MessageType, Role } from "@prisma/client";
 import { prisma } from "../lib/prisma";
 import { authMiddleware } from "../middleware/auth";
 import { paramId } from "../lib/params";
@@ -8,10 +8,22 @@ import {
   notifyNewMessage,
   getSenderName,
 } from "../lib/messages";
+import { chatUpload, deleteUploadFile, toPublicPath } from "../lib/upload";
 
 const router = Router();
 
 router.use(authMiddleware);
+
+const messageInclude = {
+  sender: {
+    select: {
+      id: true,
+      role: true,
+      profile: { select: { firstName: true, lastName: true, avatar: true } },
+    },
+  },
+  attachments: true,
+};
 
 const conversationInclude = {
   participants: {
@@ -29,14 +41,7 @@ const conversationInclude = {
   messages: {
     orderBy: { createdAt: "desc" as const },
     take: 1,
-    include: {
-      sender: {
-        select: {
-          id: true,
-          profile: { select: { firstName: true, lastName: true } },
-        },
-      },
-    },
+    include: messageInclude,
   },
 };
 
@@ -45,6 +50,19 @@ async function userInConversation(conversationId: string, userId: string) {
     where: { conversationId_userId: { conversationId, userId } },
   });
   return !!p;
+}
+
+function messagePreview(type: MessageType, content: string) {
+  if (type === MessageType.VOICE) return "🎤 Голосовое сообщение";
+  if (type === MessageType.IMAGE) return content || "📷 Фото";
+  if (type === MessageType.FILE) return content || "📎 Файл";
+  return content;
+}
+
+function detectMessageType(mimeType: string): MessageType {
+  if (mimeType.startsWith("audio/")) return MessageType.VOICE;
+  if (mimeType.startsWith("image/")) return MessageType.IMAGE;
+  return MessageType.FILE;
 }
 
 router.get("/", async (req, res) => {
@@ -116,15 +134,7 @@ router.get("/:id", async (req, res) => {
         ...conversationInclude,
         messages: {
           orderBy: { createdAt: "asc" },
-          include: {
-            sender: {
-              select: {
-                id: true,
-                role: true,
-                profile: { select: { firstName: true, lastName: true, avatar: true } },
-              },
-            },
-          },
+          include: messageInclude,
         },
       },
     });
@@ -161,17 +171,10 @@ router.post("/:id/messages", async (req, res) => {
       data: {
         conversationId: id,
         senderId: req.user!.id,
+        type: MessageType.TEXT,
         content: content.trim(),
       },
-      include: {
-        sender: {
-          select: {
-            id: true,
-            role: true,
-            profile: { select: { firstName: true, lastName: true, avatar: true } },
-          },
-        },
-      },
+      include: messageInclude,
     });
 
     await prisma.conversation.update({
@@ -186,6 +189,66 @@ router.post("/:id/messages", async (req, res) => {
   } catch (error) {
     console.error("Message send error:", error);
     res.status(500).json({ error: "Failed to send message" });
+  }
+});
+
+router.post("/:id/messages/media", chatUpload.single("file"), async (req, res) => {
+  try {
+    const id = paramId(req.params.id);
+    const allowed = await userInConversation(id, req.user!.id);
+    if (!allowed) {
+      if (req.file) deleteUploadFile(toPublicPath(req.file.filename));
+      res.status(404).json({ error: "Conversation not found" });
+      return;
+    }
+
+    if (!req.file) {
+      res.status(400).json({ error: "file is required" });
+      return;
+    }
+
+    const content = typeof req.body.content === "string" ? req.body.content.trim() : "";
+    const duration = req.body.duration ? parseInt(req.body.duration, 10) : undefined;
+    const typeParam = req.body.type as MessageType | undefined;
+    const type =
+      typeParam && Object.values(MessageType).includes(typeParam)
+        ? typeParam
+        : detectMessageType(req.file.mimetype);
+
+    const message = await prisma.directMessage.create({
+      data: {
+        conversationId: id,
+        senderId: req.user!.id,
+        type,
+        content,
+        attachments: {
+          create: {
+            filename: req.file.filename,
+            originalName: req.file.originalname,
+            mimeType: req.file.mimetype,
+            size: req.file.size,
+            path: toPublicPath(req.file.filename),
+            duration: duration && !Number.isNaN(duration) ? duration : null,
+          },
+        },
+      },
+      include: messageInclude,
+    });
+
+    await prisma.conversation.update({
+      where: { id },
+      data: { updatedAt: new Date() },
+    });
+
+    const senderName = await getSenderName(req.user!.id);
+    const preview = messagePreview(type, content);
+    await notifyNewMessage(id, req.user!.id, preview, senderName);
+
+    res.status(201).json({ message });
+  } catch (error) {
+    console.error("Media message error:", error);
+    if (req.file) deleteUploadFile(toPublicPath(req.file.filename));
+    res.status(500).json({ error: "Failed to send media" });
   }
 });
 

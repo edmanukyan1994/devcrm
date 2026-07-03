@@ -39,7 +39,7 @@ export function TaskDetailPage() {
     if (!id || !comment.trim()) return;
     setSending(true);
     try {
-      await api.comments.create(id, comment.trim());
+      await api.comments.create({ taskId: id, content: comment.trim() });
       setComment("");
       load();
     } finally {

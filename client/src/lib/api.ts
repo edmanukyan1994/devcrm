@@ -70,6 +70,11 @@ export const api = {
       request<{ users: import("@/types").User[] }>(
         `/auth/users${role ? `?role=${role}` : ""}`
       ),
+    updateRole: (id: string, role: "CLIENT" | "DEVELOPER") =>
+      request<{ user: import("@/types").User }>(`/auth/users/${id}/role`, {
+        method: "PATCH",
+        body: JSON.stringify({ role }),
+      }),
   },
   projects: {
     list: () => request<{ projects: import("@/types").Project[] }>("/projects"),
@@ -79,12 +84,22 @@ export const api = {
         method: "POST",
         body: JSON.stringify(data),
       }),
-    update: (id: string, data: Partial<{ name: string; description: string; clientId: string }>) =>
+    update: (id: string, data: Partial<{ name: string; description: string; clientId: string; budget: number | null; status: string; deadline: string | null }>) =>
       request<{ project: import("@/types").Project }>(`/projects/${id}`, {
         method: "PATCH",
         body: JSON.stringify(data),
       }),
     delete: (id: string) => request<{ success: boolean }>(`/projects/${id}`, { method: "DELETE" }),
+    uploadCover: (id: string, file: File) => {
+      const form = new FormData();
+      form.append("file", file);
+      return request<{ project: import("@/types").Project }>(`/projects/${id}/cover`, {
+        method: "POST",
+        body: form,
+      });
+    },
+    removeCover: (id: string) =>
+      request<{ project: import("@/types").Project }>(`/projects/${id}/cover`, { method: "DELETE" }),
   },
   orders: {
     list: (projectId?: string) =>
@@ -109,7 +124,13 @@ export const api = {
       }),
     update: (
       id: string,
-      data: Partial<{ title: string; description: string; status: string; deadline: string | null }>
+      data: Partial<{
+        title: string;
+        description: string;
+        status: string;
+        deadline: string | null;
+        budget: number | null;
+      }>
     ) =>
       request<{ order: import("@/types").Order }>(`/orders/${id}`, {
         method: "PATCH",
@@ -152,19 +173,45 @@ export const api = {
   comments: {
     list: (taskId: string) =>
       request<{ comments: import("@/types").Comment[] }>(`/comments/task/${taskId}`),
-    create: (taskId: string, content: string) =>
+    listProject: (projectId: string) =>
+      request<{ comments: import("@/types").Comment[] }>(`/comments/project/${projectId}`),
+    listOrder: (orderId: string) =>
+      request<{ comments: import("@/types").Comment[] }>(`/comments/order/${orderId}`),
+    create: (data: { taskId?: string; orderId?: string; projectId?: string; content: string }) =>
       request<{ comment: import("@/types").Comment }>("/comments", {
         method: "POST",
-        body: JSON.stringify({ taskId, content }),
+        body: JSON.stringify(data),
       }),
     delete: (id: string) => request<{ success: boolean }>(`/comments/${id}`, { method: "DELETE" }),
   },
   attachments: {
     list: (taskId: string) =>
       request<{ attachments: import("@/types").Attachment[] }>(`/attachments/task/${taskId}`),
+    listProject: (projectId: string) =>
+      request<{ attachments: import("@/types").Attachment[] }>(`/attachments/project/${projectId}`),
+    listOrder: (orderId: string) =>
+      request<{ attachments: import("@/types").Attachment[] }>(`/attachments/order/${orderId}`),
     upload: (taskId: string, file: File) => {
       const form = new FormData();
       form.append("taskId", taskId);
+      form.append("file", file);
+      return request<{ attachment: import("@/types").Attachment }>("/attachments", {
+        method: "POST",
+        body: form,
+      });
+    },
+    uploadProject: (projectId: string, file: File) => {
+      const form = new FormData();
+      form.append("projectId", projectId);
+      form.append("file", file);
+      return request<{ attachment: import("@/types").Attachment }>("/attachments", {
+        method: "POST",
+        body: form,
+      });
+    },
+    uploadOrder: (orderId: string, file: File) => {
+      const form = new FormData();
+      form.append("orderId", orderId);
       form.append("file", file);
       return request<{ attachment: import("@/types").Attachment }>("/attachments", {
         method: "POST",
@@ -200,7 +247,73 @@ export const api = {
         method: "POST",
         body: JSON.stringify({ content }),
       }),
+    sendMedia: (
+      conversationId: string,
+      file: File,
+      options?: { content?: string; type?: import("@/types").MessageType; duration?: number }
+    ) => {
+      const form = new FormData();
+      form.append("file", file);
+      if (options?.content) form.append("content", options.content);
+      if (options?.type) form.append("type", options.type);
+      if (options?.duration != null) form.append("duration", String(options.duration));
+      return request<{ message: import("@/types").DirectMessage }>(
+        `/messages/${conversationId}/messages/media`,
+        { method: "POST", body: form }
+      );
+    },
   },
+  finance: {
+    summary: () => request<{ summary: import("@/types").FinanceSummary }>("/finance/summary"),
+    project: (projectId: string) =>
+      request<{
+        finance: {
+          projectId: string;
+          budget: number;
+          paid: number;
+          remaining: number;
+          projectPayments: import("@/types").Payment[];
+          orders: Array<{
+            id: string;
+            title: string;
+            budget: number;
+            paid: number;
+            remaining: number;
+            payments: import("@/types").Payment[];
+          }>;
+        };
+      }>(`/finance/project/${projectId}`),
+    order: (orderId: string) =>
+      request<{
+        finance: {
+          orderId: string;
+          budget: number;
+          paid: number;
+          remaining: number;
+          payments: import("@/types").Payment[];
+        };
+      }>(`/finance/order/${orderId}`),
+    addPayment: (data: {
+      orderId?: string;
+      projectId?: string;
+      amount: number;
+      note?: string;
+      paidAt?: string;
+    }) =>
+      request<{ payment: import("@/types").Payment }>("/finance", {
+        method: "POST",
+        body: JSON.stringify(data),
+      }),
+    deletePayment: (id: string) =>
+      request<{ success: boolean }>(`/finance/${id}`, { method: "DELETE" }),
+  },
+  search: (q: string) =>
+    request<{
+      projects: import("@/types").Project[];
+      orders: import("@/types").Order[];
+      tasks: import("@/types").Task[];
+      query: string;
+    }>(`/search?q=${encodeURIComponent(q)}`),
   notifications: {
     list: () =>
       request<{ notifications: import("@/types").AppNotification[]; unreadCount: number }>(

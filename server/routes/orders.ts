@@ -116,6 +116,26 @@ router.get("/:id", async (req, res) => {
             _count: { select: { comments: true, attachments: true } },
           },
         },
+        comments: {
+          orderBy: { createdAt: "asc" },
+          include: {
+            user: {
+              select: {
+                id: true,
+                role: true,
+                profile: { select: { firstName: true, lastName: true, avatar: true } },
+              },
+            },
+          },
+        },
+        attachments: {
+          orderBy: { createdAt: "desc" },
+          include: {
+            uploadedBy: {
+              select: { profile: { select: { firstName: true, lastName: true } } },
+            },
+          },
+        },
       },
     });
 
@@ -138,7 +158,7 @@ router.get("/:id", async (req, res) => {
 
 router.post("/", requireRole(Role.DEVELOPER), async (req, res) => {
   try {
-    const { projectId, title, description, status, deadline } = req.body;
+    const { projectId, title, description, status, deadline, budget } = req.body;
 
     if (!projectId || !title) {
       res.status(400).json({ error: "projectId and title are required" });
@@ -157,6 +177,7 @@ router.post("/", requireRole(Role.DEVELOPER), async (req, res) => {
         description,
         status: status || OrderStatus.NEW,
         deadline: deadline ? new Date(deadline) : null,
+        budget: budget != null && budget !== "" ? budget : null,
         position: (maxPosition._max.position ?? -1) + 1,
       },
       include: {
@@ -180,7 +201,7 @@ router.patch("/:id", async (req, res) => {
     }
 
     const isDeveloper = req.user!.role === Role.DEVELOPER;
-    const { title, description, status, deadline, position } = req.body;
+    const { title, description, status, deadline, position, budget } = req.body;
 
     if (!isDeveloper && (title !== undefined || description !== undefined)) {
       res.status(403).json({ error: "Clients can only update status" });
@@ -195,6 +216,7 @@ router.patch("/:id", async (req, res) => {
         ...(status !== undefined && { status }),
         ...(deadline !== undefined && isDeveloper && { deadline: deadline ? new Date(deadline) : null }),
         ...(position !== undefined && isDeveloper && { position }),
+        ...(budget !== undefined && isDeveloper && { budget: budget === null || budget === "" ? null : budget }),
       },
       include: {
         project: { select: { id: true, name: true } },

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { isStaff } from "@/lib/roles";
 import { Link } from "react-router-dom";
 import { Plus, Trash2 } from "lucide-react";
 import { api } from "@/lib/api";
@@ -90,7 +91,7 @@ export function OrdersPage() {
               ))}
             </SelectContent>
           </Select>
-          {user?.role === "DEVELOPER" && (
+          {isStaff(user?.role) && (
             <Dialog open={open} onOpenChange={setOpen}>
               <DialogTrigger asChild>
                 <Button><Plus className="h-4 w-4" /> Заказ</Button>
@@ -152,7 +153,7 @@ export function OrdersPage() {
                       <span className="text-xs text-muted-foreground">{formatDate(order.deadline)}</span>
                       <span className="text-xs text-muted-foreground">{order._count?.tasks ?? 0} правок</span>
                     </div>
-                    {user?.role === "DEVELOPER" && (
+                    {isStaff(user?.role) && (
                       <div className="flex items-center gap-2">
                         {status !== "COMPLETED" && (
                           <Select

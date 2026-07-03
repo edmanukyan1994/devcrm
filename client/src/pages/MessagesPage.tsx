@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { isStaff } from "@/lib/roles";
 import { Link, useParams } from "react-router-dom";
 import { Image, Mic, Paperclip, Plus, Send, Square } from "lucide-react";
 import { api } from "@/lib/api";
@@ -53,7 +54,7 @@ export function MessagesPage() {
 
   useEffect(() => {
     loadList();
-    if (user?.role === "DEVELOPER") {
+    if (isStaff(user?.role)) {
       api.auth.users("CLIENT").then((r) => setClients(r.users));
     }
   }, [user]);
@@ -159,7 +160,7 @@ export function MessagesPage() {
           <p className="page-subtitle">Коммуникация</p>
           <h1 className="page-title">Сообщения</h1>
         </div>
-        {user?.role === "DEVELOPER" && (
+        {isStaff(user?.role) && (
           <Dialog open={open} onOpenChange={setOpen}>
             <DialogTrigger asChild>
               <Button size="sm"><Plus className="h-4 w-4" /> Новый чат</Button>

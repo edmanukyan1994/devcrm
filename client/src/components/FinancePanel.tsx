@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { isStaff } from "@/lib/roles";
 import { Plus, Trash2 } from "lucide-react";
 import { api } from "@/lib/api";
 import { useAuth } from "@/contexts/AuthContext";
@@ -106,7 +107,7 @@ export function FinancePanel({
           </div>
         </div>
 
-        {editableBudget && user?.role === "DEVELOPER" && onBudgetChange && (
+        {editableBudget && isStaff(user?.role) && onBudgetChange && (
           <div className="flex gap-2 items-end">
             <div className="flex-1 space-y-1">
               <Label className="text-xs">Бюджет</Label>
@@ -125,7 +126,7 @@ export function FinancePanel({
           </div>
         )}
 
-        {user?.role === "DEVELOPER" && (
+        {isStaff(user?.role) && (
           <form onSubmit={handleAddPayment} className="space-y-2 border-t border-border pt-4">
             <p className="text-sm font-medium">Добавить платёж</p>
             <div className="grid grid-cols-2 gap-2">
@@ -161,7 +162,7 @@ export function FinancePanel({
                         {p.note ? ` · ${p.note}` : ""}
                       </p>
                     </div>
-                    {user?.role === "DEVELOPER" && (
+                    {isStaff(user?.role) && (
                       <Button
                         size="icon"
                         variant="ghost"

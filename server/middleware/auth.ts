@@ -1,6 +1,7 @@
 import { Request, Response, NextFunction } from "express";
 import jwt from "jsonwebtoken";
 import { Role } from "@prisma/client";
+import { isStaff } from "../lib/permissions";
 
 const JWT_SECRET = process.env.JWT_SECRET || "dev-secret";
 
@@ -41,8 +42,22 @@ export function requireRole(...roles: Role[]) {
   };
 }
 
+export function requireStaff() {
+  return (req: Request, res: Response, next: NextFunction) => {
+    if (!req.user || !isStaff(req.user.role)) {
+      res.status(403).json({ error: "Forbidden" });
+      return;
+    }
+    next();
+  };
+}
+
+export function requireOwner() {
+  return requireRole(Role.OWNER);
+}
+
 export async function canAccessProject(userId: string, role: Role, projectClientId: string): Promise<boolean> {
-  if (role === Role.DEVELOPER) return true;
+  if (isStaff(role)) return true;
   return userId === projectClientId;
 }
 
@@ -51,6 +66,6 @@ export async function canAccessOrder(
   role: Role,
   projectClientId: string
 ): Promise<boolean> {
-  if (role === Role.DEVELOPER) return true;
+  if (isStaff(role)) return true;
   return userId === projectClientId;
 }

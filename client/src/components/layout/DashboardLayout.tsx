@@ -22,6 +22,7 @@ import { useTheme } from "@/contexts/ThemeContext";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { getInitials, cn } from "@/lib/utils";
+import { isOwner, roleLabel } from "@/lib/roles";
 
 const mainNavItems = [
   { to: "/", icon: LayoutDashboard, label: "Обзор" },
@@ -102,18 +103,18 @@ export function DashboardLayout() {
   const isActive = (to: string) =>
     location.pathname === to || (to !== "/" && location.pathname.startsWith(to));
 
-  const isExtraActive = [...extraNavItems, ...(user?.role === "DEVELOPER" ? developerNavItems : [])].some(
+  const isExtraActive = [...extraNavItems, ...(isOwner(user?.role) ? developerNavItems : [])].some(
     (item) => isActive(item.to)
   );
 
   const sidebarItems = [
     ...allNavItems,
-    ...(user?.role === "DEVELOPER" ? developerNavItems : []),
+    ...(isOwner(user?.role) ? developerNavItems : []),
   ];
 
   const mobileMoreItems = [
     ...extraNavItems,
-    ...(user?.role === "DEVELOPER" ? developerNavItems : []),
+    ...(isOwner(user?.role) ? developerNavItems : []),
   ];
 
   return (
@@ -152,7 +153,7 @@ export function DashboardLayout() {
                   {user?.profile?.firstName} {user?.profile?.lastName}
                 </p>
                 <p className="truncate text-xs text-muted-foreground">
-                  {user?.role === "DEVELOPER" ? "Разработчик" : "Заказчик"} · Настройки
+                  {roleLabel(user?.role)} · Настройки
                 </p>
               </div>
             </button>

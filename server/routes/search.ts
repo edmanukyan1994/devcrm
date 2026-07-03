@@ -1,7 +1,7 @@
 import { Router } from "express";
-import { Role } from "@prisma/client";
 import { prisma } from "../lib/prisma";
 import { authMiddleware } from "../middleware/auth";
+import { isStaff } from "../lib/permissions";
 
 const router = Router();
 
@@ -15,8 +15,8 @@ router.get("/", async (req, res) => {
       return;
     }
 
-    const isDeveloper = req.user!.role === Role.DEVELOPER;
-    const projectWhere = isDeveloper
+    const isStaffUser = isStaff(req.user!.role);
+    const projectWhere = isStaffUser
       ? {
           OR: [
             { name: { contains: q, mode: "insensitive" as const } },
@@ -38,7 +38,7 @@ router.get("/", async (req, res) => {
       orderBy: { updatedAt: "desc" },
     });
 
-    const orderWhere = isDeveloper
+    const orderWhere = isStaffUser
       ? {
           OR: [
             { title: { contains: q, mode: "insensitive" as const } },
@@ -65,7 +65,7 @@ router.get("/", async (req, res) => {
       orderBy: { updatedAt: "desc" },
     });
 
-    const taskWhere = isDeveloper
+    const taskWhere = isStaffUser
       ? {
           OR: [
             { title: { contains: q, mode: "insensitive" as const } },

@@ -1,7 +1,8 @@
 import { Router } from "express";
 import { Role } from "@prisma/client";
 import { prisma } from "../lib/prisma";
-import { authMiddleware, requireRole } from "../middleware/auth";
+import { authMiddleware, requireStaff } from "../middleware/auth";
+import { isStaff } from "../lib/permissions";
 import { paramId } from "../lib/params";
 import { createProjectConversation } from "../lib/messages";
 import { notifyUser } from "../lib/notifications";
@@ -14,7 +15,7 @@ router.use(authMiddleware);
 router.get("/", async (req, res) => {
   try {
     const where =
-      req.user!.role === Role.DEVELOPER ? {} : { clientId: req.user!.id };
+      req.user!.role && isStaff(req.user!.role) ? {} : { clientId: req.user!.id };
 
     const projects = await prisma.project.findMany({
       where,
@@ -95,7 +96,7 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-router.post("/", requireRole(Role.DEVELOPER), async (req, res) => {
+router.post("/", requireStaff(), async (req, res) => {
   try {
     const { name, description, clientId } = req.body;
 
@@ -142,7 +143,7 @@ router.post("/", requireRole(Role.DEVELOPER), async (req, res) => {
   }
 });
 
-router.patch("/:id", requireRole(Role.DEVELOPER), async (req, res) => {
+router.patch("/:id", requireStaff(), async (req, res) => {
   try {
     const { name, description, clientId, coverImage, budget, status, deadline } = req.body;
 
@@ -175,7 +176,7 @@ router.patch("/:id", requireRole(Role.DEVELOPER), async (req, res) => {
   }
 });
 
-router.post("/:id/cover", requireRole(Role.DEVELOPER), imageUpload.single("file"), async (req, res) => {
+router.post("/:id/cover", requireStaff(), imageUpload.single("file"), async (req, res) => {
   try {
     const id = paramId(req.params.id);
     if (!req.file) {
@@ -216,7 +217,7 @@ router.post("/:id/cover", requireRole(Role.DEVELOPER), imageUpload.single("file"
   }
 });
 
-router.delete("/:id/cover", requireRole(Role.DEVELOPER), async (req, res) => {
+router.delete("/:id/cover", requireStaff(), async (req, res) => {
   try {
     const id = paramId(req.params.id);
     const existing = await prisma.project.findUnique({ where: { id } });
@@ -248,7 +249,7 @@ router.delete("/:id/cover", requireRole(Role.DEVELOPER), async (req, res) => {
   }
 });
 
-router.delete("/:id", requireRole(Role.DEVELOPER), async (req, res) => {
+router.delete("/:id", requireStaff(), async (req, res) => {
   try {
     const id = paramId(req.params.id);
     const existing = await prisma.project.findUnique({ where: { id } });

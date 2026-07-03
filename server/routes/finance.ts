@@ -1,7 +1,8 @@
 import { Router } from "express";
 import { Role } from "@prisma/client";
 import { prisma } from "../lib/prisma";
-import { authMiddleware, requireRole } from "../middleware/auth";
+import { authMiddleware, requireStaff } from "../middleware/auth";
+import { isStaff } from "../lib/permissions";
 import { paramId } from "../lib/params";
 
 const router = Router();
@@ -10,8 +11,8 @@ router.use(authMiddleware);
 
 router.get("/summary", async (req, res) => {
   try {
-    const isDeveloper = req.user!.role === Role.DEVELOPER;
-    const projectWhere = isDeveloper ? {} : { clientId: req.user!.id };
+    const isStaffUser = isStaff(req.user!.role);
+    const projectWhere = isStaffUser ? {} : { clientId: req.user!.id };
 
     const projects = await prisma.project.findMany({
       where: projectWhere,
@@ -166,7 +167,7 @@ router.get("/order/:orderId", async (req, res) => {
   }
 });
 
-router.post("/", requireRole(Role.DEVELOPER), async (req, res) => {
+router.post("/", requireStaff(), async (req, res) => {
   try {
     const { orderId, projectId, amount, note, paidAt } = req.body;
 
@@ -192,7 +193,7 @@ router.post("/", requireRole(Role.DEVELOPER), async (req, res) => {
   }
 });
 
-router.delete("/:id", requireRole(Role.DEVELOPER), async (req, res) => {
+router.delete("/:id", requireStaff(), async (req, res) => {
   try {
     await prisma.payment.delete({ where: { id: paramId(req.params.id) } });
     res.json({ success: true });

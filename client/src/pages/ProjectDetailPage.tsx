@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { isStaff } from "@/lib/roles";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { ImagePlus, MessageSquare, Pencil, Trash2 } from "lucide-react";
 import { api } from "@/lib/api";
@@ -40,7 +41,7 @@ export function ProjectDetailPage() {
 
   useEffect(() => {
     load();
-    if (user?.role === "DEVELOPER") {
+    if (isStaff(user?.role)) {
       api.auth.users("CLIENT").then((r) => setClients(r.users));
     }
   }, [id, user]);
@@ -93,7 +94,7 @@ export function ProjectDetailPage() {
     <div className="page-section">
       <div className="relative overflow-hidden rounded-2xl border border-border">
         <ProjectCover name={project.name} coverImage={project.coverImage} className="h-48 sm:h-64 rounded-none" />
-        {user?.role === "DEVELOPER" && (
+        {isStaff(user?.role) && (
           <div className="absolute top-3 right-3 flex flex-wrap gap-2 justify-end max-w-[70%]">
             <input
               ref={coverInputRef}
@@ -172,7 +173,7 @@ export function ProjectDetailPage() {
         <FinancePanel
           projectId={project.id}
           budget={project.budget}
-          editableBudget={user?.role === "DEVELOPER"}
+          editableBudget={isStaff(user?.role)}
           onBudgetChange={handleBudgetChange}
         />
       </div>

@@ -1,4 +1,5 @@
 import { Role } from "@prisma/client";
+import { isStaff, STAFF_ROLES } from "./permissions";
 import { prisma } from "./prisma";
 import { notifyUser } from "./notifications";
 
@@ -80,7 +81,7 @@ export async function notifyNewMessage(
 
 export async function getDevelopers() {
   return prisma.user.findMany({
-    where: { role: Role.DEVELOPER },
+    where: { role: { in: STAFF_ROLES } },
     select: userBrief,
   });
 }

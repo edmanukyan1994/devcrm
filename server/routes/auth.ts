@@ -2,28 +2,13 @@ import { Router } from "express";
 import bcrypt from "bcryptjs";
 import { Role } from "@prisma/client";
 import { prisma } from "../lib/prisma";
-import { authMiddleware, requireRole, signToken } from "../middleware/auth";
+import { authMiddleware, requireStaff, requireOwner, signToken } from "../middleware/auth";
 import { paramId } from "../lib/params";
 import { resolveRegistrationRoleAsync, isValidDeveloperInvite } from "../lib/roles";
+import { isStaff } from "../lib/permissions";
+import { ensureOwnerByEmail, userSelect } from "../lib/owner";
 
 const router = Router();
-
-const userSelect = {
-  id: true,
-  email: true,
-  role: true,
-  createdAt: true,
-  profile: {
-    select: {
-      id: true,
-      firstName: true,
-      lastName: true,
-      company: true,
-      phone: true,
-      avatar: true,
-    },
-  },
-};
 
 router.post("/register", async (req, res) => {
   try {
@@ -40,11 +25,13 @@ router.post("/register", async (req, res) => {
       return;
     }
 
-    const developerCount = await prisma.user.count({ where: { role: Role.DEVELOPER } });
+    const staffCount = await prisma.user.count({
+      where: { role: { in: [Role.OWNER, Role.DEVELOPER] } },
+    });
 
     let userRole: Role;
     try {
-      userRole = await resolveRegistrationRoleAsync(role, inviteCode, developerCount);
+      userRole = await resolveRegistrationRoleAsync(role, inviteCode, staffCount);
     } catch {
       res.status(403).json({ error: "Invalid developer invite code" });
       return;
@@ -52,7 +39,7 @@ router.post("/register", async (req, res) => {
 
     const hashedPassword = await bcrypt.hash(password, 12);
 
-    const user = await prisma.user.create({
+    let user = await prisma.user.create({
       data: {
         email,
         password: hashedPassword,
@@ -69,6 +56,8 @@ router.post("/register", async (req, res) => {
       select: userSelect,
     });
 
+    user = (await ensureOwnerByEmail(user.id, user.email)) ?? user;
+
     const token = signToken({ id: user.id, email: user.email, role: user.role });
     res.status(201).json({ user, token });
   } catch (error) {
@@ -79,21 +68,23 @@ router.post("/register", async (req, res) => {
 
 router.post("/become-developer", authMiddleware, async (req, res) => {
   try {
-    const { inviteCode } = req.body;
-    const developerCount = await prisma.user.count({ where: { role: Role.DEVELOPER } });
-
-    const canPromote =
-      isValidDeveloperInvite(inviteCode) ||
-      (developerCount === 0 && req.user!.role === Role.CLIENT);
-
-    if (!canPromote) {
-      res.status(403).json({ error: "Invalid developer invite code" });
+    if (isStaff(req.user!.role)) {
+      const user = await prisma.user.findUnique({ where: { id: req.user!.id }, select: userSelect });
+      res.json({ user, token: signToken({ id: user!.id, email: user!.email, role: user!.role }) });
       return;
     }
 
-    if (req.user!.role === Role.DEVELOPER) {
-      const user = await prisma.user.findUnique({ where: { id: req.user!.id }, select: userSelect });
-      res.json({ user, token: signToken({ id: user!.id, email: user!.email, role: user!.role }) });
+    const { inviteCode } = req.body;
+    const staffCount = await prisma.user.count({
+      where: { role: { in: [Role.OWNER, Role.DEVELOPER] } },
+    });
+
+    const canPromote =
+      isValidDeveloperInvite(inviteCode) ||
+      (staffCount === 0 && req.user!.role === Role.CLIENT);
+
+    if (!canPromote) {
+      res.status(403).json({ error: "Invalid developer invite code" });
       return;
     }
 
@@ -120,25 +111,34 @@ router.post("/login", async (req, res) => {
       return;
     }
 
-    const user = await prisma.user.findUnique({
+    const found = await prisma.user.findUnique({
       where: { email },
       include: { profile: true },
     });
 
-    if (!user) {
+    if (!found) {
       res.status(401).json({ error: "Invalid credentials" });
       return;
     }
 
-    const valid = await bcrypt.compare(password, user.password);
+    const valid = await bcrypt.compare(password, found.password);
     if (!valid) {
       res.status(401).json({ error: "Invalid credentials" });
       return;
     }
 
-    const { password: _, ...safeUser } = user;
+    const updated = await ensureOwnerByEmail(found.id, found.email);
+    const user =
+      updated ??
+      ({
+        id: found.id,
+        email: found.email,
+        role: found.role,
+        createdAt: found.createdAt,
+        profile: found.profile,
+      });
     const token = signToken({ id: user.id, email: user.email, role: user.role });
-    res.json({ user: safeUser, token });
+    res.json({ user, token });
   } catch (error) {
     console.error("Login error:", error);
     res.status(500).json({ error: "Login failed" });
@@ -147,13 +147,20 @@ router.post("/login", async (req, res) => {
 
 router.get("/me", authMiddleware, async (req, res) => {
   try {
-    const user = await prisma.user.findUnique({
+    const found = await prisma.user.findUnique({
       where: { id: req.user!.id },
       select: userSelect,
     });
 
-    if (!user) {
+    if (!found) {
       res.status(404).json({ error: "User not found" });
+      return;
+    }
+
+    const user = (await ensureOwnerByEmail(found.id, found.email)) ?? found;
+    if (user.role !== req.user!.role) {
+      const token = signToken({ id: user.id, email: user.email, role: user.role });
+      res.json({ user, token });
       return;
     }
 
@@ -164,7 +171,7 @@ router.get("/me", authMiddleware, async (req, res) => {
   }
 });
 
-router.get("/users", authMiddleware, requireRole(Role.DEVELOPER), async (req, res) => {
+router.get("/users", authMiddleware, requireOwner(), async (req, res) => {
   try {
     const { role } = req.query;
     const where =
@@ -172,7 +179,9 @@ router.get("/users", authMiddleware, requireRole(Role.DEVELOPER), async (req, re
         ? { role: Role.CLIENT }
         : role === "DEVELOPER"
           ? { role: Role.DEVELOPER }
-          : {};
+          : role === "OWNER"
+            ? { role: Role.OWNER }
+            : {};
 
     const users = await prisma.user.findMany({
       where,
@@ -187,13 +196,8 @@ router.get("/users", authMiddleware, requireRole(Role.DEVELOPER), async (req, re
   }
 });
 
-router.get("/clients", authMiddleware, async (req, res) => {
+router.get("/clients", authMiddleware, requireStaff(), async (req, res) => {
   try {
-    if (req.user!.role !== Role.DEVELOPER) {
-      res.status(403).json({ error: "Forbidden" });
-      return;
-    }
-
     const clients = await prisma.user.findMany({
       where: { role: Role.CLIENT },
       select: userSelect,
@@ -207,16 +211,22 @@ router.get("/clients", authMiddleware, async (req, res) => {
   }
 });
 
-router.patch("/users/:id/role", authMiddleware, requireRole(Role.DEVELOPER), async (req, res) => {
+router.patch("/users/:id/role", authMiddleware, requireOwner(), async (req, res) => {
   try {
     const { role } = req.body;
-    if (role !== "DEVELOPER" && role !== "CLIENT") {
+    if (role !== "OWNER" && role !== "DEVELOPER" && role !== "CLIENT") {
       res.status(400).json({ error: "Invalid role" });
       return;
     }
 
+    const targetId = paramId(req.params.id);
+    if (targetId === req.user!.id && role !== Role.OWNER) {
+      res.status(400).json({ error: "Cannot change your own role" });
+      return;
+    }
+
     const user = await prisma.user.update({
-      where: { id: paramId(req.params.id) },
+      where: { id: targetId },
       data: { role: role as Role },
       select: userSelect,
     });
@@ -228,7 +238,7 @@ router.patch("/users/:id/role", authMiddleware, requireRole(Role.DEVELOPER), asy
   }
 });
 
-router.delete("/users/:id", authMiddleware, requireRole(Role.DEVELOPER), async (req, res) => {
+router.delete("/users/:id", authMiddleware, requireOwner(), async (req, res) => {
   try {
     const id = paramId(req.params.id);
     if (id === req.user!.id) {

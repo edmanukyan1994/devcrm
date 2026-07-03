@@ -7,6 +7,7 @@ import {
   Minus,
   Wallet,
 } from "lucide-react";
+import { isStaff } from "@/lib/roles";
 import { useAuth } from "@/contexts/AuthContext";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
@@ -34,7 +35,7 @@ function CellIcon({ value }: { value: Cell }) {
 
 export function HelpPage() {
   const { user } = useAuth();
-  const isDeveloper = user?.role === "DEVELOPER";
+  const isStaffUser = isStaff(user?.role);
 
   return (
     <div className="page-section max-w-3xl">
@@ -156,7 +157,7 @@ export function HelpPage() {
         </div>
       </section>
 
-      {isDeveloper && (
+      {isStaffUser && (
         <section className="space-y-4">
           <h2 className="text-lg font-semibold">Быстрый старт</h2>
           <Card>

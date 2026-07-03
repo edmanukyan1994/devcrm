@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { isStaff } from "@/lib/roles";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { Plus, Pencil, Trash2 } from "lucide-react";
 import { api } from "@/lib/api";
@@ -120,7 +121,7 @@ export function OrderDetailPage() {
           </div>
           <div className="flex items-center gap-2 shrink-0">
             <OrderStatusBadge status={order.status} />
-            {user?.role === "DEVELOPER" && (
+            {isStaff(user?.role) && (
               <>
                 <Button size="sm" variant="outline" onClick={openEdit}>
                   <Pencil className="h-4 w-4" />
@@ -220,7 +221,7 @@ export function OrderDetailPage() {
         <FinancePanel
           orderId={order.id}
           budget={order.budget}
-          editableBudget={user?.role === "DEVELOPER"}
+          editableBudget={isStaff(user?.role)}
           onBudgetChange={handleBudgetChange}
         />
       </div>

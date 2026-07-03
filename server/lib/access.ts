@@ -1,10 +1,11 @@
 import { Role } from "@prisma/client";
 import { prisma } from "./prisma";
+import { isStaff } from "./permissions";
 
 export async function canAccessProject(projectId: string, userId: string, role: Role) {
   const project = await prisma.project.findUnique({ where: { id: projectId } });
   if (!project) return false;
-  if (role === Role.DEVELOPER) return true;
+  if (isStaff(role)) return true;
   return project.clientId === userId;
 }
 
@@ -14,7 +15,7 @@ export async function canAccessOrder(orderId: string, userId: string, role: Role
     include: { project: true },
   });
   if (!order) return false;
-  if (role === Role.DEVELOPER) return true;
+  if (isStaff(role)) return true;
   return order.project.clientId === userId;
 }
 
@@ -24,6 +25,6 @@ export async function canAccessTask(taskId: string, userId: string, role: Role) 
     include: { order: { include: { project: true } } },
   });
   if (!task) return false;
-  if (role === Role.DEVELOPER) return true;
+  if (isStaff(role)) return true;
   return task.order.project.clientId === userId;
 }

@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { useAuth } from "@/contexts/AuthContext";
-import { api, setToken } from "@/lib/api";
+import { api, setToken, ApiError } from "@/lib/api";
 import { usePushNotifications } from "@/hooks/usePushNotifications";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ApiError } from "@/lib/api";
+import { roleLabel } from "@/lib/roles";
 
 export function SettingsPage() {
   const { user, refresh } = useAuth();
@@ -30,7 +30,7 @@ export function SettingsPage() {
       const { user: updated, token } = await api.auth.becomeDeveloper(inviteCode);
       setToken(token);
       await refresh();
-      setSuccess(`Роль обновлена: ${updated.role === "DEVELOPER" ? "Разработчик" : updated.role}`);
+      setSuccess(`Роль обновлена: ${roleLabel(updated.role)}`);
     } catch (err) {
       setError(err instanceof ApiError ? err.message : "Ошибка");
     } finally {
@@ -56,7 +56,7 @@ export function SettingsPage() {
         </CardHeader>
         <CardContent className="space-y-1 text-sm text-muted-foreground">
           <p>{user?.email}</p>
-          <p>Роль: {user?.role === "DEVELOPER" ? "Разработчик" : "Заказчик"}</p>
+          <p>Роль: {roleLabel(user?.role)}</p>
         </CardContent>
       </Card>
 

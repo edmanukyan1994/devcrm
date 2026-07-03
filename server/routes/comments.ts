@@ -1,5 +1,6 @@
 import { Router } from "express";
 import { Role } from "@prisma/client";
+import { STAFF_ROLES, isStaff } from "../lib/permissions";
 import { prisma } from "../lib/prisma";
 import { authMiddleware } from "../middleware/auth";
 import { paramId } from "../lib/params";
@@ -119,11 +120,11 @@ router.post("/", async (req, res) => {
     const senderName = await getSenderName(req.user!.id);
     const preview = `${senderName}: ${content.trim().slice(0, 100)}`;
 
-    if (req.user!.role === Role.DEVELOPER && clientId) {
+    if (isStaff(req.user!.role) && clientId) {
       await notifyUser(clientId, notifyTitle, preview, notifyLink);
     } else if (req.user!.role === Role.CLIENT) {
-      const developers = await prisma.user.findMany({ where: { role: Role.DEVELOPER }, select: { id: true } });
-      await Promise.all(developers.map((d) => notifyUser(d.id, notifyTitle, preview, notifyLink)));
+      const staff = await prisma.user.findMany({ where: { role: { in: STAFF_ROLES } }, select: { id: true } });
+      await Promise.all(staff.map((d) => notifyUser(d.id, notifyTitle, preview, notifyLink)));
     }
 
     res.status(201).json({ comment });
@@ -150,8 +151,8 @@ router.delete("/:id", async (req, res) => {
     }
 
     const isOwner = comment.userId === req.user!.id;
-    const isDeveloper = req.user!.role === Role.DEVELOPER;
-    if (!isOwner && !isDeveloper) {
+    const isStaffUser = isStaff(req.user!.role);
+    if (!isOwner && !isStaffUser) {
       res.status(403).json({ error: "Forbidden" });
       return;
     }

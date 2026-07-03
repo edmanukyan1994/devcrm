@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { isStaff } from "@/lib/roles";
 import { Link } from "react-router-dom";
 import { ImagePlus, Plus, Trash2 } from "lucide-react";
 import { api } from "@/lib/api";
@@ -32,7 +33,7 @@ export function ProjectsPage() {
 
   useEffect(() => {
     load();
-    if (user?.role === "DEVELOPER") {
+    if (isStaff(user?.role)) {
       api.auth.users("CLIENT").then((r) => setClients(r.users));
     }
   }, [user]);
@@ -77,7 +78,7 @@ export function ProjectsPage() {
           <p className="page-subtitle">Проекты</p>
           <h1 className="page-title">Все проекты</h1>
         </div>
-        {user?.role === "DEVELOPER" && (
+        {isStaff(user?.role) && (
           <Dialog open={open} onOpenChange={setOpen}>
             <DialogTrigger asChild>
               <Button>
@@ -153,7 +154,7 @@ export function ProjectsPage() {
                 </CardContent>
               </Card>
             </Link>
-            {user?.role === "DEVELOPER" && (
+            {isStaff(user?.role) && (
               <div className="absolute top-2 right-2 flex gap-1 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity">
                 <Button
                   size="icon"

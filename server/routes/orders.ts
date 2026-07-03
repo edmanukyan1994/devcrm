@@ -1,7 +1,8 @@
 import { Router } from "express";
 import { OrderStatus, Role } from "@prisma/client";
 import { prisma } from "../lib/prisma";
-import { authMiddleware, requireRole } from "../middleware/auth";
+import { authMiddleware, requireStaff } from "../middleware/auth";
+import { isStaff } from "../lib/permissions";
 import { paramId } from "../lib/params";
 
 const router = Router();
@@ -24,7 +25,7 @@ router.get("/", async (req, res) => {
     const { projectId } = req.query;
 
     const projectFilter =
-      req.user!.role === Role.DEVELOPER
+      isStaff(req.user!.role)
         ? projectId
           ? { projectId: String(projectId) }
           : {}
@@ -56,7 +57,7 @@ router.get("/kanban", async (req, res) => {
     const { projectId } = req.query;
 
     const where =
-      req.user!.role === Role.DEVELOPER
+      isStaff(req.user!.role)
         ? projectId
           ? { projectId: String(projectId) }
           : {}
@@ -156,7 +157,7 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-router.post("/", requireRole(Role.DEVELOPER), async (req, res) => {
+router.post("/", requireStaff(), async (req, res) => {
   try {
     const { projectId, title, description, status, deadline, budget } = req.body;
 
@@ -200,10 +201,10 @@ router.patch("/:id", async (req, res) => {
       return;
     }
 
-    const isDeveloper = req.user!.role === Role.DEVELOPER;
+    const isStaffUser = isStaff(req.user!.role);
     const { title, description, status, deadline, position, budget } = req.body;
 
-    if (!isDeveloper && (title !== undefined || description !== undefined)) {
+    if (!isStaffUser && (title !== undefined || description !== undefined)) {
       res.status(403).json({ error: "Clients can only update status" });
       return;
     }
@@ -211,12 +212,12 @@ router.patch("/:id", async (req, res) => {
     const order = await prisma.order.update({
       where: { id: paramId(req.params.id) },
       data: {
-        ...(title !== undefined && isDeveloper && { title }),
-        ...(description !== undefined && isDeveloper && { description }),
+        ...(title !== undefined && isStaffUser && { title }),
+        ...(description !== undefined && isStaffUser && { description }),
         ...(status !== undefined && { status }),
-        ...(deadline !== undefined && isDeveloper && { deadline: deadline ? new Date(deadline) : null }),
-        ...(position !== undefined && isDeveloper && { position }),
-        ...(budget !== undefined && isDeveloper && { budget: budget === null || budget === "" ? null : budget }),
+        ...(deadline !== undefined && isStaffUser && { deadline: deadline ? new Date(deadline) : null }),
+        ...(position !== undefined && isStaffUser && { position }),
+        ...(budget !== undefined && isStaffUser && { budget: budget === null || budget === "" ? null : budget }),
       },
       include: {
         project: { select: { id: true, name: true } },
@@ -230,7 +231,7 @@ router.patch("/:id", async (req, res) => {
   }
 });
 
-router.delete("/:id", requireRole(Role.DEVELOPER), async (req, res) => {
+router.delete("/:id", requireStaff(), async (req, res) => {
   try {
     await prisma.order.delete({ where: { id: paramId(req.params.id) } });
     res.json({ success: true });

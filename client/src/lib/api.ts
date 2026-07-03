@@ -64,13 +64,13 @@ export const api = {
         method: "POST",
         body: JSON.stringify({ inviteCode }),
       }),
-    me: () => request<{ user: import("@/types").User }>("/auth/me"),
+    me: () => request<{ user: import("@/types").User; token?: string }>("/auth/me"),
     clients: () => request<{ clients: import("@/types").User[] }>("/auth/clients"),
-    users: (role?: "CLIENT" | "DEVELOPER") =>
+    users: (role?: "CLIENT" | "DEVELOPER" | "OWNER") =>
       request<{ users: import("@/types").User[] }>(
         `/auth/users${role ? `?role=${role}` : ""}`
       ),
-    updateRole: (id: string, role: "CLIENT" | "DEVELOPER") =>
+    updateRole: (id: string, role: "CLIENT" | "DEVELOPER" | "OWNER") =>
       request<{ user: import("@/types").User }>(`/auth/users/${id}/role`, {
         method: "PATCH",
         body: JSON.stringify({ role }),

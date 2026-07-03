@@ -1,5 +1,6 @@
 import { Router } from "express";
 import { MessageType, Role } from "@prisma/client";
+import { isStaff } from "../lib/permissions";
 import { prisma } from "../lib/prisma";
 import { authMiddleware } from "../middleware/auth";
 import { paramId } from "../lib/params";
@@ -100,7 +101,7 @@ router.post("/", async (req, res) => {
       return;
     }
 
-    if (req.user!.role === Role.CLIENT && other.role !== Role.DEVELOPER) {
+    if (req.user!.role === Role.CLIENT && !isStaff(other.role)) {
       res.status(403).json({ error: "Forbidden" });
       return;
     }

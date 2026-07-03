@@ -35,7 +35,7 @@ export interface FinanceSummary {
   }>;
 }
 
-export type Role = "DEVELOPER" | "CLIENT";
+export type Role = "OWNER" | "DEVELOPER" | "CLIENT";
 
 export type OrderStatus = "NEW" | "IN_PROGRESS" | "REVIEW" | "COMPLETED" | "CANCELLED";
 export type ProjectStatus = "ACTIVE" | "PAUSED" | "COMPLETED";
@@ -206,6 +206,12 @@ export interface AppNotification {
   read: boolean;
   createdAt: string;
 }
+
+export const ROLE_LABELS: Record<Role, string> = {
+  OWNER: "Руководитель",
+  DEVELOPER: "Исполнитель",
+  CLIENT: "Заказчик",
+};
 
 export const PROJECT_STATUS_LABELS: Record<ProjectStatus, string> = {
   ACTIVE: "Активен",

@@ -2,6 +2,7 @@ import { Router } from "express";
 import { Role, TaskPriority, TaskStatus } from "@prisma/client";
 import { prisma } from "../lib/prisma";
 import { authMiddleware } from "../middleware/auth";
+import { isStaff } from "../lib/permissions";
 import { paramId } from "../lib/params";
 
 const router = Router();
@@ -164,7 +165,7 @@ router.patch("/:id", async (req, res) => {
       return;
     }
 
-    const isDeveloper = req.user!.role === Role.DEVELOPER;
+    const isStaffUser = isStaff(req.user!.role);
     const { title, description, priority, status, deadline, position } = req.body;
 
     const task = await prisma.task.update({
@@ -175,7 +176,7 @@ router.patch("/:id", async (req, res) => {
         ...(priority !== undefined && { priority }),
         ...(status !== undefined && { status }),
         ...(deadline !== undefined && { deadline: deadline ? new Date(deadline) : null }),
-        ...(position !== undefined && isDeveloper && { position }),
+        ...(position !== undefined && isStaffUser && { position }),
       },
       include: {
         _count: { select: { comments: true, attachments: true } },

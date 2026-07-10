@@ -1,0 +1,80 @@
+[
+  {
+    "id": "eada2156-08ba-4279-813b-c1ae8ebd2e9e",
+    "user_id": "601453ed-9ab2-4345-a9c3-4145f2d65715",
+    "role": "admin",
+    "created_at": "2025-11-05T14:23:12.57941+00:00"
+  },
+  {
+    "id": "1082edc2-7e60-4bb5-a535-cd7ad1389d18",
+    "user_id": "5b704aa0-a714-4b43-ac59-9e6ca20d4304",
+    "role": "broker",
+    "created_at": "2025-11-08T13:36:28.705819+00:00"
+  },
+  {
+    "id": "56df13c6-991b-44fc-9b64-8f593f4727ce",
+    "user_id": "b27a25ad-85c7-432c-9956-b6b71830c4a9",
+    "role": "admin",
+    "created_at": "2025-11-11T10:01:23.792382+00:00"
+  },
+  {
+    "id": "160fd4b1-a852-423c-a1a4-d198e8523155",
+    "user_id": "2fdb6882-83de-4a43-99b4-e67bc9dd44c4",
+    "role": "broker",
+    "created_at": "2025-11-13T05:18:45.160725+00:00"
+  },
+  {
+    "id": "a2a88d54-bdee-4cf5-a543-c5ec6ccf9cda",
+    "user_id": "26613517-9e69-44d5-a5a8-dd4586f974d1",
+    "role": "specialist",
+    "created_at": "2026-01-04T12:20:36.751435+00:00"
+  },
+  {
+    "id": "0a069679-def5-4d56-8e2f-39fa46e290ab",
+    "user_id": "1d1a3af3-3664-4df6-a0d9-f4b959aba771",
+    "role": "specialist",
+    "created_at": "2026-01-13T08:36:48.943883+00:00"
+  },
+  {
+    "id": "f614bbd9-ccc4-4bb1-a063-46acc2ac1ee7",
+    "user_id": "dddd5724-3703-4a21-955f-11a32bbe45c8",
+    "role": "specialist",
+    "created_at": "2026-01-13T16:38:21.426572+00:00"
+  },
+  {
+    "id": "d3603b00-e827-49ff-b07b-7894d578c68e",
+    "user_id": "9a5bf282-de4e-40c8-a5e9-a2258bafcaa3",
+    "role": "specialist",
+    "created_at": "2026-01-14T06:06:11.178528+00:00"
+  },
+  {
+    "id": "df6ed475-6f91-4b3a-87bc-bcdc0317abbc",
+    "user_id": "90c8904b-6796-4817-a953-7bbdc0a96e3e",
+    "role": "specialist",
+    "created_at": "2026-01-14T09:33:31.411192+00:00"
+  },
+  {
+    "id": "8f900663-1857-487d-bc80-52bf9cfa2e3a",
+    "user_id": "871c8423-94f0-4eb3-b2ac-e55169263258",
+    "role": "specialist",
+    "created_at": "2026-01-14T15:00:44.249064+00:00"
+  },
+  {
+    "id": "e7ac2924-5315-41de-88c9-089ee25cc8b3",
+    "user_id": "68d3a773-3567-4ef6-9817-6c5a57feafe1",
+    "role": "specialist",
+    "created_at": "2026-01-19T10:23:26.109235+00:00"
+  },
+  {
+    "id": "abe83864-c06d-4b3e-9fac-5f277fb26778",
+    "user_id": "a55a5ea6-2e07-4cfa-8525-e0d97c919e0e",
+    "role": "specialist",
+    "created_at": "2026-01-20T11:26:30.339257+00:00"
+  },
+  {
+    "id": "b048c4dc-894c-4370-8954-e2d19c44c4f8",
+    "user_id": "d674680a-b275-4568-8481-88a99f1ffe50",
+    "role": "pending",
+    "created_at": "2026-05-04T16:13:12.939755+00:00"
+  }
+]

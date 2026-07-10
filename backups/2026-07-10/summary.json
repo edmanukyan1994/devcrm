@@ -1,0 +1,83 @@
+{
+  "timestamp": "2026-07-10T00:00:07.867Z",
+  "tables": [
+    {
+      "table": "clients",
+      "rows": 111,
+      "success": true
+    },
+    {
+      "table": "suppliers",
+      "rows": 290,
+      "success": true
+    },
+    {
+      "table": "orders",
+      "rows": 161,
+      "success": true
+    },
+    {
+      "table": "supplier_price_variants",
+      "rows": 330,
+      "success": true
+    },
+    {
+      "table": "profiles",
+      "rows": 13,
+      "success": true
+    },
+    {
+      "table": "purposes",
+      "rows": 3,
+      "success": true
+    },
+    {
+      "table": "tariff_settings",
+      "rows": 7,
+      "success": true
+    },
+    {
+      "table": "tariff_amount_ranges",
+      "rows": 0,
+      "success": true
+    },
+    {
+      "table": "tariff_purposes",
+      "rows": 0,
+      "success": true
+    },
+    {
+      "table": "tariff_supplier_overrides",
+      "rows": 1,
+      "success": true
+    },
+    {
+      "table": "tariff_user_overrides",
+      "rows": 0,
+      "success": true
+    },
+    {
+      "table": "tariff_user_supplier_overrides",
+      "rows": 1,
+      "success": true
+    },
+    {
+      "table": "teams",
+      "rows": 1,
+      "success": true
+    },
+    {
+      "table": "team_members",
+      "rows": 4,
+      "success": true
+    },
+    {
+      "table": "user_roles",
+      "rows": 13,
+      "success": true
+    }
+  ],
+  "totalTables": 15,
+  "successfulTables": 15,
+  "totalRows": 935
+}

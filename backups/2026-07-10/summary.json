@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-07-10T06:00:04.455Z",
+  "timestamp": "2026-07-10T12:00:07.381Z",
   "tables": [
     {
       "table": "clients",
@@ -54,7 +54,7 @@
     {
       "table": "tariff_user_overrides",
       "rows": 0,
-      "success": false
+      "success": true
     },
     {
       "table": "tariff_user_supplier_overrides",
@@ -78,6 +78,6 @@
     }
   ],
   "totalTables": 15,
-  "successfulTables": 14,
+  "successfulTables": 15,
   "totalRows": 935
 }

@@ -448,6 +448,38 @@
     "client_delivered_at": null
   },
   {
+    "id": "c798f29a-9c18-4392-b71f-fd3da72c40e4",
+    "client_id": "97e2c171-c0c8-4d91-8485-fff34f85418d",
+    "supplier_id": null,
+    "purpose": "Айти — разработка ПО",
+    "amount": 2000000,
+    "contract_number": null,
+    "client_price": null,
+    "supplier_price": null,
+    "deadline_client": null,
+    "deadline_supplier": null,
+    "status": "new",
+    "created_by": "601453ed-9ab2-4345-a9c3-4145f2d65715",
+    "managed_by": "601453ed-9ab2-4345-a9c3-4145f2d65715",
+    "notes": null,
+    "created_at": "2026-07-21T15:47:53.813635+00:00",
+    "updated_at": "2026-07-21T15:47:53.813635+00:00",
+    "payment_date": null,
+    "tax_systems": [
+      "ОСНО (НДС)"
+    ],
+    "supplier_price_percent": null,
+    "incoming_price_percent": null,
+    "supplier_name": null,
+    "supplier_inn": null,
+    "supplier_tax_system": null,
+    "supplier_contact_person": null,
+    "supplier_phone": null,
+    "supplier_email": null,
+    "supplier_executed_at": null,
+    "client_delivered_at": null
+  },
+  {
     "id": "397dfcd9-6c18-456f-8648-244bde3b8bc7",
     "client_id": "eab864fa-5047-430e-8d78-ebbcdbe5f242",
     "supplier_id": "592af3c2-2ac5-44c1-9124-b96d4c15e652",

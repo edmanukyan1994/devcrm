@@ -1,0 +1,5271 @@
+[
+  {
+    "id": "e64563bc-cf36-45e7-a64c-8a39123f3b8b",
+    "supplier_id": "297ad6ea-d7e2-427d-a915-c3fab06c9463",
+    "price": 11,
+    "deadline_days": 5,
+    "notes": null,
+    "created_at": "2026-02-26T10:45:44.488368+00:00",
+    "updated_at": "2026-02-26T10:45:44.488368+00:00",
+    "purposes": [
+      "Оптовая торговля",
+      "Опт — строительные материалы",
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "3c1917d1-4d85-4a0c-b633-db8876ccd753",
+    "supplier_id": "e2eb7ffc-e24f-4513-9538-ea301984892f",
+    "price": 22.5,
+    "deadline_days": 1,
+    "notes": "- строительные материалы  - материалы  - товар  - металл  - металлические изделия  - металлоконструкции  - арматура",
+    "created_at": "2026-03-03T11:40:33.603948+00:00",
+    "updated_at": "2026-03-05T08:38:52.979347+00:00",
+    "purposes": [
+      "Опт — металл",
+      "Оптовая торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "f162a0c3-a8dd-45c6-88d8-521182846bd5",
+    "supplier_id": "5af6e5de-46b3-4061-84db-351686f9f539",
+    "price": 18.5,
+    "deadline_days": 3,
+    "notes": null,
+    "created_at": "2025-11-08T18:28:15.375908+00:00",
+    "updated_at": "2026-02-13T14:43:12.251143+00:00",
+    "purposes": [
+      "Опт — строительные материалы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "8fd84f8f-ca4c-419a-b32e-59835b3122b8",
+    "supplier_id": "c417cf4d-949c-464d-bede-4e0630af0a7d",
+    "price": 21,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2025-11-08T18:25:22.973436+00:00",
+    "updated_at": "2026-01-28T12:17:45.622731+00:00",
+    "purposes": [
+      "Автобизнес (общее)",
+      "Опт — строительные материалы",
+      "Оптовая торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "34962122-0e4d-439c-85bb-335fd0639c2e",
+    "supplier_id": "c4529e52-e7c6-481a-8bc4-cf1c22efaa00",
+    "price": 19,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-02-27T09:48:35.230678+00:00",
+    "updated_at": "2026-02-27T09:48:35.230678+00:00",
+    "purposes": [
+      "Оптовая торговля",
+      "СМР — строительно-монтажные работы",
+      "Опт — строительные материалы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "b901d205-c7e9-47c2-81fc-75a4e6358e2c",
+    "supplier_id": "de4bcdec-6b0c-4bba-9db7-8aef57af0ff2",
+    "price": 6,
+    "deadline_days": 5,
+    "notes": null,
+    "created_at": "2025-11-08T17:13:09.442279+00:00",
+    "updated_at": "2026-03-04T08:29:57.336226+00:00",
+    "purposes": [
+      "Айти — разработка ПО",
+      "Архитектура и инжиниринг",
+      "Реклама и маркетинг",
+      "Клининг",
+      "Швейное производство",
+      "Персональные услуги",
+      "Ремонт и монтаж оборудования",
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "83822662-5450-434c-b0b1-713259cdc5ac",
+    "supplier_id": "d8c2c9d5-183d-4e06-b22d-44d2f18abc5c",
+    "price": 18,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2025-11-08T14:00:08.481482+00:00",
+    "updated_at": "2026-01-20T12:53:00.658527+00:00",
+    "purposes": [
+      "Опт — строительные материалы",
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": 18,
+    "selling_deadline_days": 2
+  },
+  {
+    "id": "aac7a7a9-b0d2-4c7b-a2b3-742a82b2641e",
+    "supplier_id": "f078541b-1ad9-4390-9eda-a83c6f093e32",
+    "price": 17,
+    "deadline_days": 0,
+    "notes": null,
+    "created_at": "2025-11-06T19:42:50.092911+00:00",
+    "updated_at": "2025-11-10T13:18:26.704683+00:00",
+    "purposes": [
+      "Автобизнес (общее)",
+      "Аренда и лизинг",
+      "Грузоперевозки",
+      "Логистика и склады",
+      "Транспортные услуги",
+      "Опт — металл"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "35bdab61-79db-42b4-a9c9-2c0beb98dd6e",
+    "supplier_id": "7f5afe9e-76c2-430c-b363-8f2fbfb3b0f1",
+    "price": 14.5,
+    "deadline_days": 1,
+    "notes": "‼️РЕАЛЬНЫЙ ТОВАР В ОТГРУЗОЧНЫХ‼️ОБЬЕМ ЕЖЕДНЕВНЫЙ‼️",
+    "created_at": "2026-03-04T12:02:23.72301+00:00",
+    "updated_at": "2026-03-04T12:02:23.72301+00:00",
+    "purposes": [
+      "Оптовая торговля",
+      "Розничная торговля",
+      "Пищевое производство",
+      "Производство готовых блюд и полуфабрикатов"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "d500ec8a-a0ef-4477-a870-4ae2ba609291",
+    "supplier_id": "f078541b-1ad9-4390-9eda-a83c6f093e32",
+    "price": 16,
+    "deadline_days": 3,
+    "notes": null,
+    "created_at": "2025-11-06T19:42:49.935319+00:00",
+    "updated_at": "2025-11-10T13:18:26.529343+00:00",
+    "purposes": [
+      "Автобизнес (общее)",
+      "Аренда и лизинг",
+      "Грузоперевозки",
+      "Логистика и склады",
+      "Транспортные услуги",
+      "Опт — металл"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "ce8f2160-7708-493c-90d5-f615cc64c537",
+    "supplier_id": "b8a9ef88-39cc-49a3-981d-7ddc8d05dded",
+    "price": 17.5,
+    "deadline_days": 1,
+    "notes": "Электротовары",
+    "created_at": "2025-11-08T13:55:01.528928+00:00",
+    "updated_at": "2026-01-20T12:53:00.381357+00:00",
+    "purposes": [
+      "Оптовая торговля",
+      "Розничная торговля",
+      "Опт — строительные материалы"
+    ],
+    "selling_price": 17.5,
+    "selling_deadline_days": 1
+  },
+  {
+    "id": "51d5a207-c373-4f78-bdc2-d0f38e55bdcf",
+    "supplier_id": "c0e8cb0f-32b9-4427-a7b4-eafd56a61e6d",
+    "price": 15,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2025-11-08T13:57:00.3238+00:00",
+    "updated_at": "2026-01-20T12:53:00.523407+00:00",
+    "purposes": [
+      "Опт — топливо/ГСМ"
+    ],
+    "selling_price": 15,
+    "selling_deadline_days": 2
+  },
+  {
+    "id": "08e7fd5d-c97c-4fd8-8250-2a0e7c1a3ff2",
+    "supplier_id": "c4529e52-e7c6-481a-8bc4-cf1c22efaa00",
+    "price": 21,
+    "deadline_days": 0,
+    "notes": "ДЕНЬ В ДЕНЬ",
+    "created_at": "2026-02-27T09:48:35.402613+00:00",
+    "updated_at": "2026-02-27T09:48:35.402613+00:00",
+    "purposes": [
+      "Опт — строительные материалы",
+      "СМР — строительно-монтажные работы",
+      "Оптовая торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "3298863e-579c-404a-89bc-688fe14f9f47",
+    "supplier_id": "b4b15387-5c81-4cfd-96c7-e1e530d2807a",
+    "price": 18,
+    "deadline_days": 1,
+    "notes": null,
+    "created_at": "2026-03-04T13:04:09.168384+00:00",
+    "updated_at": "2026-03-04T13:04:09.168384+00:00",
+    "purposes": [
+      "Опт — электронное оборудование",
+      "Оптовая торговля",
+      "Опт — непродовольственные товары",
+      "Автобизнес (общее)",
+      "Опт — строительные материалы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "2c9e824e-6d78-4ac8-bf0b-6880aaecac67",
+    "supplier_id": "b4380ea5-e2c3-40bc-a3e3-eb602f30cbdd",
+    "price": 18.5,
+    "deadline_days": 1,
+    "notes": "Непродовольственные товары  Закрытие ( Упаковка, Стрей пленка)",
+    "created_at": "2026-03-04T13:07:17.171311+00:00",
+    "updated_at": "2026-03-04T13:07:17.171311+00:00",
+    "purposes": [
+      "Опт — непродовольственные товары"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "c71c03d5-f869-4bc3-bd4b-ad5c379568bb",
+    "supplier_id": "44ed81db-26b6-4209-8a44-714eb9247397",
+    "price": 17.5,
+    "deadline_days": 3,
+    "notes": null,
+    "created_at": "2025-11-08T18:32:53.222498+00:00",
+    "updated_at": "2026-01-20T12:52:18.129321+00:00",
+    "purposes": [
+      "Опт — строительные материалы",
+      "Оптовая торговля"
+    ],
+    "selling_price": 17.5,
+    "selling_deadline_days": 3
+  },
+  {
+    "id": "c94ce4ec-a113-459a-b0e6-2e9d40d0fed2",
+    "supplier_id": "15987280-5fdb-4c87-986d-18dc8461e8b4",
+    "price": 17.5,
+    "deadline_days": 3,
+    "notes": null,
+    "created_at": "2025-11-08T18:33:44.623802+00:00",
+    "updated_at": "2026-01-20T12:52:18.353604+00:00",
+    "purposes": [
+      "Опт — строительные материалы",
+      "Оптовая торговля"
+    ],
+    "selling_price": 17.5,
+    "selling_deadline_days": 3
+  },
+  {
+    "id": "602fa32f-1bbc-4be6-9148-38da31afdd84",
+    "supplier_id": "c59c1469-03bb-48e8-9c33-0d86e33ed38e",
+    "price": 17.5,
+    "deadline_days": 3,
+    "notes": null,
+    "created_at": "2025-11-08T18:36:35.585296+00:00",
+    "updated_at": "2026-01-20T12:52:18.584666+00:00",
+    "purposes": [
+      "Оптовая торговля"
+    ],
+    "selling_price": 17.5,
+    "selling_deadline_days": 3
+  },
+  {
+    "id": "c14d1086-86e8-47d9-adce-a8c0f3e878f1",
+    "supplier_id": "8a26adc3-d93e-4035-8d1b-fc5a83e26232",
+    "price": 17,
+    "deadline_days": 3,
+    "notes": null,
+    "created_at": "2026-02-27T09:50:56.364359+00:00",
+    "updated_at": "2026-02-27T09:50:56.364359+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы",
+      "Опт — строительные материалы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "f4a18873-b51a-478e-b0c8-db13f8e074d9",
+    "supplier_id": "97c17f8d-2eaa-44c4-b6a7-d4c49b42c459",
+    "price": 11.5,
+    "deadline_days": 3,
+    "notes": null,
+    "created_at": "2025-11-08T19:10:40.062284+00:00",
+    "updated_at": "2026-03-04T08:29:57.336226+00:00",
+    "purposes": [
+      "Клининг",
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": 11.5,
+    "selling_deadline_days": 3
+  },
+  {
+    "id": "c488d579-4f10-46ef-b463-da9f0e588e95",
+    "supplier_id": "2c59c52d-9c95-4a5b-a1d2-96ca489e4229",
+    "price": 18.5,
+    "deadline_days": 1,
+    "notes": "Непродовольственные товары  Закрытие ( Упаковка, Стрей пленка)",
+    "created_at": "2026-03-04T13:06:16.263651+00:00",
+    "updated_at": "2026-03-04T13:06:16.263651+00:00",
+    "purposes": [
+      "Оптовая торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "3c221ce0-8908-4e61-a2bc-85e8c2fe0dd1",
+    "supplier_id": "183489c8-3220-400a-bb66-bb2776a6e90b",
+    "price": 14,
+    "deadline_days": 0,
+    "notes": null,
+    "created_at": "2025-11-09T18:08:03.669214+00:00",
+    "updated_at": "2025-11-14T17:56:57.910168+00:00",
+    "purposes": [
+      "Опт — металл",
+      "Опт — строительные материалы",
+      "Розница — стройматериалы/хозтовары",
+      "Оптовая торговля",
+      "Стройматериалы (производство)",
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "bd4265d7-e909-4b8a-ac2b-dfe1254f84a5",
+    "supplier_id": "183489c8-3220-400a-bb66-bb2776a6e90b",
+    "price": 13,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2025-11-08T17:23:46.262578+00:00",
+    "updated_at": "2025-11-14T17:56:57.732301+00:00",
+    "purposes": [
+      "Опт — металл",
+      "Опт — строительные материалы",
+      "СМР — строительно-монтажные работы",
+      "Стройматериалы (производство)",
+      "Оптовая торговля",
+      "Розница — стройматериалы/хозтовары"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "dcea7a65-3f7a-4c68-8bf4-ff4506c1b6be",
+    "supplier_id": "781b3ebf-44fb-41e3-97c7-c4c790467ec3",
+    "price": 9.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2025-11-08T19:18:57.808871+00:00",
+    "updated_at": "2026-01-20T12:53:01.211444+00:00",
+    "purposes": [
+      "Автобизнес (общее)",
+      "Опт — строительные материалы",
+      "Розничная торговля",
+      "Опт — металл",
+      "Оптовая торговля",
+      "СМР — строительно-монтажные работы",
+      "Швейное производство"
+    ],
+    "selling_price": 9.5,
+    "selling_deadline_days": 4
+  },
+  {
+    "id": "42e41913-1934-4565-a18b-3cfb6e23e756",
+    "supplier_id": "76e675d7-bee5-4269-bde8-221a156e3f5b",
+    "price": 9.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2025-11-08T19:17:14.863957+00:00",
+    "updated_at": "2026-01-23T09:19:58.173625+00:00",
+    "purposes": [
+      "Швейное производство",
+      "Розничная торговля",
+      "Производство обуви и кожи",
+      "Грузоперевозки",
+      "Опт — строительные материалы",
+      "СМР — строительно-монтажные работы",
+      "Айти — разработка ПО",
+      "Ремонт бытовой техники и ПК"
+    ],
+    "selling_price": 9.5,
+    "selling_deadline_days": 4
+  },
+  {
+    "id": "9f47e4cc-6b34-4536-b7df-6b83ae3bf7b7",
+    "supplier_id": "513fff73-df06-494e-a053-13be86013826",
+    "price": 13,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2025-11-08T18:58:00.614977+00:00",
+    "updated_at": "2026-01-20T12:50:59.569027+00:00",
+    "purposes": [
+      "Розничная торговля",
+      "Общепит и кафе"
+    ],
+    "selling_price": 13,
+    "selling_deadline_days": 2
+  },
+  {
+    "id": "6a2b1a9a-c4d2-46fd-96ef-794055410140",
+    "supplier_id": "436644bf-9078-48c9-988a-5ac28071e245",
+    "price": 13,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2025-11-08T18:58:30.069261+00:00",
+    "updated_at": "2026-01-20T12:50:59.707086+00:00",
+    "purposes": [
+      "Розничная торговля",
+      "Оптовая торговля"
+    ],
+    "selling_price": 13,
+    "selling_deadline_days": 2
+  },
+  {
+    "id": "0654b2bf-6373-4a2e-bacc-87d08cd2c01b",
+    "supplier_id": "3e0cf459-ccd9-45a8-81a8-c96b3410c6d5",
+    "price": 13,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2025-11-08T18:59:13.462926+00:00",
+    "updated_at": "2026-01-20T12:50:59.877586+00:00",
+    "purposes": [
+      "Оптовая торговля"
+    ],
+    "selling_price": 13,
+    "selling_deadline_days": 2
+  },
+  {
+    "id": "c78dbf2a-0ca3-4bc0-bdc7-4a5c4c68c6c0",
+    "supplier_id": "8c127486-ffb3-4eb1-bf68-be9683b9bb15",
+    "price": 13,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2025-11-08T18:59:49.669116+00:00",
+    "updated_at": "2026-01-20T12:51:00.042609+00:00",
+    "purposes": [
+      "Розничная торговля",
+      "Оптовая торговля"
+    ],
+    "selling_price": 13,
+    "selling_deadline_days": 2
+  },
+  {
+    "id": "e115e539-663f-4090-abbc-25db66e34d7d",
+    "supplier_id": "ee376429-a104-44a0-94d5-8de016e70240",
+    "price": 11.5,
+    "deadline_days": 5,
+    "notes": null,
+    "created_at": "2025-11-08T19:11:11.422902+00:00",
+    "updated_at": "2026-01-20T12:52:19.031217+00:00",
+    "purposes": [
+      "Розница — стройматериалы/хозтовары"
+    ],
+    "selling_price": 11.5,
+    "selling_deadline_days": 5
+  },
+  {
+    "id": "b7ab2156-cb6a-4957-a2a9-f05ad592197e",
+    "supplier_id": "61bd81a4-7597-40e6-8493-d3b143b313be",
+    "price": 8,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2025-11-08T19:12:14.431976+00:00",
+    "updated_at": "2026-01-20T12:53:00.922843+00:00",
+    "purposes": [
+      "Оптовая торговля"
+    ],
+    "selling_price": 8,
+    "selling_deadline_days": 4
+  },
+  {
+    "id": "0e0a2ce8-af89-4682-b370-f458dae0aa73",
+    "supplier_id": "a4442bf7-fef7-43fe-a0b1-8aa3f083c07f",
+    "price": 9.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2025-11-08T19:12:53.213197+00:00",
+    "updated_at": "2026-01-20T12:53:01.355606+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы",
+      "Опт — строительные материалы"
+    ],
+    "selling_price": 9.5,
+    "selling_deadline_days": 4
+  },
+  {
+    "id": "f473f088-fce8-48a7-9dc2-dbb066ddcdea",
+    "supplier_id": "12111f61-58e4-4798-b18f-f687bbfbf6a3",
+    "price": 9.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2025-11-08T19:16:26.583307+00:00",
+    "updated_at": "2026-01-20T12:53:01.492372+00:00",
+    "purposes": [
+      "Оптовая торговля",
+      "СМР — строительно-монтажные работы",
+      "Опт — строительные материалы",
+      "Реклама и маркетинг",
+      "Автобизнес (общее)"
+    ],
+    "selling_price": 9.5,
+    "selling_deadline_days": 4
+  },
+  {
+    "id": "26e72653-9e33-4542-8eb9-503f115faa64",
+    "supplier_id": "93bc9ac9-85d0-4912-b8d4-d0a3fb9f34c5",
+    "price": 19,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-02-27T10:15:43.914039+00:00",
+    "updated_at": "2026-02-27T10:15:43.914039+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы",
+      "Опт — строительные материалы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "510bfd55-f7c5-4cbb-8999-41f6aabc7a59",
+    "supplier_id": "c6b23099-784c-422f-8a66-b8e084d12f47",
+    "price": 21.5,
+    "deadline_days": 4,
+    "notes": "МИН ПП  от 2млн",
+    "created_at": "2026-02-27T10:40:31.874117+00:00",
+    "updated_at": "2026-02-27T10:40:31.874117+00:00",
+    "purposes": [
+      "Автобизнес (общее)",
+      "Транспортные услуги",
+      "Грузоперевозки"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "a194f4bd-8b1d-49dc-bdce-961ae47a6d92",
+    "supplier_id": "e1bb1057-e30c-4cff-9bb1-62441cf80a9e",
+    "price": 18.5,
+    "deadline_days": 1,
+    "notes": null,
+    "created_at": "2026-03-04T13:17:33.274292+00:00",
+    "updated_at": "2026-03-04T13:17:33.274292+00:00",
+    "purposes": [
+      "Текстильное производство",
+      "Оптовая торговля",
+      "Розничная торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "9be6eb00-2c33-4bab-b4fb-cbdd0dfc7b2c",
+    "supplier_id": "1d987c19-b65c-43f8-bc90-4be8f8727486",
+    "price": 17.5,
+    "deadline_days": 3,
+    "notes": null,
+    "created_at": "2025-11-10T09:24:08.065572+00:00",
+    "updated_at": "2026-03-16T13:25:02.004533+00:00",
+    "purposes": [
+      "Опт — металл",
+      "Розничная торговля",
+      "Оптовая торговля",
+      "Опт — строительные материалы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "c7ea6e67-9c76-45e9-9f60-b4f75ab1de3c",
+    "supplier_id": "3c7cbeb8-5ef1-4f0e-b928-e58e43be5f76",
+    "price": 17.5,
+    "deadline_days": 3,
+    "notes": null,
+    "created_at": "2025-11-10T13:48:41.263775+00:00",
+    "updated_at": "2025-11-10T13:48:41.263775+00:00",
+    "purposes": [
+      "Админ-услуги для бизнеса",
+      "Айти — разработка ПО",
+      "Опт — компьютеры/ПО",
+      "Опт — электронное оборудование",
+      "Оптовая торговля",
+      "Айти — интернет-сервисы и хостинг",
+      "Ремонт бытовой техники и ПК",
+      "Реклама и маркетинг"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "b0fe25db-9ab3-41c6-af3e-26beb3cd2178",
+    "supplier_id": "c04cc6c1-10e7-4ca7-a211-64c17d54f5d8",
+    "price": 19.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-15T12:16:25.363326+00:00",
+    "updated_at": "2026-01-15T12:16:25.363326+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы",
+      "Опт — строительные материалы",
+      "Оптовая торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "d70cc36b-0308-495e-8e33-58790834bd84",
+    "supplier_id": "ee395636-57d3-4d4f-b30d-bca0a6537ea9",
+    "price": 19.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-15T12:20:31.524076+00:00",
+    "updated_at": "2026-01-15T12:20:31.524076+00:00",
+    "purposes": [
+      "Опт — строительные материалы",
+      "Оптовая торговля",
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "149cd75e-6198-4974-b7c2-d9377d8374b6",
+    "supplier_id": "c11fbef1-690c-4c5c-a801-110d1220df62",
+    "price": 13,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2025-11-10T07:50:57.405968+00:00",
+    "updated_at": "2026-01-20T12:51:00.212587+00:00",
+    "purposes": [
+      "Пищевое производство"
+    ],
+    "selling_price": 13,
+    "selling_deadline_days": 2
+  },
+  {
+    "id": "fbf63c87-7940-4e5f-bcf6-458f482b630e",
+    "supplier_id": "703a38fb-31b5-45c6-a658-91364e23dcba",
+    "price": 20,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2025-11-10T09:06:26.105656+00:00",
+    "updated_at": "2026-01-28T12:22:26.451904+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы",
+      "Оптовая торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "a90b27ce-7727-494a-bed5-8b8f35c09b61",
+    "supplier_id": "2c449dd6-20d4-4e6e-a753-bc6f72c2a9ce",
+    "price": 18.5,
+    "deadline_days": 2,
+    "notes": "ПП ОТ 1 млн",
+    "created_at": "2026-02-06T11:33:22.066983+00:00",
+    "updated_at": "2026-02-06T11:33:22.066983+00:00",
+    "purposes": [
+      "Опт — топливо/ГСМ"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "59029f5e-8a42-4600-9bcf-1c071cb38cb6",
+    "supplier_id": "ccaad21b-672b-4a11-b926-7f48c6765a02",
+    "price": 21.5,
+    "deadline_days": 2,
+    "notes": "Пп от 1 млн",
+    "created_at": "2026-02-06T11:20:54.566114+00:00",
+    "updated_at": "2026-02-06T11:44:13.663405+00:00",
+    "purposes": [
+      "Опт — строительные материалы",
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "34537a1f-2d87-4292-9c8a-1e092ce57817",
+    "supplier_id": "ca90a27b-9302-4247-ac4a-283e438f43a6",
+    "price": 18.5,
+    "deadline_days": 3,
+    "notes": null,
+    "created_at": "2026-02-27T10:24:35.855627+00:00",
+    "updated_at": "2026-02-27T10:24:35.855627+00:00",
+    "purposes": [
+      "Логистика и склады"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "50d43b01-1485-482b-9017-9665e44f3e94",
+    "supplier_id": "1fe4c09e-df26-47cd-b7b3-27a128895f44",
+    "price": 18.5,
+    "deadline_days": 1,
+    "notes": "•⁠  ⁠⁠Электрооборудование •⁠  ⁠⁠АвтоЗапчасти •⁠  ⁠⁠За Авто  •⁠  ⁠⁠Непродовольственные товары( Документы Упаковка)",
+    "created_at": "2026-03-04T13:21:40.403129+00:00",
+    "updated_at": "2026-03-04T13:21:40.403129+00:00",
+    "purposes": [
+      "Оптовая торговля",
+      "Автобизнес (общее)"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "cdb34f73-412c-4d8a-b57d-0f1277796979",
+    "supplier_id": "9e094051-b983-44b1-aa91-a37c508ad36a",
+    "price": 17,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2025-11-12T09:57:33.441492+00:00",
+    "updated_at": "2025-11-12T09:58:32.281205+00:00",
+    "purposes": [
+      "Реклама и маркетинг",
+      "Оптовая торговля",
+      "Опт — строительные материалы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "dd32f83a-6c2b-4eca-8ed3-602fdb3e2757",
+    "supplier_id": "6e5a1dd7-a7ba-422f-a440-44c7d8e16cd8",
+    "price": 17,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2025-11-12T09:58:15.238482+00:00",
+    "updated_at": "2025-11-12T09:59:07.640448+00:00",
+    "purposes": [
+      "Админ-услуги для бизнеса",
+      "Айти — разработка ПО",
+      "Полиграфия",
+      "Телеком",
+      "Реклама и маркетинг",
+      "Айти — интернет-сервисы и хостинг",
+      "Оптовая торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "1a9b1a6f-e254-464e-9bc1-447e1fd8262a",
+    "supplier_id": "6065acfa-a34f-47fe-b65d-cb019574c6b4",
+    "price": 17,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2025-11-12T10:06:25.238709+00:00",
+    "updated_at": "2025-11-12T10:06:25.238709+00:00",
+    "purposes": [
+      "Админ-услуги для бизнеса",
+      "Оптовая торговля",
+      "Прочие профессиональные услуги",
+      "СМР — строительно-монтажные работы",
+      "Текстильное производство",
+      "Реклама и маркетинг",
+      "Полиграфия",
+      "Консалтинг и менеджмент"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "51068860-649b-444b-8be4-de69db3bb890",
+    "supplier_id": "97c3b548-5a68-470e-b9c1-fb59cac042a2",
+    "price": 17,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2025-11-12T10:08:41.110793+00:00",
+    "updated_at": "2025-11-12T10:08:41.110793+00:00",
+    "purposes": [
+      "Админ-услуги для бизнеса",
+      "Оптовая торговля",
+      "Архитектура и инжиниринг",
+      "Реклама и маркетинг",
+      "Опт — строительные материалы",
+      "Айти — разработка ПО"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "7ced6541-b1cf-4d36-9899-bac65ce2a25c",
+    "supplier_id": "e83855a3-0a48-4588-b367-021d6c19f741",
+    "price": 17,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2025-11-12T10:09:41.027857+00:00",
+    "updated_at": "2025-11-12T10:09:41.027857+00:00",
+    "purposes": [
+      "Админ-услуги для бизнеса",
+      "Айти — разработка ПО",
+      "Логистика и склады",
+      "Опт — электронное оборудование",
+      "Оптовая торговля",
+      "Опт — компьютеры/ПО",
+      "Консалтинг и менеджмент",
+      "Айти — интернет-сервисы и хостинг"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "3f7abf85-c9b4-4678-b448-ff0c5c250d95",
+    "supplier_id": "140c235f-2f55-4554-8a4d-8a8b452122f4",
+    "price": 16.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2025-11-12T10:10:55.755726+00:00",
+    "updated_at": "2025-11-12T10:10:55.755726+00:00",
+    "purposes": [
+      "Автобизнес (общее)",
+      "Оптовая торговля",
+      "Транспортные услуги",
+      "Грузоперевозки"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "eea21bac-16ce-4ee8-80cc-a3468a84e45b",
+    "supplier_id": "810d3495-bdb5-4534-b052-39ca20718881",
+    "price": 16.5,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2025-11-12T10:12:58.451918+00:00",
+    "updated_at": "2025-11-12T10:12:58.451918+00:00",
+    "purposes": [
+      "Грузоперевозки",
+      "Автобизнес (общее)",
+      "Продажа автозапчастей",
+      "Логистика и склады",
+      "Аренда и лизинг",
+      "Розничная торговля",
+      "Оптовая торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "3933c2b3-24ba-4861-85e2-a8fce470d475",
+    "supplier_id": "73c1740a-aea4-4770-ab0f-8e589e01a7b5",
+    "price": 16.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2025-11-12T10:14:15.527362+00:00",
+    "updated_at": "2025-11-12T10:14:15.527362+00:00",
+    "purposes": [
+      "Автобизнес (общее)",
+      "Логистика и склады",
+      "Продажа автомобилей",
+      "Розничная торговля",
+      "Продажа автозапчастей",
+      "Грузоперевозки"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "574a2221-6cca-41a0-a1c4-1c5eb3160992",
+    "supplier_id": "b132581a-076a-4564-96f4-be210e921f7a",
+    "price": 16.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2025-11-12T10:15:33.488143+00:00",
+    "updated_at": "2025-11-12T10:15:33.488143+00:00",
+    "purposes": [
+      "Автобизнес (общее)",
+      "Грузоперевозки",
+      "Логистика и склады",
+      "Оптовая торговля",
+      "Розничная торговля",
+      "Интернет-магазин",
+      "Аренда и лизинг"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "a015ee21-819f-4250-981c-bc1fc52f5aed",
+    "supplier_id": "3062d410-9f0a-41fe-a3ad-3d93ea915058",
+    "price": 16.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2025-11-12T10:19:10.669864+00:00",
+    "updated_at": "2025-11-12T10:19:10.669864+00:00",
+    "purposes": [
+      "Грузоперевозки",
+      "Логистика и склады",
+      "Автобизнес (общее)",
+      "Розничная торговля",
+      "Оптовая торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "908d82eb-b89e-4ad4-92d4-711cafcea010",
+    "supplier_id": "2afb34f0-a845-4703-9a60-842ef2fcb99a",
+    "price": 16.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2025-11-12T10:21:10.571126+00:00",
+    "updated_at": "2025-11-12T10:21:10.571126+00:00",
+    "purposes": [
+      "Грузоперевозки",
+      "Автобизнес (общее)",
+      "Логистика и склады",
+      "Розничная торговля",
+      "Транспортные услуги",
+      "Оптовая торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "c49f8c7b-851a-4487-a8c4-67179f447396",
+    "supplier_id": "0b9a3be4-3efe-4aa0-bdd3-66f1782cf568",
+    "price": 19.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-15T12:18:01.256696+00:00",
+    "updated_at": "2026-01-15T12:18:01.256696+00:00",
+    "purposes": [
+      "Опт — строительные материалы",
+      "Оптовая торговля",
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "7e1dc1fd-9b23-4359-ba32-8b00aaba6df5",
+    "supplier_id": "e2cff1cb-fad4-4bdd-8691-7f30a9a6a92a",
+    "price": 19.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-15T12:21:32.259869+00:00",
+    "updated_at": "2026-01-15T12:21:32.259869+00:00",
+    "purposes": [
+      "Опт — строительные материалы",
+      "Оптовая торговля",
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "b9037623-4297-4b73-b254-eb4db6ec5144",
+    "supplier_id": "c1edf75a-48ec-4cd3-ae28-7ac2421753a5",
+    "price": 19,
+    "deadline_days": 2,
+    "notes": "Текстиль, ПВХ",
+    "created_at": "2026-02-06T11:22:20.277041+00:00",
+    "updated_at": "2026-02-06T11:22:20.277041+00:00",
+    "purposes": [
+      "Оптовая торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "96ecfa4b-54f1-4a95-b8fe-cbad13544552",
+    "supplier_id": "1ee8043e-0913-416f-a205-67eb1cdf3607",
+    "price": 20.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-02-27T10:27:33.764708+00:00",
+    "updated_at": "2026-02-27T10:27:33.764708+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы",
+      "Опт — строительные материалы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "81fb4323-eb9c-4c37-bf2a-d109a11d9b32",
+    "supplier_id": "64764318-070d-46c3-a061-f0a6877def11",
+    "price": 8,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2025-11-13T11:51:44.049782+00:00",
+    "updated_at": "2025-11-13T11:51:44.049782+00:00",
+    "purposes": [
+      "Опт — мясо и мясопродукты",
+      "Опт — молочная продукция"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "aafd0bc1-4a0b-445c-946d-cce7d081a622",
+    "supplier_id": "264c919e-4b1a-477a-88e4-df093c6339e8",
+    "price": 9.5,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2025-11-13T09:12:33.213509+00:00",
+    "updated_at": "2026-03-04T08:29:57.336226+00:00",
+    "purposes": [
+      "Грузоперевозки",
+      "Логистика и склады",
+      "СМР — строительно-монтажные работы",
+      "Транспортные услуги",
+      "Клининг"
+    ],
+    "selling_price": 9.5,
+    "selling_deadline_days": 2
+  },
+  {
+    "id": "7f31660c-ab58-4869-961b-099d98900be0",
+    "supplier_id": "aca07292-4df3-4632-b20d-26d3c97174f6",
+    "price": 9.5,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2025-11-13T09:15:45.813926+00:00",
+    "updated_at": "2026-03-04T08:29:57.336226+00:00",
+    "purposes": [
+      "Грузоперевозки",
+      "Клининг",
+      "Транспортные услуги",
+      "СМР — строительно-монтажные работы",
+      "Логистика и склады"
+    ],
+    "selling_price": 9.5,
+    "selling_deadline_days": 2
+  },
+  {
+    "id": "be3e9690-f1fb-4b68-b638-2b075a3c3fa9",
+    "supplier_id": "9dd4fe8a-8183-425b-a9ea-0e05d17d9d7b",
+    "price": 20,
+    "deadline_days": 1,
+    "notes": "Бытовая химия  Чистящие средства",
+    "created_at": "2026-03-04T13:26:18.899074+00:00",
+    "updated_at": "2026-03-04T13:26:18.899074+00:00",
+    "purposes": [
+      "Оптовая торговля",
+      "Сервис зданий/территорий",
+      "Клининг"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "2db4088c-6636-4ba0-a001-1f60e311f0bd",
+    "supplier_id": "7cd91b15-3192-4f48-9406-57f6eb839e56",
+    "price": 17.5,
+    "deadline_days": 3,
+    "notes": null,
+    "created_at": "2025-11-19T09:29:37.501203+00:00",
+    "updated_at": "2026-03-16T13:24:37.469732+00:00",
+    "purposes": [
+      "Опт — металл",
+      "Оптовая торговля",
+      "Стройматериалы (производство)",
+      "Опт — строительные материалы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "7739953b-d8c3-4678-a340-592b3843dc7c",
+    "supplier_id": "6fcadf39-6fb2-4aa4-9272-f6587254a022",
+    "price": 17.5,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2025-11-19T09:26:37.097058+00:00",
+    "updated_at": "2025-11-19T09:26:37.097058+00:00",
+    "purposes": [
+      "Опт — металл",
+      "Розничная торговля",
+      "Оптовая торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "4107e5b9-1eb9-4f64-b715-e042d31f1a48",
+    "supplier_id": "da44e72f-76e3-4d80-8728-4572613ba8d4",
+    "price": 19,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2025-11-19T09:28:36.257226+00:00",
+    "updated_at": "2025-11-19T09:28:36.257226+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы",
+      "Опт — строительные материалы",
+      "Стройматериалы (производство)"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "177c635b-860b-467f-b8b9-13b8ec35a269",
+    "supplier_id": "ddd70f7f-72d4-408e-ba98-a8fd1e473c04",
+    "price": 18.5,
+    "deadline_days": 5,
+    "notes": null,
+    "created_at": "2025-11-19T09:39:41.281999+00:00",
+    "updated_at": "2025-11-19T09:39:41.281999+00:00",
+    "purposes": [
+      "Опт — строительные материалы",
+      "Опт — металл",
+      "Оптовая торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "7f9f0f90-9881-4400-b775-5b7235728575",
+    "supplier_id": "5cda6298-f63f-4a6e-8df9-4a83b1a41e43",
+    "price": 17.5,
+    "deadline_days": 5,
+    "notes": null,
+    "created_at": "2025-11-19T09:40:47.061628+00:00",
+    "updated_at": "2025-11-19T09:40:47.061628+00:00",
+    "purposes": [
+      "Оптовая торговля",
+      "Стройматериалы (производство)",
+      "Розничная торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "efb564a7-9615-44e5-94a9-09ffe32f7f71",
+    "supplier_id": "2104947a-2d74-439d-ab8d-ff23a2e050fe",
+    "price": 18.5,
+    "deadline_days": 5,
+    "notes": null,
+    "created_at": "2025-11-19T09:41:28.121838+00:00",
+    "updated_at": "2025-11-19T09:41:28.121838+00:00",
+    "purposes": [
+      "Автобизнес (общее)"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "04ddb586-500f-4296-a48d-0ef14d4a43c6",
+    "supplier_id": "637a28b4-1856-47b7-9956-80dd009e438a",
+    "price": 18.5,
+    "deadline_days": 5,
+    "notes": null,
+    "created_at": "2025-11-19T09:48:03.317597+00:00",
+    "updated_at": "2025-11-19T09:48:03.317597+00:00",
+    "purposes": [
+      "Опт — металл",
+      "Опт — строительные материалы",
+      "Оптовая торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "a0574da0-92a1-4cc7-aa97-a8a498537d34",
+    "supplier_id": "93858df0-1a28-4cb7-b374-7d0958ec751f",
+    "price": 9,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2025-11-13T12:49:31.725406+00:00",
+    "updated_at": "2026-02-20T08:37:39.019532+00:00",
+    "purposes": [
+      "Опт — молочная продукция",
+      "Опт — мясо и птица",
+      "Опт — продукты из мяса",
+      "Опт — мясо и мясопродукты"
+    ],
+    "selling_price": 9,
+    "selling_deadline_days": 4
+  },
+  {
+    "id": "03cccc78-d392-4352-bca5-080d829507e3",
+    "supplier_id": "d90c32e5-8c4b-4a36-bd31-9e7f97e6b14c",
+    "price": 9.5,
+    "deadline_days": 3,
+    "notes": null,
+    "created_at": "2025-11-17T11:29:14.294658+00:00",
+    "updated_at": "2026-01-23T09:17:44.896282+00:00",
+    "purposes": [
+      "Транспортные услуги",
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": 9.5,
+    "selling_deadline_days": 3
+  },
+  {
+    "id": "58107a64-ae34-48d0-a05d-b2b53ee42672",
+    "supplier_id": "83547f4e-c71d-4847-a88d-1c6a67c9f236",
+    "price": 10,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2025-11-13T09:56:11.090319+00:00",
+    "updated_at": "2026-01-15T10:43:08.163705+00:00",
+    "purposes": [
+      "Юруслуги / Бухуслуги",
+      "Консалтинг и менеджмент",
+      "Айти — разработка ПО",
+      "Админ-услуги для бизнеса",
+      "Архитектура и инжиниринг",
+      "Персональные услуги"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "fcf06acb-01a9-400b-b026-a7ac7675be3a",
+    "supplier_id": "961f7a74-85d0-408c-b40a-634849928a17",
+    "price": 18.5,
+    "deadline_days": 5,
+    "notes": "Бензин 92 и 95",
+    "created_at": "2025-11-14T08:56:49.492037+00:00",
+    "updated_at": "2026-01-20T12:52:46.741392+00:00",
+    "purposes": [
+      "Опт — топливо/ГСМ",
+      "Нефтепродукты",
+      "Розница — топливо/АЗС"
+    ],
+    "selling_price": 18.5,
+    "selling_deadline_days": 5
+  },
+  {
+    "id": "9103ab09-6f5f-4944-96c2-9cb21c14e0bb",
+    "supplier_id": "34593a46-4cf3-4ff7-8c8d-f8852503a08f",
+    "price": 18.5,
+    "deadline_days": 5,
+    "notes": "Бензин 92 и 95",
+    "created_at": "2025-11-14T08:57:57.915118+00:00",
+    "updated_at": "2026-01-20T12:52:46.878448+00:00",
+    "purposes": [
+      "Опт — топливо/ГСМ",
+      "Розница — топливо/АЗС"
+    ],
+    "selling_price": 18.5,
+    "selling_deadline_days": 5
+  },
+  {
+    "id": "482277c7-b2c5-4f0d-a0f7-ec46ab6f29d5",
+    "supplier_id": "cacf2704-3916-4e85-b857-539fa37bbec2",
+    "price": 18.5,
+    "deadline_days": 5,
+    "notes": "Бензин 92 и 95",
+    "created_at": "2025-11-14T08:58:46.986535+00:00",
+    "updated_at": "2026-01-20T12:52:47.030188+00:00",
+    "purposes": [
+      "Нефтепродукты",
+      "Опт — топливо/ГСМ",
+      "Розница — топливо/АЗС"
+    ],
+    "selling_price": 18.5,
+    "selling_deadline_days": 5
+  },
+  {
+    "id": "4ff39c45-ef53-4d3b-a7c2-f2b3230bcb2e",
+    "supplier_id": "02ad9635-295e-4aae-a2d8-33319a5a89a4",
+    "price": 18.5,
+    "deadline_days": 5,
+    "notes": "Бензин 92 и 95",
+    "created_at": "2025-11-14T08:59:31.315411+00:00",
+    "updated_at": "2026-01-20T12:52:47.181206+00:00",
+    "purposes": [
+      "Опт — топливо/ГСМ",
+      "Розница — топливо/АЗС"
+    ],
+    "selling_price": 18.5,
+    "selling_deadline_days": 5
+  },
+  {
+    "id": "50169183-e836-4c75-902d-692a00fffda3",
+    "supplier_id": "1a27e478-12a5-4b81-a776-568811c94231",
+    "price": 9.5,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2025-11-13T09:14:26.61817+00:00",
+    "updated_at": "2026-01-20T12:53:01.767926+00:00",
+    "purposes": [
+      "Айти — разработка ПО",
+      "Транспортные услуги",
+      "Грузоперевозки",
+      "Недвижимость и аренда"
+    ],
+    "selling_price": 9.5,
+    "selling_deadline_days": 2
+  },
+  {
+    "id": "7c8f2176-00d0-4712-b844-9dea95f2c2ac",
+    "supplier_id": "dea1ca51-2752-423f-bd3c-2f0d709194e2",
+    "price": 9.5,
+    "deadline_days": 3,
+    "notes": null,
+    "created_at": "2025-11-17T11:27:38.644373+00:00",
+    "updated_at": "2026-01-20T12:53:02.039934+00:00",
+    "purposes": [
+      "Грузоперевозки",
+      "Опт — строительные материалы",
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": 9.5,
+    "selling_deadline_days": 3
+  },
+  {
+    "id": "ccba82d0-f1f8-41ba-88e0-9ced80031663",
+    "supplier_id": "b380d326-491b-43b9-839b-289e0f6f020f",
+    "price": 17,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2025-11-19T09:50:34.049105+00:00",
+    "updated_at": "2026-01-20T12:53:02.175499+00:00",
+    "purposes": [
+      "Ремонт и монтаж оборудования",
+      "Оптовая торговля",
+      "Опт — электронное оборудование",
+      "СМР — строительно-монтажные работы",
+      "Архитектура и инжиниринг"
+    ],
+    "selling_price": 17,
+    "selling_deadline_days": 2
+  },
+  {
+    "id": "f49a13ad-2d5b-4aec-8263-816859a033d1",
+    "supplier_id": "b247aaaa-04e5-4a85-a53a-57b61ce26e08",
+    "price": 17.5,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2025-11-19T10:22:30.101582+00:00",
+    "updated_at": "2025-11-19T10:22:30.101582+00:00",
+    "purposes": [
+      "Интернет-магазин",
+      "Оптовая торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "238300a7-b50b-4d45-835f-7f6a4d8a44bc",
+    "supplier_id": "35bc2955-284b-4934-b9c1-9129d819a178",
+    "price": 17.5,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2025-11-19T10:23:18.3383+00:00",
+    "updated_at": "2025-11-19T10:23:18.3383+00:00",
+    "purposes": [
+      "Оптовая торговля",
+      "Розничная торговля",
+      "Электроника"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "8c90d98f-08dd-4694-a0d3-2d4279a0534d",
+    "supplier_id": "8c33cea1-2e88-4325-97e3-37069f547ac8",
+    "price": 17.5,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2025-11-19T10:27:39.781792+00:00",
+    "updated_at": "2025-11-19T10:27:39.781792+00:00",
+    "purposes": [
+      "Оптовая торговля",
+      "Розничная торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "0dba82d8-4d7d-40bb-a8ac-22df89eaf72c",
+    "supplier_id": "04a1d2ee-a1a7-41b6-8b32-ac39991a8d64",
+    "price": 17.5,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2025-11-19T10:28:22.710072+00:00",
+    "updated_at": "2025-11-19T10:28:22.710072+00:00",
+    "purposes": [
+      "Оптовая торговля",
+      "Розничная торговля",
+      "Электроника"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "c9b0ce46-e24a-458a-be78-12a42ac3e40f",
+    "supplier_id": "b2ada349-b9ff-4df9-81cc-3bf32c689719",
+    "price": 18.5,
+    "deadline_days": 2,
+    "notes": "В Документах отписывают кому что надо. Товар.",
+    "created_at": "2026-02-27T10:34:29.193064+00:00",
+    "updated_at": "2026-02-27T10:34:29.193064+00:00",
+    "purposes": [
+      "Оптовая торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "11d20995-2b82-43e9-a86f-9374de001f6f",
+    "supplier_id": "e4291819-6014-431c-93ea-281c721d0d01",
+    "price": 16,
+    "deadline_days": 0,
+    "notes": null,
+    "created_at": "2025-11-25T12:45:16.777023+00:00",
+    "updated_at": "2026-01-20T12:52:19.391149+00:00",
+    "purposes": [
+      "Автобизнес (общее)",
+      "Админ-услуги для бизнеса",
+      "Изделия из металла",
+      "Консалтинг и менеджмент",
+      "Недвижимость и аренда",
+      "Опт — металл",
+      "Опт — строительные материалы",
+      "Опт — топливо/ГСМ",
+      "Оптовая торговля",
+      "Розница — стройматериалы/хозтовары",
+      "Розничная торговля",
+      "СМР — строительно-монтажные работы",
+      "Транспортные услуги"
+    ],
+    "selling_price": 16,
+    "selling_deadline_days": 0
+  },
+  {
+    "id": "fd356377-5026-4cc6-962a-a6550180b51a",
+    "supplier_id": "7cdaf4cd-6e6c-4471-810c-89e87e6e9159",
+    "price": 7,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2025-11-21T10:15:41.482945+00:00",
+    "updated_at": "2025-11-21T10:15:41.482945+00:00",
+    "purposes": [
+      "Розничная торговля",
+      "Оптовая торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "03b6ffe9-c973-4cdb-8d38-1c5e87a7b6b7",
+    "supplier_id": "334abe0e-b7ad-4515-bad6-01c368483226",
+    "price": 16.5,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2025-11-22T11:45:03.734323+00:00",
+    "updated_at": "2025-11-22T11:45:03.734323+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы",
+      "Опт — строительные материалы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "6b2638e9-19f8-4866-99ca-e6f873dab26a",
+    "supplier_id": "5dfd844a-a34c-4a29-8bab-2a1c102e16dc",
+    "price": 20.5,
+    "deadline_days": 1,
+    "notes": "Оборудование Комплектующие",
+    "created_at": "2026-03-04T13:28:07.650034+00:00",
+    "updated_at": "2026-03-04T13:28:07.650034+00:00",
+    "purposes": [
+      "Оптовая торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "921e3695-e750-4774-bdae-b4b67d3b319b",
+    "supplier_id": "627e653e-46da-4158-a91b-ac57029164e2",
+    "price": 15.5,
+    "deadline_days": 3,
+    "notes": null,
+    "created_at": "2025-11-23T18:23:39.672071+00:00",
+    "updated_at": "2025-11-23T18:23:52.837138+00:00",
+    "purposes": [
+      "Розница — топливо/АЗС",
+      "Опт — топливо/ГСМ"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "9700fbbc-bacb-4882-953d-5423315d2a55",
+    "supplier_id": "b597f32f-7f9d-4006-8327-3953f327d5a7",
+    "price": 17.5,
+    "deadline_days": 3,
+    "notes": null,
+    "created_at": "2025-11-23T18:26:35.59418+00:00",
+    "updated_at": "2025-11-23T18:27:07.303798+00:00",
+    "purposes": [
+      "Опт — строительные материалы",
+      "Опт — металл",
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "d2d1df97-ba0d-4cd7-8909-3bc8d70dd84d",
+    "supplier_id": "2d93c5c3-a295-467b-9ef4-b1c4524135db",
+    "price": 15.5,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2025-11-24T11:37:06.51895+00:00",
+    "updated_at": "2025-11-24T11:37:06.51895+00:00",
+    "purposes": [
+      "Опт — строительные материалы",
+      "Оптовая торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "578d9e38-2c18-46a1-90d0-30e0c5abaee7",
+    "supplier_id": "2d93c5c3-a295-467b-9ef4-b1c4524135db",
+    "price": 16,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2025-11-24T11:37:06.667914+00:00",
+    "updated_at": "2025-11-24T11:37:06.667914+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "a57410ae-c24b-4225-94dd-f281542c4e8f",
+    "supplier_id": "704bd928-14e2-4dc3-8d73-0ad5fa3b14d6",
+    "price": 15.5,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2025-11-24T11:38:18.08367+00:00",
+    "updated_at": "2025-11-24T11:38:18.08367+00:00",
+    "purposes": [
+      "Опт — строительные материалы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "03f38404-9a53-4b1d-afe5-cb83f6e9f379",
+    "supplier_id": "704bd928-14e2-4dc3-8d73-0ad5fa3b14d6",
+    "price": 16,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2025-11-24T11:38:18.20997+00:00",
+    "updated_at": "2025-11-24T11:38:18.20997+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "e1bc5160-cc42-4d2e-948a-a8311c2b8208",
+    "supplier_id": "0f707917-d391-4a2d-b650-a76e2f576387",
+    "price": 15.5,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2025-11-24T11:39:21.354029+00:00",
+    "updated_at": "2025-11-24T11:39:21.354029+00:00",
+    "purposes": [
+      "Опт — строительные материалы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "52402540-65dc-4289-b1b7-6605e2562996",
+    "supplier_id": "0f707917-d391-4a2d-b650-a76e2f576387",
+    "price": 16,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2025-11-24T11:39:21.479813+00:00",
+    "updated_at": "2025-11-24T11:39:21.479813+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "b18e86fc-a549-4ba6-8415-4469e2f6d06a",
+    "supplier_id": "65216c19-4322-4636-b0e6-f1c442f93be3",
+    "price": 15.5,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2025-11-24T11:40:04.943861+00:00",
+    "updated_at": "2025-11-24T11:40:04.943861+00:00",
+    "purposes": [
+      "Опт — строительные материалы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "e9a565e1-6f32-48bc-80ed-1ca9b0fbd3f7",
+    "supplier_id": "65216c19-4322-4636-b0e6-f1c442f93be3",
+    "price": 16,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2025-11-24T11:40:05.07662+00:00",
+    "updated_at": "2025-11-24T11:40:05.07662+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "6b044616-408c-432e-850d-161e3b082364",
+    "supplier_id": "7360fc43-4799-4a9d-870e-7f1bd3c935a0",
+    "price": 15.5,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2025-11-24T11:42:33.065173+00:00",
+    "updated_at": "2025-11-24T11:42:33.065173+00:00",
+    "purposes": [
+      "Опт — строительные материалы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "fb0df5a6-4639-40f1-8268-335f8d21d5cf",
+    "supplier_id": "7360fc43-4799-4a9d-870e-7f1bd3c935a0",
+    "price": 16,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2025-11-24T11:42:33.230849+00:00",
+    "updated_at": "2025-11-24T11:42:33.230849+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "33a0be59-6142-48a7-a254-c0ad167371c6",
+    "supplier_id": "b380d326-491b-43b9-839b-289e0f6f020f",
+    "price": 18,
+    "deadline_days": -2,
+    "notes": null,
+    "created_at": "2025-11-19T09:50:34.179877+00:00",
+    "updated_at": "2026-01-20T12:53:02.45789+00:00",
+    "purposes": [
+      "Опт — электронное оборудование",
+      "Архитектура и инжиниринг",
+      "Ремонт и монтаж оборудования",
+      "СМР — строительно-монтажные работы",
+      "Оптовая торговля"
+    ],
+    "selling_price": 18,
+    "selling_deadline_days": -2
+  },
+  {
+    "id": "1fd48ae3-741b-4924-9788-1a86276ebf57",
+    "supplier_id": "882c157f-66b1-4f18-a69d-fbc6bf54b61a",
+    "price": 17,
+    "deadline_days": 1,
+    "notes": null,
+    "created_at": "2025-11-25T12:59:10.273914+00:00",
+    "updated_at": "2026-01-20T12:53:02.591691+00:00",
+    "purposes": [
+      "Архитектура и инжиниринг",
+      "Опт — строительные материалы",
+      "Опт — электронное оборудование",
+      "СМР — строительно-монтажные работы",
+      "Сервис зданий/территорий"
+    ],
+    "selling_price": 17,
+    "selling_deadline_days": 1
+  },
+  {
+    "id": "c5dcdae2-9f82-4609-9653-85d8b3fcdb2f",
+    "supplier_id": "882c157f-66b1-4f18-a69d-fbc6bf54b61a",
+    "price": 18,
+    "deadline_days": -2,
+    "notes": null,
+    "created_at": "2025-11-25T12:59:10.395594+00:00",
+    "updated_at": "2026-01-20T12:53:02.730767+00:00",
+    "purposes": [
+      "Опт — строительные материалы",
+      "Опт — электронное оборудование",
+      "СМР — строительно-монтажные работы",
+      "Сервис зданий/территорий"
+    ],
+    "selling_price": 18,
+    "selling_deadline_days": -2
+  },
+  {
+    "id": "e6b87aad-7133-48db-9027-90981135669f",
+    "supplier_id": "7bc40c7b-f274-4477-905d-ef1cc466e0f1",
+    "price": 17.5,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2025-11-19T10:01:46.87202+00:00",
+    "updated_at": "2026-01-29T09:55:13.931853+00:00",
+    "purposes": [
+      "Розничная торговля",
+      "Оптовая торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "1093e5fe-854b-481d-86a1-a031fa8b00da",
+    "supplier_id": "3ee46fc1-3c06-4d9a-a5ea-67ff536b292c",
+    "price": 21,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2025-11-25T13:03:03.777733+00:00",
+    "updated_at": "2025-11-25T13:03:03.777733+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы",
+      "Опт — строительные материалы",
+      "Архитектура и инжиниринг",
+      "Оптовая торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "b554541f-1912-4ef3-ac19-1a5c3e7516d5",
+    "supplier_id": "112307c4-aee9-4b6e-8f3e-2deada1f6179",
+    "price": 19.5,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2025-11-25T13:04:32.540107+00:00",
+    "updated_at": "2025-11-25T13:04:32.540107+00:00",
+    "purposes": [
+      "Опт — металл",
+      "Опт — строительные материалы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "23aefcc7-be3b-474d-af94-1898d0ddc483",
+    "supplier_id": "862b6fb8-039d-46b0-b7c0-5e6f8cae0f76",
+    "price": 18.5,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2025-11-25T13:05:33.165204+00:00",
+    "updated_at": "2025-11-25T13:05:33.165204+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы",
+      "Опт — строительные материалы",
+      "Опт — металл",
+      "Оптовая торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "56606d09-64fe-4604-bc5e-d332b80ed5d6",
+    "supplier_id": "5546a960-e057-4e8e-9307-d621f22d6e8e",
+    "price": 19.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-15T12:19:35.009793+00:00",
+    "updated_at": "2026-01-15T12:19:35.009793+00:00",
+    "purposes": [
+      "Опт — строительные материалы",
+      "Оптовая торговля",
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "1a972541-4c50-46ee-95c3-06ec747ccc63",
+    "supplier_id": "ed830d06-9c43-4a70-8507-0e30ff45dbfb",
+    "price": 17,
+    "deadline_days": 3,
+    "notes": null,
+    "created_at": "2026-01-29T10:06:13.547999+00:00",
+    "updated_at": "2026-01-29T10:06:35.600034+00:00",
+    "purposes": [
+      "Опт — строительные материалы",
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "d40d5695-c180-4ec3-9fd6-bce9df3e9701",
+    "supplier_id": "dd1a0c3e-1435-4531-8054-522b796ee8b6",
+    "price": 7.5,
+    "deadline_days": 2,
+    "notes": "ЧЗ",
+    "created_at": "2026-02-18T12:52:56.855987+00:00",
+    "updated_at": "2026-02-18T12:53:33.32174+00:00",
+    "purposes": [
+      "Опт — табак",
+      "Логистика и склады"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "59561209-ee64-40b6-aeb3-99f711776cd8",
+    "supplier_id": "d2c91bd6-ebb3-42fd-805a-a2840f8ae629",
+    "price": 17.5,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2025-11-25T13:06:47.414576+00:00",
+    "updated_at": "2025-11-25T13:06:47.414576+00:00",
+    "purposes": [
+      "Автобизнес (общее)",
+      "Аренда и лизинг",
+      "Логистика и склады",
+      "Грузоперевозки",
+      "Транспортные услуги"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "bf0a83c5-8658-48c0-b45e-6b68c5f913a5",
+    "supplier_id": "2932a387-f274-4794-980c-29c53b09f16f",
+    "price": 16,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2025-11-25T13:08:14.5699+00:00",
+    "updated_at": "2025-11-25T13:08:14.5699+00:00",
+    "purposes": [
+      "Автобизнес (общее)",
+      "Грузоперевозки",
+      "Логистика и склады",
+      "Транспортные услуги"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "db8540b4-2b5e-4fae-b6a3-a3e601bc149b",
+    "supplier_id": "a9f382f6-cc3e-4d53-a3dc-89f3b1c4da8e",
+    "price": 20.5,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2026-02-27T10:47:08.047122+00:00",
+    "updated_at": "2026-02-27T10:47:08.047122+00:00",
+    "purposes": [
+      "Химическая промышленность"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "9cb2d98a-ca90-4915-9047-1b03eb3f119a",
+    "supplier_id": "a4927133-84ef-4921-8691-0f9577bfa02e",
+    "price": 16.5,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2025-12-05T14:21:05.131792+00:00",
+    "updated_at": "2025-12-05T14:21:05.131792+00:00",
+    "purposes": [
+      "Автобизнес (общее)"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "b924de1a-230f-42aa-b77d-8c60a495ad7c",
+    "supplier_id": "71e31516-1151-4638-a23c-f2836e539322",
+    "price": 18,
+    "deadline_days": 3,
+    "notes": null,
+    "created_at": "2025-12-09T14:42:15.509021+00:00",
+    "updated_at": "2025-12-09T14:42:15.509021+00:00",
+    "purposes": [
+      "Автобизнес (общее)"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "b37abb57-de7e-406f-83f5-854d89b8de40",
+    "supplier_id": "83547f4e-c71d-4847-a88d-1c6a67c9f236",
+    "price": 9,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2025-12-23T09:42:32.04601+00:00",
+    "updated_at": "2026-01-15T10:43:59.623482+00:00",
+    "purposes": [
+      "Админ-услуги для бизнеса",
+      "Айти — разработка ПО",
+      "Архитектура и инжиниринг",
+      "Консалтинг и менеджмент",
+      "Персональные услуги",
+      "Юруслуги / Бухуслуги"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "d22f8796-b480-41f4-a95d-05a3e134d977",
+    "supplier_id": "3ee56e6f-318b-42c0-aaa9-dd92727e52fa",
+    "price": 20.5,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2026-02-27T10:50:56.413621+00:00",
+    "updated_at": "2026-02-27T10:50:56.413621+00:00",
+    "purposes": [
+      "Опт — непродовольственные товары"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "d3579cd5-3938-4a44-a8f8-977afd3ca2dc",
+    "supplier_id": "7c8d0810-f1d9-4fac-95bc-230733ee0c7a",
+    "price": 18.5,
+    "deadline_days": 5,
+    "notes": null,
+    "created_at": "2026-03-10T10:51:13.829374+00:00",
+    "updated_at": "2026-03-10T10:51:13.829374+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы",
+      "Опт — строительные материалы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "763ebe48-ea73-4674-a322-00eb8b9c8392",
+    "supplier_id": "0b32bebb-e2bf-4d4e-862f-a60b0d44758d",
+    "price": 9,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2025-12-17T12:28:09.263977+00:00",
+    "updated_at": "2026-01-15T09:20:25.738624+00:00",
+    "purposes": [
+      "Юруслуги / Бухуслуги"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "a4ee5b9c-ed7a-4369-bc66-e062b1fd5e3c",
+    "supplier_id": "2cb948b6-81d6-4dfb-9b53-1e08ae071ccc",
+    "price": 9.5,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2026-01-12T10:02:46.71907+00:00",
+    "updated_at": "2026-01-20T12:51:00.358782+00:00",
+    "purposes": [
+      "Опт — мясо и птица",
+      "Опт — мясо и мясопродукты"
+    ],
+    "selling_price": 9.5,
+    "selling_deadline_days": 2
+  },
+  {
+    "id": "9f20ee12-4d52-4267-a92c-da1e819061e2",
+    "supplier_id": "324002d3-2be0-4bb6-ae91-88ad534a9d67",
+    "price": 18.5,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2025-12-04T08:15:36.162033+00:00",
+    "updated_at": "2026-01-20T12:52:19.590648+00:00",
+    "purposes": [
+      "Продажа автозапчастей",
+      "Автобизнес (общее)"
+    ],
+    "selling_price": 18.5,
+    "selling_deadline_days": 2
+  },
+  {
+    "id": "4af37ef7-5318-4120-8276-bffaaad9462e",
+    "supplier_id": "9ba7f3a9-9fa5-463f-aca7-5121c2a6797d",
+    "price": 20,
+    "deadline_days": 5,
+    "notes": null,
+    "created_at": "2025-12-04T08:21:33.817824+00:00",
+    "updated_at": "2026-01-20T12:52:19.727851+00:00",
+    "purposes": [
+      "Опт — металл",
+      "Оптовая торговля"
+    ],
+    "selling_price": 20,
+    "selling_deadline_days": 5
+  },
+  {
+    "id": "46c41995-c618-420d-89c0-e3477aca8f00",
+    "supplier_id": "e96e3151-de32-4b09-bf87-24a811418d8a",
+    "price": 20,
+    "deadline_days": 5,
+    "notes": null,
+    "created_at": "2025-12-04T08:23:27.375004+00:00",
+    "updated_at": "2026-01-20T12:52:19.873365+00:00",
+    "purposes": [
+      "Металлургия",
+      "Изделия из металла",
+      "Оптовая торговля"
+    ],
+    "selling_price": 20,
+    "selling_deadline_days": 5
+  },
+  {
+    "id": "dfa983de-1d95-409e-a1ae-85eaa7dc681f",
+    "supplier_id": "a785012e-ae1a-4eaf-8ed9-317a0e7d52b6",
+    "price": 20,
+    "deadline_days": 5,
+    "notes": null,
+    "created_at": "2025-12-04T08:27:56.481106+00:00",
+    "updated_at": "2026-01-20T12:52:20.008863+00:00",
+    "purposes": [
+      "Металлургия",
+      "Изделия из металла",
+      "Оптовая торговля"
+    ],
+    "selling_price": 20,
+    "selling_deadline_days": 5
+  },
+  {
+    "id": "8054daa7-d068-4391-90ba-d8a2f49cc5b2",
+    "supplier_id": "070e5d1f-62aa-4520-ac14-7d48e4d3d4cb",
+    "price": 18.5,
+    "deadline_days": 5,
+    "notes": null,
+    "created_at": "2025-12-04T08:30:04.313014+00:00",
+    "updated_at": "2026-01-20T12:52:20.142639+00:00",
+    "purposes": [
+      "Грузоперевозки",
+      "Транспортные услуги"
+    ],
+    "selling_price": 18.5,
+    "selling_deadline_days": 5
+  },
+  {
+    "id": "61c0ed35-9e87-47a5-a993-e7fbd333cc9b",
+    "supplier_id": "31402add-ef99-451c-aa39-ed18f3c0f2a1",
+    "price": 20.5,
+    "deadline_days": 5,
+    "notes": null,
+    "created_at": "2025-12-04T08:32:40.907236+00:00",
+    "updated_at": "2026-01-20T12:52:20.332763+00:00",
+    "purposes": [
+      "Оптовая торговля",
+      "Опт — строительные материалы"
+    ],
+    "selling_price": 20.5,
+    "selling_deadline_days": 5
+  },
+  {
+    "id": "c6094779-a7c1-45a7-966d-894ecb0836d8",
+    "supplier_id": "6560551c-5eb8-421a-99a7-78386e8bb99e",
+    "price": 21.5,
+    "deadline_days": 5,
+    "notes": null,
+    "created_at": "2025-12-04T08:42:44.213754+00:00",
+    "updated_at": "2026-01-20T12:52:20.473721+00:00",
+    "purposes": [
+      "Опт — металл",
+      "Оптовая торговля"
+    ],
+    "selling_price": 21.5,
+    "selling_deadline_days": 5
+  },
+  {
+    "id": "7d2099f0-24e4-49c5-80af-eb086e4834a2",
+    "supplier_id": "e942183f-539b-4a16-addf-ef74e7b2e007",
+    "price": 21.5,
+    "deadline_days": 5,
+    "notes": null,
+    "created_at": "2025-12-04T08:43:30.328832+00:00",
+    "updated_at": "2026-01-20T12:52:20.605841+00:00",
+    "purposes": [
+      "Опт — металл",
+      "Изделия из металла",
+      "Металлургия",
+      "Оптовая торговля"
+    ],
+    "selling_price": 21.5,
+    "selling_deadline_days": 5
+  },
+  {
+    "id": "55ecb8cc-716d-4341-8e24-41585f9ed3b8",
+    "supplier_id": "cbe67a5e-4009-4b48-85dd-28de2c5878f3",
+    "price": 17,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-12T11:55:45.650305+00:00",
+    "updated_at": "2026-02-13T07:58:22.486589+00:00",
+    "purposes": [
+      "Опт — топливо/ГСМ",
+      "Грузоперевозки",
+      "СМР — строительно-монтажные работы",
+      "Опт — строительные материалы"
+    ],
+    "selling_price": 17.5,
+    "selling_deadline_days": 3
+  },
+  {
+    "id": "e3dcd3d0-33b1-4c03-b285-5907687c747d",
+    "supplier_id": "b2984241-2075-4341-b792-8497c34ae442",
+    "price": 10,
+    "deadline_days": 1,
+    "notes": null,
+    "created_at": "2025-11-26T10:46:04.068441+00:00",
+    "updated_at": "2026-01-20T12:52:47.45222+00:00",
+    "purposes": [
+      "Нефтепродукты",
+      "Опт — топливо/ГСМ",
+      "Добыча нефти и газа"
+    ],
+    "selling_price": 10,
+    "selling_deadline_days": 1
+  },
+  {
+    "id": "779e22e9-8b1f-41a0-85e0-5c8124c8fd06",
+    "supplier_id": "07176da2-311a-4b1a-bf56-092615828c61",
+    "price": 16,
+    "deadline_days": 3,
+    "notes": null,
+    "created_at": "2025-12-04T07:33:27.734422+00:00",
+    "updated_at": "2026-01-20T12:53:02.869338+00:00",
+    "purposes": [
+      "Опт — строительные материалы",
+      "Оптовая торговля",
+      "СМР — строительно-монтажные работы",
+      "Опт — электронное оборудование"
+    ],
+    "selling_price": 16,
+    "selling_deadline_days": 3
+  },
+  {
+    "id": "e191ab44-aed0-478f-8306-98194ba0e3a4",
+    "supplier_id": "d4aa424f-c891-47a6-bdc7-b9078204b540",
+    "price": 16.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2025-12-04T07:38:01.55395+00:00",
+    "updated_at": "2026-01-20T12:53:03.004652+00:00",
+    "purposes": [
+      "Грузоперевозки",
+      "Логистика и склады",
+      "Транспортные услуги"
+    ],
+    "selling_price": 16.5,
+    "selling_deadline_days": 4
+  },
+  {
+    "id": "3b2a454a-219e-44d9-94cf-1bc36230c43e",
+    "supplier_id": "94f1bec0-3b97-4d63-8efc-6ca30883d617",
+    "price": 16.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2025-12-04T07:39:53.38917+00:00",
+    "updated_at": "2026-01-20T12:53:03.132131+00:00",
+    "purposes": [
+      "Аренда и лизинг",
+      "Логистика и склады",
+      "Транспортные услуги",
+      "Грузоперевозки"
+    ],
+    "selling_price": 16.5,
+    "selling_deadline_days": 4
+  },
+  {
+    "id": "f44b739c-4553-4861-aa27-402f0aeacdba",
+    "supplier_id": "19c232a2-613a-4de0-8ad5-546a46358049",
+    "price": 16.5,
+    "deadline_days": 3,
+    "notes": null,
+    "created_at": "2025-12-04T07:44:09.246742+00:00",
+    "updated_at": "2026-01-20T12:53:03.272876+00:00",
+    "purposes": [
+      "Оптовая торговля",
+      "Розничная торговля",
+      "Опт — непродовольственные товары"
+    ],
+    "selling_price": 16.5,
+    "selling_deadline_days": 3
+  },
+  {
+    "id": "64be528f-98ca-4474-ac85-bac52995e7ed",
+    "supplier_id": "11171e72-40c8-4f3c-a765-06105577156b",
+    "price": 17.5,
+    "deadline_days": 0,
+    "notes": null,
+    "created_at": "2025-12-04T08:02:19.203584+00:00",
+    "updated_at": "2026-01-20T12:53:03.411224+00:00",
+    "purposes": [
+      "Опт — строительные материалы",
+      "СМР — строительно-монтажные работы",
+      "Архитектура и инжиниринг"
+    ],
+    "selling_price": 17.5,
+    "selling_deadline_days": 0
+  },
+  {
+    "id": "901a5b49-40ed-4395-8557-286df9e66e9f",
+    "supplier_id": "11171e72-40c8-4f3c-a765-06105577156b",
+    "price": 16.5,
+    "deadline_days": 3,
+    "notes": null,
+    "created_at": "2025-12-04T08:02:19.395157+00:00",
+    "updated_at": "2026-01-20T12:53:03.650337+00:00",
+    "purposes": [
+      "Опт — строительные материалы",
+      "СМР — строительно-монтажные работы",
+      "Архитектура и инжиниринг"
+    ],
+    "selling_price": 16.5,
+    "selling_deadline_days": 3
+  },
+  {
+    "id": "4d8bad7d-fe3b-441f-b01d-a144dfebbaec",
+    "supplier_id": "ab55e00f-b6a2-461b-8e9a-a28e404ec274",
+    "price": 9.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-12T11:53:43.847069+00:00",
+    "updated_at": "2026-01-23T09:18:55.625303+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы",
+      "Транспортные услуги",
+      "Грузоперевозки"
+    ],
+    "selling_price": 9.5,
+    "selling_deadline_days": 4
+  },
+  {
+    "id": "fca134cc-b079-4dae-b62c-caffd80f588a",
+    "supplier_id": "458e0bd3-5b9e-4be4-b529-b8167aa41529",
+    "price": 21.5,
+    "deadline_days": 5,
+    "notes": null,
+    "created_at": "2025-12-04T08:49:46.034369+00:00",
+    "updated_at": "2026-02-06T11:48:00.752704+00:00",
+    "purposes": [
+      "Опт — металл",
+      "Металлургия",
+      "Оптовая торговля"
+    ],
+    "selling_price": 21.5,
+    "selling_deadline_days": 5
+  },
+  {
+    "id": "6a25be73-2ac1-4b01-b5e6-c405c113f40e",
+    "supplier_id": "29e13d75-e3fa-46c4-a501-53be33cc9eca",
+    "price": 17.5,
+    "deadline_days": 3,
+    "notes": null,
+    "created_at": "2026-01-12T12:01:45.945775+00:00",
+    "updated_at": "2026-01-20T12:53:04.490615+00:00",
+    "purposes": [
+      "Опт — строительные материалы",
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": 17.5,
+    "selling_deadline_days": 3
+  },
+  {
+    "id": "ccd3b8a5-bcbd-474e-9704-c261fd65c349",
+    "supplier_id": "7bee6dca-1a7c-4b0f-a581-73af84dc25ab",
+    "price": 9.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-12T11:50:38.915218+00:00",
+    "updated_at": "2026-01-23T09:17:05.549801+00:00",
+    "purposes": [
+      "Опт — строительные материалы",
+      "Оптовая торговля"
+    ],
+    "selling_price": 9.5,
+    "selling_deadline_days": 4
+  },
+  {
+    "id": "f958c9c3-a4c4-4a95-b2fe-e9161297a95d",
+    "supplier_id": "eaea5b8b-76b2-4a1b-88cc-210020cde11e",
+    "price": 17,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2026-01-13T09:23:29.438271+00:00",
+    "updated_at": "2026-01-13T09:34:10.484123+00:00",
+    "purposes": [
+      "Автобизнес (общее)",
+      "Грузоперевозки",
+      "Логистика и склады",
+      "Опт — строительные материалы",
+      "Оптовая торговля",
+      "Розница — стройматериалы/хозтовары",
+      "Транспортные услуги"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "a3f5b4e3-2586-4d2b-bb33-1e74847bb95d",
+    "supplier_id": "eaea5b8b-76b2-4a1b-88cc-210020cde11e",
+    "price": 20.5,
+    "deadline_days": 2,
+    "notes": "20,5% за 4 квартал",
+    "created_at": "2026-01-13T09:34:10.73182+00:00",
+    "updated_at": "2026-01-13T09:34:10.73182+00:00",
+    "purposes": [
+      "Автобизнес (общее)",
+      "Грузоперевозки",
+      "Логистика и склады",
+      "Опт — строительные материалы",
+      "Оптовая торговля",
+      "Розница — стройматериалы/хозтовары",
+      "Транспортные услуги"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "1a5f0ce8-feab-4004-b863-c6e59c66b2df",
+    "supplier_id": "183272bd-37ef-495d-a8a7-ea2a926de1d0",
+    "price": 18,
+    "deadline_days": 2,
+    "notes": "18% текущим кварталом",
+    "created_at": "2026-01-13T09:38:50.849489+00:00",
+    "updated_at": "2026-01-20T12:53:04.786471+00:00",
+    "purposes": [
+      "Автобизнес (общее)",
+      "Аренда и лизинг",
+      "Опт — топливо/ГСМ",
+      "Транспортные услуги",
+      "Стройматериалы (производство)",
+      "Прочие профессиональные услуги"
+    ],
+    "selling_price": 18,
+    "selling_deadline_days": 2
+  },
+  {
+    "id": "f3727c0d-57ab-4140-a6fa-cc5fceb000a5",
+    "supplier_id": "244c1d37-9bf3-4355-b22c-0a4c05d61cd2",
+    "price": 22,
+    "deadline_days": 1,
+    "notes": null,
+    "created_at": "2026-03-03T11:01:25.460112+00:00",
+    "updated_at": "2026-03-03T11:01:25.460112+00:00",
+    "purposes": [
+      "Опт — строительные материалы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "5246fa21-5b01-4475-93c8-eb369bf4775b",
+    "supplier_id": "0483425a-cfa5-4280-bf2c-f463d8601ce8",
+    "price": 17.5,
+    "deadline_days": 3,
+    "notes": null,
+    "created_at": "2026-01-13T09:48:39.015647+00:00",
+    "updated_at": "2026-01-13T09:48:39.015647+00:00",
+    "purposes": [
+      "Оптовая торговля",
+      "Опт — электронное оборудование"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "af513262-10f7-484d-90f2-178185048921",
+    "supplier_id": "0483425a-cfa5-4280-bf2c-f463d8601ce8",
+    "price": 21,
+    "deadline_days": 3,
+    "notes": "21% за 4 квартал",
+    "created_at": "2026-01-13T09:48:39.205012+00:00",
+    "updated_at": "2026-01-13T09:48:39.205012+00:00",
+    "purposes": [
+      "Оптовая торговля",
+      "Опт — электронное оборудование"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "9a1a0a9c-c1dc-46d5-970c-bdb1f78060b3",
+    "supplier_id": "1fd0c829-2e12-44b9-9648-959489fbbf39",
+    "price": 12,
+    "deadline_days": 3,
+    "notes": "Все подтверждено реальными GTD, если нужно сделать доставку доставку будет оплачиваться отдельно, GTD на конкретный товар который предоставляем ,НЕ дубликаты",
+    "created_at": "2026-01-14T12:42:22.324455+00:00",
+    "updated_at": "2026-01-14T12:42:22.324455+00:00",
+    "purposes": [
+      "Оптовая торговля",
+      "Розничная торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "a1f3499b-b7b1-4561-b590-9a07a3b89c38",
+    "supplier_id": "a0959274-b490-416e-998f-fd05939e293e",
+    "price": 16.5,
+    "deadline_days": 3,
+    "notes": "СМР  принимает",
+    "created_at": "2026-01-14T08:48:45.454503+00:00",
+    "updated_at": "2026-01-14T08:55:38.930444+00:00",
+    "purposes": [
+      "Опт — строительные материалы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "2e6b83fb-7ad8-4719-b2d4-958b28422288",
+    "supplier_id": "9288783f-4a9c-46f8-8da0-3dbb4492be70",
+    "price": 23.5,
+    "deadline_days": 7,
+    "notes": null,
+    "created_at": "2026-03-03T11:20:47.408845+00:00",
+    "updated_at": "2026-03-03T11:23:27.08999+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "0f0c5278-3283-48d2-826e-7b8f46fdb89f",
+    "supplier_id": "7c8d0810-f1d9-4fac-95bc-230733ee0c7a",
+    "price": 19.5,
+    "deadline_days": 3,
+    "notes": null,
+    "created_at": "2026-03-10T10:51:14.006739+00:00",
+    "updated_at": "2026-03-10T10:51:14.006739+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы",
+      "Опт — строительные материалы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "0076b9a6-eed1-43cf-9314-9f99acbd1b66",
+    "supplier_id": "053251bb-9c8f-4003-9cf5-9040d0ecefb8",
+    "price": 12,
+    "deadline_days": 3,
+    "notes": "Все подтверждено реальными грузовыми таможенными декларациями, если нужно сделать доставку доставку будет оплачиваться отдельно, GTD на конкретный товар который предоставляем ,НЕ дубликаты",
+    "created_at": "2026-01-14T12:40:11.178824+00:00",
+    "updated_at": "2026-01-14T12:40:35.972185+00:00",
+    "purposes": [
+      "Оптовая торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "e2f2e897-6a7b-4d73-b5a0-296bf462df6a",
+    "supplier_id": "5dd7b5fe-a4af-41d9-9ffc-feb88362b991",
+    "price": 18,
+    "deadline_days": 3,
+    "notes": "ИМПОРТЕР",
+    "created_at": "2026-01-14T13:38:14.761905+00:00",
+    "updated_at": "2026-01-14T13:41:08.493088+00:00",
+    "purposes": [
+      "Интернет-магазин",
+      "Логистика и склады",
+      "Опт — электронное оборудование",
+      "Оптовая торговля",
+      "Розничная торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "b69d627a-f482-4fab-8ecd-81c6786bf273",
+    "supplier_id": "6bb44d2f-4058-460b-aa81-bf566e72a7a9",
+    "price": 19.5,
+    "deadline_days": 4,
+    "notes": "+ 2,5% за 4 квартал ",
+    "created_at": "2026-01-15T07:27:12.115041+00:00",
+    "updated_at": "2026-01-20T12:52:21.491101+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": 19.5,
+    "selling_deadline_days": 4
+  },
+  {
+    "id": "c5ba1caf-12df-4e9d-b3d0-d531f348ba9f",
+    "supplier_id": "7c8d0810-f1d9-4fac-95bc-230733ee0c7a",
+    "price": 21.5,
+    "deadline_days": 5,
+    "notes": null,
+    "created_at": "2026-01-15T10:09:07.386655+00:00",
+    "updated_at": "2026-01-15T10:09:07.386655+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы",
+      "Опт — строительные материалы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "5f16696f-7c26-4f0d-9b56-ac18514dcf5b",
+    "supplier_id": "7ce2eeef-5f8a-45af-98aa-df191dc72e9e",
+    "price": 16.5,
+    "deadline_days": 5,
+    "notes": "СПЕЦОДЕЖДА",
+    "created_at": "2026-01-14T12:46:21.030023+00:00",
+    "updated_at": "2026-01-20T12:52:20.872919+00:00",
+    "purposes": [
+      "Оптовая торговля"
+    ],
+    "selling_price": 16.5,
+    "selling_deadline_days": 5
+  },
+  {
+    "id": "19dcccf3-c84f-4ba3-9d3f-1d64993f45f6",
+    "supplier_id": "d9daa142-ada1-479c-b434-ac582ad1c8aa",
+    "price": 16.5,
+    "deadline_days": 5,
+    "notes": "СПЕЦОДЕЖДА",
+    "created_at": "2026-01-14T12:47:24.4098+00:00",
+    "updated_at": "2026-01-20T12:52:21.069219+00:00",
+    "purposes": [
+      "Оптовая торговля"
+    ],
+    "selling_price": 16.5,
+    "selling_deadline_days": 5
+  },
+  {
+    "id": "e11882ba-e83a-4378-99fd-fc83fa380638",
+    "supplier_id": "b28ea3ce-b32d-4c0b-aed4-a42d3626c9eb",
+    "price": 16.5,
+    "deadline_days": 5,
+    "notes": "СПЕЦОДЕЖДА",
+    "created_at": "2026-01-14T12:48:50.867532+00:00",
+    "updated_at": "2026-01-20T12:52:21.207724+00:00",
+    "purposes": [
+      "Оптовая торговля"
+    ],
+    "selling_price": 16.5,
+    "selling_deadline_days": 5
+  },
+  {
+    "id": "03c4e782-87ac-4319-b895-eadb8d4b19f5",
+    "supplier_id": "52fc9ca6-1417-41fd-9dd3-f32e548e517c",
+    "price": 18.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-15T07:30:49.22858+00:00",
+    "updated_at": "2026-01-20T12:52:21.629608+00:00",
+    "purposes": [
+      "Розница — электроника",
+      "Опт — компьютеры/ПО",
+      "Оптовая торговля"
+    ],
+    "selling_price": 18.5,
+    "selling_deadline_days": 4
+  },
+  {
+    "id": "47976960-1f25-4e7d-bffb-4bf7f497263e",
+    "supplier_id": "7215a157-ad32-4bfe-82a3-f60a6cfca590",
+    "price": 19.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-14T10:19:04.1478+00:00",
+    "updated_at": "2026-01-20T12:52:47.589595+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы",
+      "Опт — строительные материалы"
+    ],
+    "selling_price": 19.5,
+    "selling_deadline_days": 4
+  },
+  {
+    "id": "4d923af8-8769-4415-a220-c42fc00caf3d",
+    "supplier_id": "45638cf3-c906-4287-8101-171983386f96",
+    "price": 22.5,
+    "deadline_days": 4,
+    "notes": "Транспорт/Щебень с доставкой/Песок с доставкой. Лимит 15 млн.",
+    "created_at": "2026-01-14T10:27:05.464888+00:00",
+    "updated_at": "2026-01-20T12:52:47.727925+00:00",
+    "purposes": [
+      "Опт — строительные материалы",
+      "Грузоперевозки"
+    ],
+    "selling_price": 22.5,
+    "selling_deadline_days": 4
+  },
+  {
+    "id": "f48fd1a5-ac00-4535-850c-e9a03f40b53d",
+    "supplier_id": "961e19a5-b156-4bd0-b67d-6fcf37ca5a14",
+    "price": 22,
+    "deadline_days": 5,
+    "notes": null,
+    "created_at": "2026-01-14T10:31:23.636595+00:00",
+    "updated_at": "2026-01-20T12:52:47.86822+00:00",
+    "purposes": [
+      "Автобизнес (общее)",
+      "Оптовая торговля",
+      "Изделия из металла",
+      "Ремонт и монтаж оборудования",
+      "Электрооборудование"
+    ],
+    "selling_price": 22,
+    "selling_deadline_days": 5
+  },
+  {
+    "id": "144f7fdc-c813-4f51-ab1c-434d8ddf39e5",
+    "supplier_id": "183272bd-37ef-495d-a8a7-ea2a926de1d0",
+    "price": 17.5,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2026-01-13T09:38:50.719654+00:00",
+    "updated_at": "2026-01-20T12:53:04.642321+00:00",
+    "purposes": [
+      "Автобизнес (общее)",
+      "Аренда и лизинг",
+      "Стройматериалы (производство)",
+      "Транспортные услуги",
+      "Прочие профессиональные услуги",
+      "Опт — топливо/ГСМ"
+    ],
+    "selling_price": 17.5,
+    "selling_deadline_days": 2
+  },
+  {
+    "id": "c33b1c70-6430-4d14-8ab9-04d0b6012e4d",
+    "supplier_id": "9734c184-1252-48e4-bb18-16afc501c92c",
+    "price": 18.5,
+    "deadline_days": 3,
+    "notes": null,
+    "created_at": "2026-01-13T09:45:54.857622+00:00",
+    "updated_at": "2026-02-17T11:46:02.551664+00:00",
+    "purposes": [
+      "Опт — электронное оборудование",
+      "Оптовая торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "a3d0d3a0-6cd6-47bd-b6fb-6c8311f74d0b",
+    "supplier_id": "9734c184-1252-48e4-bb18-16afc501c92c",
+    "price": 21,
+    "deadline_days": 3,
+    "notes": "21% за 4 квартал",
+    "created_at": "2026-01-13T09:45:55.050702+00:00",
+    "updated_at": "2026-02-17T11:46:02.703945+00:00",
+    "purposes": [
+      "Опт — электронное оборудование",
+      "Оптовая торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "4c01e98a-ae57-451f-a1af-6f43c9b559d1",
+    "supplier_id": "63304e92-76b2-4ab1-823a-3261be53f3c6",
+    "price": 20.5,
+    "deadline_days": 1,
+    "notes": null,
+    "created_at": "2026-03-03T11:02:20.132286+00:00",
+    "updated_at": "2026-03-03T11:02:20.132286+00:00",
+    "purposes": [
+      "Опт — металл",
+      "Изделия из металла"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "3b41d901-85a7-439f-8ea9-e9f44b9c7a05",
+    "supplier_id": "bcc6059b-134f-4e13-b235-4be0f00d58ca",
+    "price": 13.5,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2026-03-16T06:26:17.021435+00:00",
+    "updated_at": "2026-03-16T06:26:17.021435+00:00",
+    "purposes": [
+      "Айти — разработка ПО",
+      "Айти — интернет-сервисы и хостинг"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "4d8f129e-64bf-4b58-93d7-612d7c187616",
+    "supplier_id": "46ea9254-e540-4bac-a415-fc31e36f118a",
+    "price": 21.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-15T10:40:13.192542+00:00",
+    "updated_at": "2026-01-15T10:40:13.192542+00:00",
+    "purposes": [
+      "Опт — строительные материалы",
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "e060ce01-e9f6-4f00-8e77-910ea9eae4b5",
+    "supplier_id": "bfff4115-7f1d-44db-a1d0-f9ca3246c7a4",
+    "price": 16.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-15T11:08:17.701948+00:00",
+    "updated_at": "2026-01-15T11:08:17.701948+00:00",
+    "purposes": [
+      "Транспортные услуги"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "d6cdb94c-78b9-4288-a072-c04e4a116b54",
+    "supplier_id": "31ea21e9-a0e0-4d70-9526-bef63d602c31",
+    "price": 16.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-15T11:29:08.48607+00:00",
+    "updated_at": "2026-01-15T11:29:08.48607+00:00",
+    "purposes": [
+      "Транспортные услуги"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "24b7599f-f572-4b36-b823-f77195a70653",
+    "supplier_id": "552399c7-5aa6-49f0-a589-dddf41a85437",
+    "price": 16,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-15T11:58:36.436598+00:00",
+    "updated_at": "2026-01-15T11:59:59.69693+00:00",
+    "purposes": [
+      "Админ-услуги для бизнеса",
+      "Консалтинг и менеджмент",
+      "Айти — разработка ПО",
+      "Логистика и склады",
+      "Реклама и маркетинг",
+      "Юруслуги / Бухуслуги",
+      "Подбор персонала"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "42c3426c-5a95-4a62-a404-86ec4e00796b",
+    "supplier_id": "5846e18d-7851-404a-8e20-c1200abc4d50",
+    "price": 16,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-15T11:59:17.741679+00:00",
+    "updated_at": "2026-01-15T12:00:12.386328+00:00",
+    "purposes": [
+      "Айти — интернет-сервисы и хостинг",
+      "Полиграфия",
+      "Телеком",
+      "Реклама и маркетинг",
+      "Айти — разработка ПО",
+      "Админ-услуги для бизнеса"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "2f9f019c-49bc-4c20-a8fd-9109f7a8b172",
+    "supplier_id": "fcc27be4-2358-468e-990f-8bb1fe73f0f8",
+    "price": 16,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-15T12:00:56.914754+00:00",
+    "updated_at": "2026-01-15T12:00:56.914754+00:00",
+    "purposes": [
+      "Айти — интернет-сервисы и хостинг",
+      "Реклама и маркетинг",
+      "Айти — разработка ПО"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "9dae7b84-137e-46c0-87ff-c4b53434192b",
+    "supplier_id": "53f0e0b6-dbdb-4a5d-9a03-457b4b46ed95",
+    "price": 20.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-15T12:01:20.804822+00:00",
+    "updated_at": "2026-01-15T12:01:20.804822+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "61bb8085-0c96-4d7f-a540-766b81a6b672",
+    "supplier_id": "a4580689-7657-43b8-bc06-1c4b9c54f474",
+    "price": 16,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-15T12:01:55.780169+00:00",
+    "updated_at": "2026-01-15T12:02:11.218005+00:00",
+    "purposes": [
+      "Админ-услуги для бизнеса",
+      "Консалтинг и менеджмент",
+      "Подбор персонала",
+      "Айти — интернет-сервисы и хостинг"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "7a69a831-82b8-4549-aed8-ed11265cf77e",
+    "supplier_id": "db8e28bf-d4d0-4c63-9971-8e0c143019c8",
+    "price": 19.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-15T12:03:45.623599+00:00",
+    "updated_at": "2026-01-15T12:03:45.623599+00:00",
+    "purposes": [
+      "Опт — строительные материалы",
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "424797e3-b0b1-4f27-b9a1-20d3788d99e5",
+    "supplier_id": "afa447a3-6c47-4991-8ba4-62d9de9c27de",
+    "price": 16,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-15T12:04:33.702572+00:00",
+    "updated_at": "2026-01-15T12:04:33.702572+00:00",
+    "purposes": [
+      "Админ-услуги для бизнеса",
+      "Айти — разработка ПО",
+      "Полиграфия",
+      "Почта и курьеры",
+      "Айти — интернет-сервисы и хостинг",
+      "Телеком",
+      "Реклама и маркетинг"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "b107c613-fda8-4a0f-9df8-eee063672bcb",
+    "supplier_id": "8da9289e-4fa6-4fb1-8dda-fb6db157c5ed",
+    "price": 19.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-15T12:05:22.204116+00:00",
+    "updated_at": "2026-01-15T12:05:22.204116+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы",
+      "Розница — стройматериалы/хозтовары"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "a5631765-3e26-4fc8-ae4c-d5f9e09e971a",
+    "supplier_id": "4ecdf63b-2fd3-4815-98db-022e763635e6",
+    "price": 16,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-15T12:05:26.298859+00:00",
+    "updated_at": "2026-01-15T12:05:26.298859+00:00",
+    "purposes": [
+      "Админ-услуги для бизнеса",
+      "Айти — разработка ПО",
+      "Реклама и маркетинг",
+      "Юруслуги / Бухуслуги",
+      "Телеком",
+      "Полиграфия",
+      "Айти — интернет-сервисы и хостинг"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "385ab458-1d98-412e-aef7-f39a9eea6a38",
+    "supplier_id": "717d06c2-82cb-447c-9ecf-5a6aad066926",
+    "price": 19.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-15T12:06:47.763381+00:00",
+    "updated_at": "2026-01-15T12:06:47.763381+00:00",
+    "purposes": [
+      "Оптовая торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "33f04a67-46aa-4aaf-b520-e80d721476ab",
+    "supplier_id": "8cad31f7-33e1-4863-8f2a-f86c0e1bd9b5",
+    "price": 16,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-15T12:06:29.112672+00:00",
+    "updated_at": "2026-01-15T12:07:55.401141+00:00",
+    "purposes": [
+      "Реклама и маркетинг"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "baeeef78-f432-41f5-94ca-69bb01f1f195",
+    "supplier_id": "3d5e1ae6-0b7e-43a4-9c86-56f1d3079b8f",
+    "price": 19.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-15T12:07:44.602025+00:00",
+    "updated_at": "2026-01-15T12:08:21.868932+00:00",
+    "purposes": [
+      "Опт — строительные материалы",
+      "Оптовая торговля",
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "417ec01e-be24-4fe2-8c17-3ca159b80a19",
+    "supplier_id": "2f8b6392-d165-4f1d-8961-1e8ea4b57051",
+    "price": 16,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-15T12:03:45.299654+00:00",
+    "updated_at": "2026-01-15T12:09:05.803604+00:00",
+    "purposes": [
+      "Админ-услуги для бизнеса",
+      "Консалтинг и менеджмент",
+      "Подбор персонала",
+      "Юруслуги / Бухуслуги",
+      "Реклама и маркетинг",
+      "Айти — интернет-сервисы и хостинг"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "c205d48c-30c2-4e79-a204-0b4f08c31c35",
+    "supplier_id": "806a7958-1b0f-45d0-aa6d-053fe8bcc349",
+    "price": 19.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-15T12:09:18.754238+00:00",
+    "updated_at": "2026-01-15T12:09:18.754238+00:00",
+    "purposes": [
+      "Оптовая торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "0baf8671-320b-4545-8fd8-b8fd9454597d",
+    "supplier_id": "05f4e282-4814-4288-9555-889959b045db",
+    "price": 19.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-15T12:10:31.124627+00:00",
+    "updated_at": "2026-01-15T12:10:31.124627+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы",
+      "Опт — топливо/ГСМ"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "3e29cb28-129a-4165-9743-bdc8a98bcacc",
+    "supplier_id": "cf947c92-9f3c-4026-af76-c4c85ffc5925",
+    "price": 16,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-15T12:11:23.524678+00:00",
+    "updated_at": "2026-01-15T12:11:23.524678+00:00",
+    "purposes": [
+      "Админ-услуги для бизнеса",
+      "Реклама и маркетинг",
+      "Айти — интернет-сервисы и хостинг"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "0478502e-a3a8-4598-afc9-d5aec4c34875",
+    "supplier_id": "544c70c0-ef1d-459b-837f-9288c0871149",
+    "price": 19.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-15T12:11:41.712585+00:00",
+    "updated_at": "2026-01-15T12:11:41.712585+00:00",
+    "purposes": [
+      "Оптовая торговля",
+      "Опт — строительные материалы",
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "9dc04b0f-abec-4126-ad3f-6e90fe18bdc9",
+    "supplier_id": "7e28912d-2df2-437c-9767-536763950825",
+    "price": 19.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-15T12:13:15.253485+00:00",
+    "updated_at": "2026-01-15T12:13:15.253485+00:00",
+    "purposes": [
+      "Опт — строительные материалы",
+      "СМР — строительно-монтажные работы",
+      "Опт — электронное оборудование",
+      "Оптовая торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "d66737cf-a812-49ab-97ea-46c83cea780d",
+    "supplier_id": "aa6c729c-e99c-4824-b358-4627a61b06e2",
+    "price": 19.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-15T12:15:23.798514+00:00",
+    "updated_at": "2026-01-15T12:15:23.798514+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы",
+      "Опт — строительные материалы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "328affc9-d55f-41fa-baa6-399a92885ef1",
+    "supplier_id": "19ad7543-ca11-41f8-a8fa-34e81b48e109",
+    "price": 19.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-15T12:22:38.09159+00:00",
+    "updated_at": "2026-01-15T12:22:38.09159+00:00",
+    "purposes": [
+      "Оптовая торговля",
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "a0133d36-a8dd-47df-978e-c226eda1b0a2",
+    "supplier_id": "42e88589-aac7-4339-a0fa-0d1fc57f44db",
+    "price": 18.5,
+    "deadline_days": 2,
+    "notes": "Примет за строймат и айти. Прием по договору или по счету.  Дочерняя компания сбербанка. Более 1 млрд оплаченных налогов.",
+    "created_at": "2026-01-15T12:33:43.56854+00:00",
+    "updated_at": "2026-01-15T12:33:43.56854+00:00",
+    "purposes": [
+      "Айти — разработка ПО",
+      "Оптовая торговля",
+      "Розница — стройматериалы/хозтовары"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "d74f3b0a-5abf-40ad-a5b3-5ea3c6789172",
+    "supplier_id": "6032ca23-cfe4-419e-9746-14671e40fe7f",
+    "price": 18.5,
+    "deadline_days": 2,
+    "notes": "- Автомобильные запчасти (легковые/грузовые) - Моторные масла - Резина",
+    "created_at": "2026-03-03T11:06:00.069839+00:00",
+    "updated_at": "2026-03-03T11:06:00.069839+00:00",
+    "purposes": [
+      "Автобизнес (общее)"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "6ab3e8d9-10e2-4f05-ae7f-7c8244676e06",
+    "supplier_id": "9bb42d9e-76df-4e45-a216-ec2e867a7c3e",
+    "price": 10,
+    "deadline_days": 5,
+    "notes": null,
+    "created_at": "2026-01-16T12:44:29.70988+00:00",
+    "updated_at": "2026-01-16T12:44:29.70988+00:00",
+    "purposes": [
+      "Автобизнес (общее)"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "2b200ed6-3031-4cae-9a24-cbb7254a41d3",
+    "supplier_id": "ee52bc4f-8e26-4d66-bb3c-2734a87af131",
+    "price": 19,
+    "deadline_days": 3,
+    "notes": null,
+    "created_at": "2025-11-23T17:58:12.064597+00:00",
+    "updated_at": "2026-01-19T08:19:53.936832+00:00",
+    "purposes": [
+      "Грузоперевозки",
+      "Транспортные услуги",
+      "Автобизнес (общее)"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "ae63fb8e-ee80-4846-ba1a-1425a0dacbe5",
+    "supplier_id": "29ec6f26-2b5e-4a01-b6d1-1f9202c99ba4",
+    "price": 18.5,
+    "deadline_days": 2,
+    "notes": "- Автомобильные запчасти (легковые/грузовые) - Моторные масла - Резина",
+    "created_at": "2026-03-03T11:07:37.90094+00:00",
+    "updated_at": "2026-03-03T11:07:37.90094+00:00",
+    "purposes": [
+      "Автобизнес (общее)"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "39b2011b-e430-497a-8b53-f3beb5c0fa37",
+    "supplier_id": "c26ccced-e9f0-40f9-8bd7-74eac7ea4dfb",
+    "price": 17,
+    "deadline_days": 3,
+    "notes": null,
+    "created_at": "2026-01-19T13:25:25.791995+00:00",
+    "updated_at": "2026-01-19T13:25:25.791995+00:00",
+    "purposes": [
+      "Автобизнес (общее)"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "14cc5d83-e40c-4eed-9320-57b6109b80ad",
+    "supplier_id": "cb2d8705-7ac2-4324-b9f3-d189a8ad27d6",
+    "price": 17,
+    "deadline_days": 3,
+    "notes": null,
+    "created_at": "2026-01-19T13:26:20.513788+00:00",
+    "updated_at": "2026-01-19T13:26:20.513788+00:00",
+    "purposes": [
+      "Автобизнес (общее)"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "8e970e13-d79c-4f2b-aead-4cc73c797534",
+    "supplier_id": "4dc999b4-e882-4edc-9848-1509b10891b1",
+    "price": 17,
+    "deadline_days": 3,
+    "notes": null,
+    "created_at": "2026-01-19T13:28:01.332221+00:00",
+    "updated_at": "2026-01-19T13:28:01.332221+00:00",
+    "purposes": [
+      "Автобизнес (общее)"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "3244f671-0d0d-4172-a003-60f108781aa6",
+    "supplier_id": "418064a4-448b-464c-a0ea-dfe991b6e4bc",
+    "price": 23.5,
+    "deadline_days": 1,
+    "notes": null,
+    "created_at": "2026-03-03T11:14:55.093952+00:00",
+    "updated_at": "2026-03-03T11:14:55.093952+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "e2f3eb3c-c3d7-4bd8-b5af-2bc87725f04a",
+    "supplier_id": "f15ebdde-def4-40fa-9b10-e20265aa0c01",
+    "price": 20,
+    "deadline_days": 0,
+    "notes": "день в день",
+    "created_at": "2026-04-08T12:45:16.34762+00:00",
+    "updated_at": "2026-04-08T12:45:16.34762+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы",
+      "Опт — строительные материалы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "0ff7a691-bbe8-4100-8ce8-cdd209b2418f",
+    "supplier_id": "e4291819-6014-431c-93ea-281c721d0d01",
+    "price": 15,
+    "deadline_days": 3,
+    "notes": null,
+    "created_at": "2025-11-25T12:45:16.653882+00:00",
+    "updated_at": "2026-01-20T12:52:19.193696+00:00",
+    "purposes": [
+      "Автобизнес (общее)",
+      "Админ-услуги для бизнеса",
+      "Изделия из металла",
+      "Консалтинг и менеджмент",
+      "Недвижимость и аренда",
+      "Опт — металл",
+      "Опт — строительные материалы",
+      "Опт — топливо/ГСМ",
+      "Оптовая торговля",
+      "Розница — стройматериалы/хозтовары",
+      "Розничная торговля",
+      "СМР — строительно-монтажные работы",
+      "Транспортные услуги"
+    ],
+    "selling_price": 15,
+    "selling_deadline_days": 3
+  },
+  {
+    "id": "b0874c04-1a9c-4588-a28f-abe10ee9e2fb",
+    "supplier_id": "9e7b8981-7c0f-48bf-9089-39b55a525b8d",
+    "price": 17.5,
+    "deadline_days": 7,
+    "notes": null,
+    "created_at": "2026-01-15T07:23:47.507763+00:00",
+    "updated_at": "2026-01-20T12:52:21.355161+00:00",
+    "purposes": [
+      "Розница — электроника",
+      "Опт — электронное оборудование",
+      "Опт — компьютеры/ПО"
+    ],
+    "selling_price": 17.5,
+    "selling_deadline_days": 7
+  },
+  {
+    "id": "bf79f36c-a055-4378-9b0c-e6f5ce68a1e4",
+    "supplier_id": "bdde130c-01ea-4ca1-9b4b-9d45f2005052",
+    "price": 18.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-19T13:34:06.229378+00:00",
+    "updated_at": "2026-01-20T12:52:22.156906+00:00",
+    "purposes": [
+      "Автобизнес (общее)"
+    ],
+    "selling_price": 18.5,
+    "selling_deadline_days": 4
+  },
+  {
+    "id": "c554fc09-2eae-4f6a-9b04-f50ba144a32f",
+    "supplier_id": "3ed67e57-1736-4be6-bc5a-2e0bc42aa194",
+    "price": 12,
+    "deadline_days": 3,
+    "notes": null,
+    "created_at": "2025-11-14T13:07:10.310349+00:00",
+    "updated_at": "2026-01-20T12:52:47.322411+00:00",
+    "purposes": [
+      "Изделия из металла",
+      "Опт — строительные материалы",
+      "СМР — строительно-монтажные работы",
+      "Розничная торговля",
+      "Розница — стройматериалы/хозтовары",
+      "Оптовая торговля"
+    ],
+    "selling_price": 12,
+    "selling_deadline_days": 3
+  },
+  {
+    "id": "91857bb4-799a-4ee2-91a8-235affb20cea",
+    "supplier_id": "69eca657-c0a5-4eaf-b2f9-ce4b44474a7b",
+    "price": 21.5,
+    "deadline_days": 3,
+    "notes": null,
+    "created_at": "2026-01-15T13:41:57.057277+00:00",
+    "updated_at": "2026-01-20T12:52:48.125787+00:00",
+    "purposes": [
+      "Айти — разработка ПО",
+      "Издательская деятельность",
+      "Интернет-магазин",
+      "НИОКР",
+      "Образование",
+      "Опт — компьютеры/ПО",
+      "Оптовая торговля",
+      "Полиграфия",
+      "Прочее производство",
+      "Телевидение и радио"
+    ],
+    "selling_price": 21.5,
+    "selling_deadline_days": 3
+  },
+  {
+    "id": "d42cf83e-b54c-4858-92f1-67e1dfc454d3",
+    "supplier_id": "28e97b89-74ce-4d9e-b820-1d0653b74fe2",
+    "price": 9.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-16T08:57:01.182709+00:00",
+    "updated_at": "2026-01-23T09:19:21.176259+00:00",
+    "purposes": [
+      "Опт — строительные материалы",
+      "СМР — строительно-монтажные работы",
+      "Розница — стройматериалы/хозтовары"
+    ],
+    "selling_price": 9.5,
+    "selling_deadline_days": 4
+  },
+  {
+    "id": "80cb3894-936f-400d-b8de-ee516d09d07d",
+    "supplier_id": "fe47619f-495d-44c1-8fa5-48c663ff88ee",
+    "price": 20,
+    "deadline_days": 4,
+    "notes": "Строительные материалы, оборудование и товар",
+    "created_at": "2026-01-15T11:04:35.00066+00:00",
+    "updated_at": "2026-01-28T12:20:07.95787+00:00",
+    "purposes": [
+      "Оптовая торговля",
+      "Опт — строительные материалы"
+    ],
+    "selling_price": 16.5,
+    "selling_deadline_days": 4
+  },
+  {
+    "id": "19033374-e141-433a-b49f-1e1312d5a5c5",
+    "supplier_id": "86757be0-8c17-44f3-bcb7-a25da63adfc4",
+    "price": 19,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-20T12:11:55.622087+00:00",
+    "updated_at": "2026-02-13T10:04:52.318714+00:00",
+    "purposes": [
+      "Оптовая торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "a35aa3e7-13a3-47b2-a789-466676905c06",
+    "supplier_id": "94626e96-cdec-41e2-aa12-b0d29a8cf9d7",
+    "price": 16.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2025-11-20T06:40:13.79695+00:00",
+    "updated_at": "2026-02-20T08:38:24.350306+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы",
+      "Оптовая торговля",
+      "Опт — строительные материалы"
+    ],
+    "selling_price": 16.5,
+    "selling_deadline_days": 4
+  },
+  {
+    "id": "6ea5c2d2-ebc4-46ea-878f-ce09747d4c95",
+    "supplier_id": "898baa25-2faf-49c6-970f-692c2c82c7a9",
+    "price": 18.5,
+    "deadline_days": 2,
+    "notes": "- Автозапчасти - грузовые запчасти - запасные части",
+    "created_at": "2026-03-03T11:08:56.234599+00:00",
+    "updated_at": "2026-03-03T11:08:56.234599+00:00",
+    "purposes": [
+      "Автобизнес (общее)"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "14a0f3ba-fc3a-4647-9257-5f4264de2634",
+    "supplier_id": "d33b2d93-3ea4-43e5-a747-226382bdcfdd",
+    "price": 23,
+    "deadline_days": 3,
+    "notes": "Оплата по договору",
+    "created_at": "2026-01-22T11:24:36.428781+00:00",
+    "updated_at": "2026-03-03T11:37:22.337407+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "21845668-2dd5-40fa-be98-01ff9c4137d4",
+    "supplier_id": "2261c9b8-b1ba-4d9a-a927-46dc996d88ff",
+    "price": 21.5,
+    "deadline_days": 4,
+    "notes": "Оплата по договору",
+    "created_at": "2026-01-22T11:22:55.571259+00:00",
+    "updated_at": "2026-01-22T11:22:55.571259+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "f5899619-9cf6-4c3f-a2b6-1476123a1cba",
+    "supplier_id": "0d9ecfc2-297c-4756-a629-63e422aa464c",
+    "price": 21.5,
+    "deadline_days": 4,
+    "notes": "Оплата по договору",
+    "created_at": "2026-01-22T11:26:15.422546+00:00",
+    "updated_at": "2026-01-22T11:26:15.422546+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "aadba133-f5e3-40fb-9c5c-9a4ace9db039",
+    "supplier_id": "f15ebdde-def4-40fa-9b10-e20265aa0c01",
+    "price": 19,
+    "deadline_days": 1,
+    "notes": null,
+    "created_at": "2026-04-08T12:45:16.584267+00:00",
+    "updated_at": "2026-04-08T12:45:16.584267+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы",
+      "Опт — строительные материалы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "32f55ae7-b1d5-43d3-80bf-187d0a9da9ba",
+    "supplier_id": "2660eb98-4178-428d-82c7-c5ddedd89391",
+    "price": 19.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-22T11:28:48.445166+00:00",
+    "updated_at": "2026-01-22T11:28:48.445166+00:00",
+    "purposes": [
+      "Опт — строительные материалы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "6694b1f5-275e-4bc0-9d68-d6c2cd2b1a51",
+    "supplier_id": "2660eb98-4178-428d-82c7-c5ddedd89391",
+    "price": 20.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-22T11:28:48.610631+00:00",
+    "updated_at": "2026-01-22T11:28:48.610631+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "2511a024-cb37-42cd-9a4a-ca581c5d9c7c",
+    "supplier_id": "89208c09-c294-41fd-930b-7f29e78a4aef",
+    "price": 18.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-22T11:30:13.128833+00:00",
+    "updated_at": "2026-01-22T11:30:13.128833+00:00",
+    "purposes": [
+      "Опт — строительные материалы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "9331e052-a701-4895-9480-f9091c2175ab",
+    "supplier_id": "89208c09-c294-41fd-930b-7f29e78a4aef",
+    "price": 20.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-22T11:30:13.276203+00:00",
+    "updated_at": "2026-01-22T11:30:13.276203+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "39354b58-d2ef-4dbe-9d74-dd964c6406ce",
+    "supplier_id": "d6751ac7-0707-4901-95cf-a7ad9c984300",
+    "price": 18.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-22T11:31:11.398489+00:00",
+    "updated_at": "2026-01-22T11:31:11.398489+00:00",
+    "purposes": [
+      "Опт — строительные материалы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "fab997f0-9b19-4c2d-9e08-60eb8a299333",
+    "supplier_id": "d6751ac7-0707-4901-95cf-a7ad9c984300",
+    "price": 20.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-22T11:31:11.538588+00:00",
+    "updated_at": "2026-01-22T11:31:11.538588+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "118f30a3-3290-4309-8d68-446839275b19",
+    "supplier_id": "bf0c993d-59f1-4de0-be9d-dda0b5b02f75",
+    "price": 18.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-22T11:32:28.132969+00:00",
+    "updated_at": "2026-01-22T11:32:28.132969+00:00",
+    "purposes": [
+      "Оптовая торговля",
+      "Опт — металл",
+      "Изделия из металла"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "f6c17549-d39a-472c-aaf5-764fee7e20e9",
+    "supplier_id": "bf0c993d-59f1-4de0-be9d-dda0b5b02f75",
+    "price": 20.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-22T11:32:28.337921+00:00",
+    "updated_at": "2026-01-22T11:32:28.337921+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "3aa2ae48-02f0-4e26-963d-d29a2241ea98",
+    "supplier_id": "9895fd2f-6b07-4ea6-a1f1-1a6ed1441685",
+    "price": 11.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-22T11:34:14.692372+00:00",
+    "updated_at": "2026-01-22T11:34:14.692372+00:00",
+    "purposes": [
+      "Опт — мясо и мясопродукты",
+      "Оптовая торговля",
+      "Производство готовых блюд и полуфабрикатов",
+      "Опт — непродовольственные товары"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "578cc12f-921b-4ac8-a7a4-9c8770d969bb",
+    "supplier_id": "9895fd2f-6b07-4ea6-a1f1-1a6ed1441685",
+    "price": 17.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-22T11:34:14.829464+00:00",
+    "updated_at": "2026-01-22T11:34:14.829464+00:00",
+    "purposes": [
+      "Админ-услуги для бизнеса",
+      "Спорт и отдых"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "1302269a-5db5-4975-9d81-98cf7588d4d3",
+    "supplier_id": "6c767fcb-4190-48b5-a99c-3e86404e141e",
+    "price": 11.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-22T11:36:23.272443+00:00",
+    "updated_at": "2026-01-22T11:36:23.272443+00:00",
+    "purposes": [
+      "Опт — молочная продукция",
+      "Опт — непродовольственные товары",
+      "Розница — прочие пищевые продукты",
+      "Розница — мясо и мясопродукты",
+      "Опт — мясо и мясопродукты",
+      "Оптовая торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "f1e13ac9-bcc4-442a-ae20-73c74e7a5209",
+    "supplier_id": "6c767fcb-4190-48b5-a99c-3e86404e141e",
+    "price": 17.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-22T11:36:23.430835+00:00",
+    "updated_at": "2026-01-22T11:36:23.430835+00:00",
+    "purposes": [
+      "Админ-услуги для бизнеса",
+      "Производство готовых блюд и полуфабрикатов",
+      "Пищевое производство",
+      "Спорт и отдых"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "dbb34694-9f5d-4418-80ef-042dace4fd14",
+    "supplier_id": "a4ff5c8d-0dc5-4c0a-ac3a-f364ed0eeead",
+    "price": 11.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-22T11:37:24.316726+00:00",
+    "updated_at": "2026-01-22T11:37:24.316726+00:00",
+    "purposes": [
+      "Опт — мясо и мясопродукты",
+      "Оптовая торговля",
+      "Опт — непродовольственные товары"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "18808ff8-df81-4715-892a-13540e23db7f",
+    "supplier_id": "a4ff5c8d-0dc5-4c0a-ac3a-f364ed0eeead",
+    "price": 17.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-22T11:37:24.480684+00:00",
+    "updated_at": "2026-01-22T11:37:24.480684+00:00",
+    "purposes": [
+      "Производство готовых блюд и полуфабрикатов",
+      "Спорт и отдых",
+      "Админ-услуги для бизнеса"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "e3c0de60-cf69-4aec-92fb-c5f03613ccd2",
+    "supplier_id": "e3f2e9fa-b86a-4513-9ba8-5393d6968c22",
+    "price": 20.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-22T11:39:10.31633+00:00",
+    "updated_at": "2026-01-22T11:39:10.31633+00:00",
+    "purposes": [
+      "Транспортные услуги"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "dc12e345-b2cc-4583-9653-98f1abbc0b4a",
+    "supplier_id": "87f3a272-273a-4ba0-9465-bebe50e68613",
+    "price": 18,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-22T11:40:30.877172+00:00",
+    "updated_at": "2026-01-22T11:42:28.340822+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "f8e6dba8-178f-4eac-9b13-c2e86b39342f",
+    "supplier_id": "5b4ad764-50a4-46cd-8d34-222c82e0b0ca",
+    "price": 19.5,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2026-01-22T11:41:50.857903+00:00",
+    "updated_at": "2026-01-22T11:43:04.64911+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "a80578c9-52a5-478c-b51a-bb00a930583f",
+    "supplier_id": "5ec72f7b-128c-4a8d-8bcd-bdd22067a676",
+    "price": 15.5,
+    "deadline_days": 6,
+    "notes": null,
+    "created_at": "2026-01-22T11:44:34.202387+00:00",
+    "updated_at": "2026-01-22T11:44:34.202387+00:00",
+    "purposes": [
+      "Автобизнес (общее)",
+      "Опт — электронное оборудование",
+      "Ремонт и монтаж оборудования"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "3af89a72-385a-43d8-90f1-e2abef27ece4",
+    "supplier_id": "ab9f74e3-1624-41d5-959d-ceca8bd20b50",
+    "price": 19.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-22T11:49:50.962641+00:00",
+    "updated_at": "2026-01-22T11:49:50.962641+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы",
+      "Опт — строительные материалы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "ec2609e2-b039-4f1f-aede-9a058b67df6a",
+    "supplier_id": "17656a88-95f8-4aec-9dce-1035fc1ec75d",
+    "price": 17.5,
+    "deadline_days": 2,
+    "notes": "на след или через день",
+    "created_at": "2026-01-22T11:55:23.985768+00:00",
+    "updated_at": "2026-01-22T11:55:23.985768+00:00",
+    "purposes": [
+      "Опт — строительные материалы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "1938d57f-6aba-4ff8-9bc2-1c13eae658d0",
+    "supplier_id": "7bee6dca-1a7c-4b0f-a581-73af84dc25ab",
+    "price": 10,
+    "deadline_days": 4,
+    "notes": "4 квартал",
+    "created_at": "2026-01-23T09:17:05.771865+00:00",
+    "updated_at": "2026-01-23T09:17:05.771865+00:00",
+    "purposes": [
+      "Опт — строительные материалы",
+      "Оптовая торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "1c9d3a55-bdf6-4ba7-bfea-bdf89cf99358",
+    "supplier_id": "d90c32e5-8c4b-4a36-bd31-9e7f97e6b14c",
+    "price": 10,
+    "deadline_days": 3,
+    "notes": "4 квартал",
+    "created_at": "2026-01-23T09:17:45.039259+00:00",
+    "updated_at": "2026-01-23T09:17:45.039259+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы",
+      "Транспортные услуги",
+      "Интернет-магазин",
+      "Розничная торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "1711c7c5-7def-4631-893f-fe2d8c9b217b",
+    "supplier_id": "7c385d69-c2f4-40d1-abc2-4ad28dbaba53",
+    "price": 9.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-12T11:52:35.721794+00:00",
+    "updated_at": "2026-01-23T09:18:30.942854+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы",
+      "Опт — строительные материалы",
+      "Оптовая торговля"
+    ],
+    "selling_price": 9.5,
+    "selling_deadline_days": 4
+  },
+  {
+    "id": "9e17beb5-1b7b-4aac-9f46-fa70f1280ed8",
+    "supplier_id": "7c385d69-c2f4-40d1-abc2-4ad28dbaba53",
+    "price": 10,
+    "deadline_days": 4,
+    "notes": "4 квартал",
+    "created_at": "2026-01-23T09:18:31.081403+00:00",
+    "updated_at": "2026-01-23T09:18:31.081403+00:00",
+    "purposes": [
+      "Опт — строительные материалы",
+      "СМР — строительно-монтажные работы",
+      "Оптовая торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "ab72d1b1-62f8-468f-a372-e99b3f1f73f5",
+    "supplier_id": "ab55e00f-b6a2-461b-8e9a-a28e404ec274",
+    "price": 10,
+    "deadline_days": 4,
+    "notes": "4 квартал",
+    "created_at": "2026-01-23T09:18:55.756169+00:00",
+    "updated_at": "2026-01-23T09:18:55.756169+00:00",
+    "purposes": [
+      "Транспортные услуги",
+      "Грузоперевозки",
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "a68346bb-9a08-427d-bf1c-02f2877b9a1a",
+    "supplier_id": "28e97b89-74ce-4d9e-b820-1d0653b74fe2",
+    "price": 10,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-23T09:19:21.325778+00:00",
+    "updated_at": "2026-01-23T09:19:21.325778+00:00",
+    "purposes": [
+      "Опт — строительные материалы",
+      "СМР — строительно-монтажные работы",
+      "Розница — стройматериалы/хозтовары"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "bc327311-960c-455f-95ed-25fca82d9e50",
+    "supplier_id": "76e675d7-bee5-4269-bde8-221a156e3f5b",
+    "price": 10,
+    "deadline_days": 4,
+    "notes": "4 квартал",
+    "created_at": "2026-01-23T09:19:58.334201+00:00",
+    "updated_at": "2026-01-23T09:19:58.334201+00:00",
+    "purposes": [
+      "Айти — разработка ПО",
+      "Опт — строительные материалы",
+      "Ремонт бытовой техники и ПК",
+      "СМР — строительно-монтажные работы",
+      "Швейное производство",
+      "Розничная торговля",
+      "Производство обуви и кожи",
+      "Грузоперевозки"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "c2dbeb6f-f369-4e9e-8e6a-8f1c3c382c80",
+    "supplier_id": "d35123f0-fe60-46ed-99d9-5c631d36edb6",
+    "price": 10,
+    "deadline_days": 3,
+    "notes": null,
+    "created_at": "2026-01-26T07:17:58.43177+00:00",
+    "updated_at": "2026-01-26T07:17:58.43177+00:00",
+    "purposes": [
+      "Опт — металл"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "30577815-1afb-4dce-8ebc-a19530f3987f",
+    "supplier_id": "da7f8b83-0277-428f-9787-b26492bf8d97",
+    "price": 10,
+    "deadline_days": 3,
+    "notes": null,
+    "created_at": "2026-01-26T07:18:51.72912+00:00",
+    "updated_at": "2026-01-26T07:18:51.72912+00:00",
+    "purposes": [
+      "Опт — металл"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "1b7ba85f-b8f0-4192-a9ef-f5cb39fbf046",
+    "supplier_id": "2ff0cb48-5763-400e-bc1d-3d0f0822de9f",
+    "price": 10,
+    "deadline_days": 1,
+    "notes": null,
+    "created_at": "2026-01-27T08:58:20.281765+00:00",
+    "updated_at": "2026-01-27T08:58:20.281765+00:00",
+    "purposes": [
+      "Опт — металл"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "94deac7a-7712-4106-94a6-8665de90994a",
+    "supplier_id": "babf802f-6a4a-4665-96cb-c480e727c94b",
+    "price": 9,
+    "deadline_days": 4,
+    "notes": "Грузоперевозки, логистика, аренда транспорта, 16, 4 день",
+    "created_at": "2025-11-13T12:46:18.035295+00:00",
+    "updated_at": "2026-03-02T10:34:42.562966+00:00",
+    "purposes": [
+      "Опт — мясо и мясопродукты",
+      "Опт — продукты из мяса",
+      "Опт — мясо и птица",
+      "Грузоперевозки",
+      "Оптовая торговля",
+      "Транспортные услуги"
+    ],
+    "selling_price": 9,
+    "selling_deadline_days": 4
+  },
+  {
+    "id": "5f0f7214-5085-4ce2-919c-ea3bdd581102",
+    "supplier_id": "08e69b6d-8f5c-4f08-8673-78262497e331",
+    "price": 23.5,
+    "deadline_days": 7,
+    "notes": null,
+    "created_at": "2026-03-03T11:22:49.547927+00:00",
+    "updated_at": "2026-03-03T11:22:49.547927+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "95667df3-d8b9-40df-b53b-aff60a13fa37",
+    "supplier_id": "31d8cf62-49ea-439d-b323-a6c9c9b17091",
+    "price": 13.5,
+    "deadline_days": 3,
+    "notes": "Клининг",
+    "created_at": "2026-01-27T14:02:30.218043+00:00",
+    "updated_at": "2026-03-04T08:29:57.336226+00:00",
+    "purposes": [
+      "Клининг"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "f1254b09-d7e1-4f03-bd99-b0b823729446",
+    "supplier_id": "a2ddc8c7-f0b7-4951-85a0-69ee6f123450",
+    "price": 19.5,
+    "deadline_days": 4,
+    "notes": "Связанные со строительством",
+    "created_at": "2026-01-28T12:23:41.260315+00:00",
+    "updated_at": "2026-03-04T08:29:57.336226+00:00",
+    "purposes": [
+      "Оптовая торговля",
+      "Клининг",
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "3041af19-2e90-4b73-a7c2-88af4c48e9ec",
+    "supplier_id": "ef28e513-4376-49e5-b747-0a841df1a0d3",
+    "price": 19,
+    "deadline_days": 1,
+    "notes": null,
+    "created_at": "2026-01-28T10:18:57.586959+00:00",
+    "updated_at": "2026-01-28T14:22:55.388345+00:00",
+    "purposes": [
+      "Опт — строительные материалы",
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "26bd90c1-8a69-4d8b-8099-0a1cdeb1205b",
+    "supplier_id": "77a77452-a77f-4442-bb5d-e0c6e1167941",
+    "price": 17.5,
+    "deadline_days": 6,
+    "notes": null,
+    "created_at": "2026-01-27T13:48:21.305032+00:00",
+    "updated_at": "2026-01-27T13:52:19.391872+00:00",
+    "purposes": [
+      "Опт — строительные материалы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "f5407ffb-3a25-451e-a9b8-9b32eb50ab67",
+    "supplier_id": "24ecdc8e-a920-4965-94e5-9a9400f0eb3e",
+    "price": 15.5,
+    "deadline_days": 3,
+    "notes": "+СМР/Аренда техники",
+    "created_at": "2026-01-27T18:25:36.235219+00:00",
+    "updated_at": "2026-01-27T18:25:36.235219+00:00",
+    "purposes": [
+      "Опт — строительные материалы",
+      "Транспортные услуги",
+      "Оптовая торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "d9e5bb2c-4f1e-474e-ab8a-ba58ab944540",
+    "supplier_id": "2fef07b6-a73c-49bd-b5fd-926e41459b4d",
+    "price": 21.5,
+    "deadline_days": 3,
+    "notes": "Песок и Щебень",
+    "created_at": "2026-01-28T10:21:14.910697+00:00",
+    "updated_at": "2026-01-28T10:21:14.910697+00:00",
+    "purposes": [
+      "Опт — строительные материалы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "edabf0e0-7ed1-4bb6-a889-d2503fa23df7",
+    "supplier_id": "0998ee8e-baa6-4b89-88df-e6a30f9783b8",
+    "price": 20,
+    "deadline_days": 3,
+    "notes": "Песок и щебень",
+    "created_at": "2026-01-28T10:22:11.665687+00:00",
+    "updated_at": "2026-01-28T10:22:11.665687+00:00",
+    "purposes": [
+      "Опт — строительные материалы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "7829f5e4-1d02-4066-8af0-9ee39c409782",
+    "supplier_id": "7f304d76-93eb-4b25-9704-a40efb5d026b",
+    "price": 19,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2026-01-28T10:23:12.319327+00:00",
+    "updated_at": "2026-01-28T10:23:12.319327+00:00",
+    "purposes": [
+      "Опт — строительные материалы",
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "4e938fad-d007-40d2-90a8-c70f8572c6b5",
+    "supplier_id": "fd4bfa23-1ee4-49f3-ab04-ff730e3d0671",
+    "price": 15.5,
+    "deadline_days": 3,
+    "notes": null,
+    "created_at": "2026-01-28T12:36:17.126772+00:00",
+    "updated_at": "2026-01-28T12:36:17.126772+00:00",
+    "purposes": [
+      "Опт — строительные материалы",
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "45b02b17-c590-42f0-be62-f73f2b726abe",
+    "supplier_id": "0dcae633-de6a-4627-bc5a-208201d0efa5",
+    "price": 17,
+    "deadline_days": 3,
+    "notes": null,
+    "created_at": "2026-01-29T10:02:22.637618+00:00",
+    "updated_at": "2026-01-29T10:02:22.637618+00:00",
+    "purposes": [
+      "Опт — строительные материалы",
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "16955d49-c0c9-4d3d-b67d-c16c13dd753a",
+    "supplier_id": "94332ca8-68f6-4c02-b752-653983adcbf0",
+    "price": 17,
+    "deadline_days": 2,
+    "notes": "За текстиль /бытовые товары",
+    "created_at": "2026-01-28T12:13:57.321184+00:00",
+    "updated_at": "2026-02-06T11:17:44.571054+00:00",
+    "purposes": [
+      "Оптовая торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "7f4df9ee-a7ba-46fc-bdfc-fa090e06c9cf",
+    "supplier_id": "559e49d0-753a-423b-abb3-d79638bc5e6f",
+    "price": 20,
+    "deadline_days": 3,
+    "notes": "пп от 1 млн",
+    "created_at": "2026-01-29T09:59:06.874115+00:00",
+    "updated_at": "2026-02-10T18:02:25.03242+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы",
+      "Опт — строительные материалы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "1c1ff251-40d8-4e15-8852-e2b986af2132",
+    "supplier_id": "3db70bb5-9347-4359-a3e3-ed946f6518b0",
+    "price": 24.5,
+    "deadline_days": 5,
+    "notes": null,
+    "created_at": "2026-03-03T11:25:56.28669+00:00",
+    "updated_at": "2026-03-03T11:25:56.28669+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "a8a80523-8dd9-49e9-9e10-eaa60db82db6",
+    "supplier_id": "c4f45839-f2bc-4e51-95c7-91e1330394be",
+    "price": 17,
+    "deadline_days": 3,
+    "notes": null,
+    "created_at": "2026-01-29T10:05:02.797233+00:00",
+    "updated_at": "2026-01-29T10:05:02.797233+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы",
+      "Опт — строительные материалы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "6c99220d-1778-4f51-919d-244b4803697d",
+    "supplier_id": "a880b01b-9245-463f-9e1e-6c45c5dedbdb",
+    "price": 22.5,
+    "deadline_days": 1,
+    "notes": "паркет, доски",
+    "created_at": "2026-01-29T10:09:33.581316+00:00",
+    "updated_at": "2026-01-29T10:09:33.581316+00:00",
+    "purposes": [
+      "Архитектура и инжиниринг",
+      "Розница — стройматериалы/хозтовары"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "110305aa-54b5-4ec2-87a5-1309747d03e8",
+    "supplier_id": "0acd6a95-5a2a-4dd1-8540-2b5a8095e8a8",
+    "price": 10.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-02-04T13:18:25.564704+00:00",
+    "updated_at": "2026-03-04T08:29:57.336226+00:00",
+    "purposes": [
+      "Архитектура и инжиниринг",
+      "Опт — строительные материалы",
+      "Ремонт и монтаж оборудования",
+      "Розничная торговля",
+      "СМР — строительно-монтажные работы",
+      "Клининг",
+      "Розница — электроника",
+      "Оптовая торговля",
+      "Грузоперевозки"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "30b8b2d1-1f46-4f28-97a8-7c72a5b09d18",
+    "supplier_id": "aaea82a1-708d-45c1-a416-870bea8e8329",
+    "price": 15,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2026-02-03T09:15:27.581292+00:00",
+    "updated_at": "2026-02-03T09:15:27.581292+00:00",
+    "purposes": [
+      "Архитектура и инжиниринг",
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "3341b199-494f-41a6-b448-b39cb2f66dbd",
+    "supplier_id": "92c7118e-592c-4529-be21-0129841cdb7e",
+    "price": 19,
+    "deadline_days": 3,
+    "notes": "ИМПОРТЕРЫ",
+    "created_at": "2026-02-04T09:15:36.867054+00:00",
+    "updated_at": "2026-02-04T09:15:36.867054+00:00",
+    "purposes": [
+      "Оптовая торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "46bd42f0-e783-459a-823f-d4f415a2311d",
+    "supplier_id": "43dc1fa0-a405-4c39-bd5b-7e0d86a76eee",
+    "price": 14,
+    "deadline_days": 3,
+    "notes": "Назначение Хим продукция . В документах удобрения",
+    "created_at": "2026-02-06T10:50:45.02891+00:00",
+    "updated_at": "2026-02-06T10:50:45.02891+00:00",
+    "purposes": [
+      "Розничная торговля",
+      "Розница — стройматериалы/хозтовары"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "c47735f5-d7ce-4052-99c8-066dfc21c449",
+    "supplier_id": "695f5bd3-9909-4de4-acc8-e7e564338c18",
+    "price": 19,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2026-02-06T10:53:00.687744+00:00",
+    "updated_at": "2026-02-06T10:53:00.687744+00:00",
+    "purposes": [
+      "Автобизнес (общее)"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "85fd8a90-ecdf-40ac-b5bb-46c92c181e40",
+    "supplier_id": "bc0dcd5f-cdf8-4ade-b0bf-635fcba495c4",
+    "price": 19,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2026-02-06T10:54:58.096094+00:00",
+    "updated_at": "2026-02-06T10:54:58.096094+00:00",
+    "purposes": [
+      "Автобизнес (общее)"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "3559a579-6be4-427a-ba58-7cf61c4ae7c5",
+    "supplier_id": "bbd23b4a-f495-47df-aec3-faacd210b250",
+    "price": 20.5,
+    "deadline_days": 6,
+    "notes": "Имеется СРО на проектирование",
+    "created_at": "2026-02-06T10:55:58.168477+00:00",
+    "updated_at": "2026-02-06T10:55:58.168477+00:00",
+    "purposes": [
+      "Опт — металл",
+      "Оптовая торговля",
+      "Опт — строительные материалы",
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "06ded11b-595f-4e80-a9cd-c5ab0ee067cd",
+    "supplier_id": "3eb57af5-9de7-4815-a956-c1c90de91bf3",
+    "price": 19,
+    "deadline_days": 6,
+    "notes": "Имеется СРО на проектирование",
+    "created_at": "2026-02-06T10:57:18.197597+00:00",
+    "updated_at": "2026-02-06T10:57:18.197597+00:00",
+    "purposes": [
+      "Опт — строительные материалы",
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "d48dde6d-f4d1-4029-851f-74fa300303e9",
+    "supplier_id": "b9c858e0-96dc-488c-9596-362169b12a7c",
+    "price": 20.5,
+    "deadline_days": 5,
+    "notes": "Имеется СРО на проектирование",
+    "created_at": "2026-02-06T10:58:07.667232+00:00",
+    "updated_at": "2026-02-06T10:58:07.667232+00:00",
+    "purposes": [
+      "Опт — строительные материалы",
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "584965d1-4d48-4e6a-a8ee-06123c8465cd",
+    "supplier_id": "179278d1-6312-43a4-b31d-b20aefc54274",
+    "price": 19,
+    "deadline_days": 2,
+    "notes": "- строительные материалы  - металл - металлические изделия  - металлоконструкции",
+    "created_at": "2026-02-06T10:59:00.457296+00:00",
+    "updated_at": "2026-02-06T10:59:00.457296+00:00",
+    "purposes": [
+      "Оптовая торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "8eda480f-78b3-4e9b-9499-de16320d807d",
+    "supplier_id": "6aa6c7cd-f59d-43dd-8958-4835a8a3170c",
+    "price": 19,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2026-02-06T10:59:50.200588+00:00",
+    "updated_at": "2026-02-06T10:59:50.200588+00:00",
+    "purposes": [
+      "Изделия из металла",
+      "Металлургия",
+      "Опт — строительные материалы",
+      "Оптовая торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "37ee51c4-8b94-4447-a1d7-5727106103c1",
+    "supplier_id": "b9ecc8ca-9124-40e6-87b1-c4f9b9b8bfd1",
+    "price": 19.5,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2026-02-06T11:08:25.170004+00:00",
+    "updated_at": "2026-02-06T11:08:25.170004+00:00",
+    "purposes": [
+      "Опт — строительные материалы",
+      "Оптовая торговля",
+      "Розница — стройматериалы/хозтовары"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "a94eacc4-d1e4-4920-98e2-d19d274d5552",
+    "supplier_id": "18305f22-d3cf-4575-96b6-302a075f2b01",
+    "price": 20,
+    "deadline_days": 2,
+    "notes": "ПРИНИМАЕМ ТОЛЬКО С ЗЕЛЕНЫХ КОМПАНИЙ",
+    "created_at": "2026-02-06T11:14:05.204596+00:00",
+    "updated_at": "2026-02-06T11:14:05.204596+00:00",
+    "purposes": [
+      "Опт — строительные материалы",
+      "Оптовая торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "3c6e0ee1-42dc-4d7b-8d11-8554e3bde015",
+    "supplier_id": "97ae8972-f626-44c3-8059-2148f27a644d",
+    "price": 21,
+    "deadline_days": 2,
+    "notes": "- Стройматериалы  - Металл/Металлопрокат  - СМР ( оплата по договору )  - Оборудование.  - Кабельная продукция.",
+    "created_at": "2026-02-06T11:15:26.493394+00:00",
+    "updated_at": "2026-02-06T11:15:26.493394+00:00",
+    "purposes": [
+      "Опт — строительные материалы",
+      "Оптовая торговля",
+      "Розничная торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "8fbd4b2c-31d0-4b25-b036-028cd778a5e1",
+    "supplier_id": "1ee77c6e-6c2d-44df-b8e3-0c55eba139f3",
+    "price": 21,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2026-02-06T11:16:53.677446+00:00",
+    "updated_at": "2026-02-06T11:16:53.677446+00:00",
+    "purposes": [
+      "Опт — металл",
+      "Оптовая торговля",
+      "СМР — строительно-монтажные работы",
+      "Опт — строительные материалы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "984288a3-3a3c-46e2-9c2a-054f0408b507",
+    "supplier_id": "2cd543bb-a56f-4407-bee8-0be5ce528b19",
+    "price": 17,
+    "deadline_days": 2,
+    "notes": "За запчасти  За оборудование  За товары  За материалы  За инструменты За электрооборудования",
+    "created_at": "2026-01-28T12:16:59.636276+00:00",
+    "updated_at": "2026-02-06T11:19:55.521924+00:00",
+    "purposes": [
+      "Автобизнес (общее)",
+      "Оптовая торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "9fd6daa7-1eb2-4c18-a668-1347e6edd797",
+    "supplier_id": "ed846048-82e7-4ad7-bb81-6db8e001cb8d",
+    "price": 19.5,
+    "deadline_days": 2,
+    "notes": "За материалы  оборудование электрооборудование электроматериалы запчасти комплектующие товар Инструменты Бытовая техника",
+    "created_at": "2026-02-06T11:23:18.635242+00:00",
+    "updated_at": "2026-02-06T11:23:18.635242+00:00",
+    "purposes": [
+      "Оптовая торговля",
+      "Опт — электронное оборудование"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "5108cd5b-6ea2-4a73-8b1b-6c96f4ac873b",
+    "supplier_id": "24c485b0-3775-46d1-b6ba-fa5d6ee5a897",
+    "price": 21,
+    "deadline_days": 1,
+    "notes": "Материалы!",
+    "created_at": "2026-02-06T11:41:39.543278+00:00",
+    "updated_at": "2026-02-06T11:41:39.543278+00:00",
+    "purposes": [
+      "Ремонт бытовой техники и ПК",
+      "Ремонт и монтаж оборудования",
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "e1c994b9-23ad-48d0-81d4-493abc7f8ecd",
+    "supplier_id": "64851a6d-e2a2-47cb-9a12-85dff34add0d",
+    "price": 18.5,
+    "deadline_days": 3,
+    "notes": null,
+    "created_at": "2026-02-06T11:43:05.839364+00:00",
+    "updated_at": "2026-02-06T11:43:05.839364+00:00",
+    "purposes": [
+      "Опт — топливо/ГСМ"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "4b8fd8d9-6121-4e65-aba5-18c63ba969c0",
+    "supplier_id": "ccaad21b-672b-4a11-b926-7f48c6765a02",
+    "price": 20.5,
+    "deadline_days": 3,
+    "notes": "Глеб МГСУ",
+    "created_at": "2026-02-06T11:44:13.824848+00:00",
+    "updated_at": "2026-02-06T11:44:13.824848+00:00",
+    "purposes": [
+      "Опт — строительные материалы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "76f4574b-e964-4c96-b984-704c595f5f59",
+    "supplier_id": "2e28d6de-e760-4d06-b00c-cf01b24c543d",
+    "price": 15.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-02-06T11:45:25.785884+00:00",
+    "updated_at": "2026-02-06T11:45:25.785884+00:00",
+    "purposes": [
+      "Автобизнес (общее)",
+      "Админ-услуги для бизнеса",
+      "Аренда и лизинг",
+      "Гостиницы и аренда жилья",
+      "Грузоперевозки",
+      "Консалтинг и менеджмент",
+      "Логистика и склады",
+      "Общепит и кафе",
+      "Опт — компьютеры/ПО",
+      "Опт — молочная продукция",
+      "Опт — мясо и мясопродукты",
+      "Опт — строительные материалы",
+      "Оптовая торговля",
+      "Производство бумаги и картона",
+      "Производство напитков",
+      "Реклама и маркетинг",
+      "Розничная торговля",
+      "Транспортные услуги",
+      "Юруслуги / Бухуслуги"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "b4667e8c-3900-4566-8ec1-57e7d58f73be",
+    "supplier_id": "2e28d6de-e760-4d06-b00c-cf01b24c543d",
+    "price": 16.5,
+    "deadline_days": 0,
+    "notes": "двд",
+    "created_at": "2026-02-06T11:45:25.940995+00:00",
+    "updated_at": "2026-02-06T11:45:25.940995+00:00",
+    "purposes": [
+      "Автобизнес (общее)",
+      "Админ-услуги для бизнеса",
+      "Аренда и лизинг",
+      "Гостиницы и аренда жилья",
+      "Грузоперевозки",
+      "Консалтинг и менеджмент",
+      "Логистика и склады",
+      "Общепит и кафе",
+      "Опт — компьютеры/ПО",
+      "Опт — молочная продукция",
+      "Опт — мясо и мясопродукты",
+      "Опт — строительные материалы",
+      "Оптовая торговля",
+      "Производство бумаги и картона",
+      "Производство напитков",
+      "Реклама и маркетинг",
+      "Розничная торговля",
+      "Транспортные услуги",
+      "Юруслуги / Бухуслуги"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "4995db6b-e456-4006-9259-b7522204f11c",
+    "supplier_id": "76787655-3388-49f5-956d-c2324fe1d25c",
+    "price": 15,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-02-06T11:46:42.041391+00:00",
+    "updated_at": "2026-02-06T11:46:42.041391+00:00",
+    "purposes": [
+      "Автобизнес (общее)",
+      "Админ-услуги для бизнеса",
+      "Аренда и лизинг",
+      "Гостиницы и аренда жилья",
+      "Грузоперевозки",
+      "Консалтинг и менеджмент",
+      "Логистика и склады",
+      "Общепит и кафе",
+      "Опт — компьютеры/ПО",
+      "Опт — молочная продукция",
+      "Опт — мясо и мясопродукты",
+      "Опт — строительные материалы",
+      "Оптовая торговля",
+      "Производство бумаги и картона",
+      "Производство напитков",
+      "Реклама и маркетинг",
+      "Розничная торговля",
+      "Транспортные услуги",
+      "Финансы",
+      "Юруслуги / Бухуслуги"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "981999a9-d8fd-40cc-8808-13314db5cf84",
+    "supplier_id": "76787655-3388-49f5-956d-c2324fe1d25c",
+    "price": 16,
+    "deadline_days": 0,
+    "notes": "двд",
+    "created_at": "2026-02-06T11:46:42.171455+00:00",
+    "updated_at": "2026-02-06T11:46:42.171455+00:00",
+    "purposes": [
+      "Автобизнес (общее)",
+      "Админ-услуги для бизнеса",
+      "Аренда и лизинг",
+      "Гостиницы и аренда жилья",
+      "Грузоперевозки",
+      "Консалтинг и менеджмент",
+      "Логистика и склады",
+      "Общепит и кафе",
+      "Опт — компьютеры/ПО",
+      "Опт — молочная продукция",
+      "Опт — мясо и мясопродукты",
+      "Опт — строительные материалы",
+      "Оптовая торговля",
+      "Производство бумаги и картона",
+      "Производство напитков",
+      "Реклама и маркетинг",
+      "Розничная торговля",
+      "Транспортные услуги",
+      "Финансы",
+      "Юруслуги / Бухуслуги"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "80347273-8828-404f-818a-bff828156fa9",
+    "supplier_id": "458e0bd3-5b9e-4be4-b529-b8167aa41529",
+    "price": 7.5,
+    "deadline_days": 3,
+    "notes": "Глеб МГСУ. Пример назначения платежа: \"Оплата по Договору № 33/55/01 от 11.03.2024 за металлолом. Сумма 10 000 000-00 НДС исчисляется налоговым агентом",
+    "created_at": "2026-02-06T11:48:00.894865+00:00",
+    "updated_at": "2026-02-06T11:48:00.894865+00:00",
+    "purposes": [
+      "Опт — металл"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "ef2f3360-dd1b-4dc5-8b08-e49cebf3c516",
+    "supplier_id": "7516dea9-a1b7-4ab6-ab42-b7c872b64e0e",
+    "price": 7.5,
+    "deadline_days": 3,
+    "notes": "Пример назначения платежа: \"Оплата по Договору № 33/55/01 от 11.03.2024 за металлолом. Сумма 10 000 000-00 НДС исчисляется налоговым агентом",
+    "created_at": "2026-02-06T11:48:43.165957+00:00",
+    "updated_at": "2026-02-06T11:48:43.165957+00:00",
+    "purposes": [
+      "Опт — металл"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "28a1d9a8-1669-4e45-adb9-80160ac295cb",
+    "supplier_id": "8b65cfed-2de2-4afc-be19-8b0cd157bc0a",
+    "price": 20,
+    "deadline_days": 1,
+    "notes": "https://spsstroi.ru/projects САЙТ",
+    "created_at": "2026-02-10T09:13:08.137362+00:00",
+    "updated_at": "2026-02-10T09:24:09.740769+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "7e471b22-104f-44f7-8724-bb6658ed74a2",
+    "supplier_id": "a42cb74e-e507-4706-b629-ce609721fb74",
+    "price": 15,
+    "deadline_days": 3,
+    "notes": "ИМПОРТЕР",
+    "created_at": "2026-02-10T10:15:29.695588+00:00",
+    "updated_at": "2026-02-10T10:15:43.923394+00:00",
+    "purposes": [
+      "Оптовая торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "7f233713-4dca-4221-9eed-53c1c29c91f4",
+    "supplier_id": "c244a1e2-14ce-429c-91e4-934f36ccaaee",
+    "price": 13,
+    "deadline_days": 3,
+    "notes": null,
+    "created_at": "2026-02-10T10:16:29.887107+00:00",
+    "updated_at": "2026-02-10T10:16:29.887107+00:00",
+    "purposes": [
+      "Айти — разработка ПО"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "8bf7c39a-3eac-4e91-9c59-30d46027de43",
+    "supplier_id": "60604282-ed3e-4752-bc4b-47492c822c67",
+    "price": 13,
+    "deadline_days": 2,
+    "notes": "В сфере IT услуг⬇️ -за обновление, анализ, разработку, управление. В т.ч. НДС 5%",
+    "created_at": "2026-02-10T10:17:15.847763+00:00",
+    "updated_at": "2026-02-10T10:17:15.847763+00:00",
+    "purposes": [
+      "Айти — интернет-сервисы и хостинг",
+      "Айти — разработка ПО"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "c92f2aa3-fabd-4291-9020-2b89a07026f4",
+    "supplier_id": "b0341dad-a443-442d-9177-6f40783cc27b",
+    "price": 19.5,
+    "deadline_days": 1,
+    "notes": "смр",
+    "created_at": "2026-02-06T11:35:14.17305+00:00",
+    "updated_at": "2026-02-13T14:36:33.463957+00:00",
+    "purposes": [
+      "Опт — строительные материалы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "11ee9fa1-9f21-4bb2-a014-7b14ea073a08",
+    "supplier_id": "8c17a3de-a090-4649-a006-f597931a502d",
+    "price": 17.5,
+    "deadline_days": 3,
+    "notes": "Принимает от зеленых, по согласованию от желтых.",
+    "created_at": "2026-02-09T11:15:07.776073+00:00",
+    "updated_at": "2026-02-13T14:47:38.223406+00:00",
+    "purposes": [
+      "Опт — строительные материалы",
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "1aed83b2-ceb6-4ed0-8015-118e29c10a63",
+    "supplier_id": "babf802f-6a4a-4665-96cb-c480e727c94b",
+    "price": 15,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-02-09T12:00:37.033143+00:00",
+    "updated_at": "2026-03-02T10:34:42.701147+00:00",
+    "purposes": [
+      "Грузоперевозки",
+      "Транспортные услуги",
+      "Логистика и склады",
+      "Оптовая торговля"
+    ],
+    "selling_price": 15,
+    "selling_deadline_days": 4
+  },
+  {
+    "id": "4488ba8e-6502-4c19-a1df-1032f883cde1",
+    "supplier_id": "0804169e-bcc2-41a4-b7e1-faa80389ece0",
+    "price": 23.5,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2026-03-03T11:32:17.080598+00:00",
+    "updated_at": "2026-03-03T11:36:31.36881+00:00",
+    "purposes": [
+      "Опт — строительные материалы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "4d278045-1d11-430e-864b-8f6df80345d1",
+    "supplier_id": "caa6cbea-f8f2-4e8b-ad48-005f33427660",
+    "price": 18.5,
+    "deadline_days": 3,
+    "notes": "ЛЮБЫЕ НАЗНАЧЕНИЯ",
+    "created_at": "2026-02-12T10:16:23.435928+00:00",
+    "updated_at": "2026-02-12T10:16:23.435928+00:00",
+    "purposes": [
+      "Автобизнес (общее)",
+      "Админ-услуги для бизнеса",
+      "Грузоперевозки",
+      "Изделия из металла",
+      "Консалтинг и менеджмент",
+      "Недвижимость и аренда",
+      "Опт — металл",
+      "Опт — строительные материалы",
+      "Опт — топливо/ГСМ",
+      "Оптовая торговля",
+      "Реклама и маркетинг",
+      "Розница — стройматериалы/хозтовары",
+      "Розничная торговля",
+      "СМР — строительно-монтажные работы",
+      "Транспортные услуги",
+      "Швейное производство"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "d5bfdaa8-ddf4-4199-962d-83a6d265241d",
+    "supplier_id": "8381c8c2-3878-402e-a607-93da16e5c935",
+    "price": 18,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2026-02-12T10:41:52.312763+00:00",
+    "updated_at": "2026-02-12T10:41:52.312763+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы",
+      "Опт — строительные материалы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "26a6b01e-2e36-486c-9b28-7cc9562fa7b0",
+    "supplier_id": "9197e769-0cd7-4a92-8745-2c000710e01c",
+    "price": 19,
+    "deadline_days": 1,
+    "notes": null,
+    "created_at": "2026-02-12T11:10:11.244414+00:00",
+    "updated_at": "2026-02-12T11:10:11.244414+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "51716d2e-3532-4f1f-adae-04eab0bfc345",
+    "supplier_id": "99bd2df0-92ba-40b9-a2b5-1dbaad932753",
+    "price": 17,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-02-13T07:57:41.066773+00:00",
+    "updated_at": "2026-02-13T07:57:41.066773+00:00",
+    "purposes": [
+      "Транспортные услуги",
+      "СМР — строительно-монтажные работы",
+      "Опт — строительные материалы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "c8f0ae73-a16c-4e94-a63f-94dadf525352",
+    "supplier_id": "f88e200d-c5e1-4d60-bc6e-887bb923825d",
+    "price": 17,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-01-12T11:57:17.19147+00:00",
+    "updated_at": "2026-02-13T07:59:19.693719+00:00",
+    "purposes": [
+      "Опт — строительные материалы",
+      "СМР — строительно-монтажные работы",
+      "Транспортные услуги"
+    ],
+    "selling_price": 17.5,
+    "selling_deadline_days": 3
+  },
+  {
+    "id": "8f3c663b-ac21-4fc9-82e8-dc477aa6ab06",
+    "supplier_id": "555af0fb-4ce2-411b-8fa1-ea421bf8052a",
+    "price": 11.5,
+    "deadline_days": 2,
+    "notes": "Орехи/сухофрукты  22 ндс",
+    "created_at": "2026-02-13T08:02:47.081289+00:00",
+    "updated_at": "2026-02-13T08:02:47.081289+00:00",
+    "purposes": [
+      "Производство готовых блюд и полуфабрикатов",
+      "Оптовая торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "e13d7fe9-f442-4507-ad7b-3b082ca89c0c",
+    "supplier_id": "3348e31d-47a8-4451-85b9-a166c05c3572",
+    "price": 20.5,
+    "deadline_days": 3,
+    "notes": "пластиковые окна , двери, рамы и так далее",
+    "created_at": "2026-02-13T13:12:32.305249+00:00",
+    "updated_at": "2026-02-13T13:12:32.305249+00:00",
+    "purposes": [
+      "Опт — строительные материалы",
+      "Оптовая торговля",
+      "Прочее производство"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "b3863285-3be7-4404-a121-07a9eb072ea9",
+    "supplier_id": "b37d73e2-e397-4f1e-871a-79fe7fa2f4e6",
+    "price": 16.5,
+    "deadline_days": 1,
+    "notes": "https://tdorion.com/. Бытовая техника. Строго по их номенклатуре. Работа по эдо.",
+    "created_at": "2026-02-13T13:19:16.705604+00:00",
+    "updated_at": "2026-02-13T13:19:16.705604+00:00",
+    "purposes": [
+      "Оптовая торговля",
+      "Опт — электронное оборудование"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "644f4f62-c702-4ef8-b145-3cb121f1b5e3",
+    "supplier_id": "b0341dad-a443-442d-9177-6f40783cc27b",
+    "price": 17.5,
+    "deadline_days": 3,
+    "notes": "смр",
+    "created_at": "2026-02-13T14:36:33.681855+00:00",
+    "updated_at": "2026-02-13T14:36:33.681855+00:00",
+    "purposes": [
+      "Оптовая торговля",
+      "Опт — строительные материалы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "64d79901-5116-4578-a013-cd3953a10746",
+    "supplier_id": "ce7484b7-b6cd-4795-be18-d420b0916d0b",
+    "price": 17.5,
+    "deadline_days": 3,
+    "notes": null,
+    "created_at": "2026-02-13T14:37:32.400413+00:00",
+    "updated_at": "2026-02-13T14:37:32.400413+00:00",
+    "purposes": [
+      "Опт — строительные материалы",
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "02cb1f09-4271-4ce9-91e7-113498e6de70",
+    "supplier_id": "5af6e5de-46b3-4061-84db-351686f9f539",
+    "price": 17.5,
+    "deadline_days": 3,
+    "notes": "Муслим",
+    "created_at": "2026-02-13T14:43:12.462907+00:00",
+    "updated_at": "2026-02-13T14:43:12.462907+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы",
+      "Опт — строительные материалы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "eafb39cc-a09d-4c5a-91c7-13d87a882ac5",
+    "supplier_id": "e8d39f83-eeda-4c40-9a73-a06cdcc1aecb",
+    "price": 21.5,
+    "deadline_days": 4,
+    "notes": "Платеж мин пп 5 млн",
+    "created_at": "2026-02-16T08:48:00.937156+00:00",
+    "updated_at": "2026-02-16T08:48:00.937156+00:00",
+    "purposes": [
+      "Пластмассы и резина"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "7e524834-ff04-4e69-a2c0-6df6e2c73127",
+    "supplier_id": "6b0d205e-b8f1-4448-a7e8-cdfe0edd866a",
+    "price": 21,
+    "deadline_days": 1,
+    "notes": null,
+    "created_at": "2026-02-16T10:07:26.94216+00:00",
+    "updated_at": "2026-02-16T10:07:26.94216+00:00",
+    "purposes": [
+      "Изделия из металла",
+      "Оптовая торговля",
+      "Опт — строительные материалы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "d7df6c99-ae99-48c4-bd1a-6ed208b29083",
+    "supplier_id": "920171d4-4409-4230-96c5-c363008399d8",
+    "price": 21.5,
+    "deadline_days": 1,
+    "notes": "металл",
+    "created_at": "2026-02-16T10:09:17.884234+00:00",
+    "updated_at": "2026-02-16T10:09:17.884234+00:00",
+    "purposes": [
+      "Оптовая торговля",
+      "Опт — строительные материалы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "435938f3-2cef-4f4e-a59f-a631749f4d07",
+    "supplier_id": "4fdf654e-8e88-4613-b854-0e478c03edd8",
+    "price": 18.5,
+    "deadline_days": 3,
+    "notes": null,
+    "created_at": "2026-02-17T11:45:21.003324+00:00",
+    "updated_at": "2026-02-17T11:45:21.003324+00:00",
+    "purposes": [
+      "Опт — строительные материалы",
+      "Оптовая торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "dc2bf70f-a7ba-4ead-986c-c304ad427294",
+    "supplier_id": "0e3ac6f6-f626-4299-a5b0-2680bdc9465b",
+    "price": 21.5,
+    "deadline_days": 3,
+    "notes": null,
+    "created_at": "2026-02-17T11:48:27.34459+00:00",
+    "updated_at": "2026-02-17T11:48:27.34459+00:00",
+    "purposes": [
+      "Оптовая торговля",
+      "Автобизнес (общее)"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "52d2bc0b-3143-44a4-8551-19dcb08b7ab9",
+    "supplier_id": "34549850-47f8-464b-bf2a-c6965e42f48a",
+    "price": 18.5,
+    "deadline_days": 1,
+    "notes": "за оборудование, комплектующие, кабели,  лимит 30 млн",
+    "created_at": "2026-02-17T11:51:32.472166+00:00",
+    "updated_at": "2026-02-17T11:51:32.472166+00:00",
+    "purposes": [
+      "Оптовая торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "8bae79bf-98f0-4d6a-95ae-5708a9f40432",
+    "supplier_id": "80f0eabd-4c9e-45f6-a4a8-0fc77094deeb",
+    "price": 20.5,
+    "deadline_days": 2,
+    "notes": "ПРИНИМАЕМ ТОЛЬКО С ЗЕЛЕНЫХ КОМПАНИЙ",
+    "created_at": "2026-02-06T11:11:48.284595+00:00",
+    "updated_at": "2026-02-17T11:54:28.755413+00:00",
+    "purposes": [
+      "Опт — строительные материалы",
+      "СМР — строительно-монтажные работы",
+      "Оптовая торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "ead238b5-eb74-43b3-9b64-a834aff767ca",
+    "supplier_id": "80f0eabd-4c9e-45f6-a4a8-0fc77094deeb",
+    "price": 19,
+    "deadline_days": 2,
+    "notes": "Светлана",
+    "created_at": "2026-02-17T11:54:28.970815+00:00",
+    "updated_at": "2026-02-17T11:54:28.970815+00:00",
+    "purposes": [
+      "Опт — строительные материалы",
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "513e5280-9364-4b53-a6aa-220d7489dece",
+    "supplier_id": "dd08629f-4fb5-4294-98e3-d30528dd3cc3",
+    "price": 18.5,
+    "deadline_days": 1,
+    "notes": null,
+    "created_at": "2026-02-17T13:12:05.987059+00:00",
+    "updated_at": "2026-02-17T13:12:05.987059+00:00",
+    "purposes": [
+      "Ремонт и монтаж оборудования",
+      "Электрооборудование",
+      "Оптовая торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "9fc7b08f-8e4b-4d97-9651-df9e74bc2816",
+    "supplier_id": "230e1e7f-5cb0-408a-b937-a5581a963ac5",
+    "price": 16,
+    "deadline_days": 1,
+    "notes": "минимальный платеж от 15 млн кривой суммой (не несколько платежей в сумме 15+, а 15+ и более одной платежкой)",
+    "created_at": "2026-02-17T13:13:13.963611+00:00",
+    "updated_at": "2026-02-17T13:13:13.963611+00:00",
+    "purposes": [
+      "Опт — строительные материалы",
+      "СМР — строительно-монтажные работы",
+      "Оптовая торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "b3985b3f-f744-47ce-bd79-06f3a0e9561d",
+    "supplier_id": "18e16024-f0c5-417b-9f83-a5d0fded8bf4",
+    "price": 22,
+    "deadline_days": 1,
+    "notes": null,
+    "created_at": "2026-02-17T15:09:36.276259+00:00",
+    "updated_at": "2026-02-17T15:09:36.276259+00:00",
+    "purposes": [
+      "Опт — строительные материалы",
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "5b723b70-fabc-4167-9e1d-6559e6045903",
+    "supplier_id": "b5b24ec4-3764-40cb-b8c6-30b7a1f8e06a",
+    "price": 18.5,
+    "deadline_days": 3,
+    "notes": null,
+    "created_at": "2026-02-18T09:42:37.11918+00:00",
+    "updated_at": "2026-02-18T09:42:37.11918+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "cfe1f979-753d-4a81-87a8-326d9f2b473d",
+    "supplier_id": "86f3de08-caea-4b5e-aa73-cd3300ed184f",
+    "price": 18,
+    "deadline_days": 3,
+    "notes": null,
+    "created_at": "2026-02-18T09:43:30.086294+00:00",
+    "updated_at": "2026-02-18T09:43:30.086294+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы",
+      "Опт — строительные материалы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "85181fb5-4777-48a0-9823-8a952b1cded2",
+    "supplier_id": "d03d5fcd-aaad-494f-acd9-f017f89e1de0",
+    "price": 10.5,
+    "deadline_days": 3,
+    "notes": "ТАБАК",
+    "created_at": "2026-02-18T09:53:10.871883+00:00",
+    "updated_at": "2026-02-18T09:53:10.871883+00:00",
+    "purposes": [
+      "Оптовая торговля",
+      "Опт — непродовольственные товары",
+      "Розничная торговля"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "1e7f3e79-69d9-4b1d-880f-63cab3f7cd97",
+    "supplier_id": "49da585a-b4c1-4f6b-8fd9-84a819089e7c",
+    "price": 19.5,
+    "deadline_days": 3,
+    "notes": null,
+    "created_at": "2026-02-18T09:55:16.38261+00:00",
+    "updated_at": "2026-02-18T09:55:16.38261+00:00",
+    "purposes": [
+      "Реклама и маркетинг"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "441b6e9e-fc4b-4611-9583-da97cdd828f0",
+    "supplier_id": "c5f8affe-a525-497f-8a5d-003edbb760c8",
+    "price": 10.5,
+    "deadline_days": 3,
+    "notes": null,
+    "created_at": "2026-02-18T09:56:26.940056+00:00",
+    "updated_at": "2026-02-18T09:56:26.940056+00:00",
+    "purposes": [
+      "Опт — табак"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "171bbf3d-6a9e-4565-81d2-595a31dfd650",
+    "supplier_id": "4ba8b6ef-69ae-4a81-8fd9-2f20f64389d6",
+    "price": 11.5,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2026-02-18T09:57:30.731348+00:00",
+    "updated_at": "2026-02-18T09:57:30.731348+00:00",
+    "purposes": [
+      "Оптовая торговля",
+      "Опт — табак"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "b694fa65-0787-4397-8de1-187b8dea8812",
+    "supplier_id": "5e983181-b270-42b7-ae6b-79094776de1b",
+    "price": 23.5,
+    "deadline_days": 2,
+    "notes": null,
+    "created_at": "2026-03-03T11:36:09.250979+00:00",
+    "updated_at": "2026-03-03T11:36:09.250979+00:00",
+    "purposes": [
+      "Опт — строительные материалы"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "f750352b-8f24-4f25-9938-ed75569efc3f",
+    "supplier_id": "eedca541-47f6-4ee2-95c9-fb7d629729d1",
+    "price": 7.5,
+    "deadline_days": 2,
+    "notes": "ЧЗ",
+    "created_at": "2026-02-18T14:30:28.359587+00:00",
+    "updated_at": "2026-02-18T14:30:28.359587+00:00",
+    "purposes": [
+      "Опт — табак"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "367ab886-404d-4f3e-a06e-bed060fa8925",
+    "supplier_id": "744cba73-b3a3-49ee-ba9d-220592678218",
+    "price": 19,
+    "deadline_days": 3,
+    "notes": null,
+    "created_at": "2026-03-03T11:39:01.593575+00:00",
+    "updated_at": "2026-03-03T11:39:01.593575+00:00",
+    "purposes": [
+      "Автобизнес (общее)",
+      "Грузоперевозки"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "e3a523d2-2281-4707-830f-fbbdc1220448",
+    "supplier_id": "56237968-8aa3-4a8e-903b-e1877a23f544",
+    "price": 9.5,
+    "deadline_days": 4,
+    "notes": "Текстиль/Медоборудования",
+    "created_at": "2026-02-03T10:43:47.938346+00:00",
+    "updated_at": "2026-03-04T08:29:57.336226+00:00",
+    "purposes": [
+      "СМР — строительно-монтажные работы",
+      "Опт — строительные материалы",
+      "Оптовая торговля",
+      "Клининг",
+      "Грузоперевозки",
+      "Реклама и маркетинг",
+      "Розничная торговля",
+      "Ремонт бытовой техники и ПК",
+      "Интернет-магазин"
+    ],
+    "selling_price": null,
+    "selling_deadline_days": null
+  },
+  {
+    "id": "1ef5f49b-26fd-41f7-aae2-cc694b87eb19",
+    "supplier_id": "592af3c2-2ac5-44c1-9124-b96d4c15e652",
+    "price": 14.5,
+    "deadline_days": 4,
+    "notes": null,
+    "created_at": "2026-02-20T08:24:03.023996+00:00",
+    "updated_at": "2026-02-20T08:28:52.446327+00:00",
+    "purposes": [
+      "Упаковка",
+      "Упаковочные материалы"
+    ],
+    "selling_price": 14.5,
+    "selling_deadline_days": 4
+  }
+]
